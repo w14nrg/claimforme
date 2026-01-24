@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>About Kensington Plumbing Services | Local Plumbers in Kensington, Chelsea, Hammersmith & Fulham</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="local plumbers Kensington, family-run plumbing Chelsea, emergency plumber Hammersmith, boiler installation Fulham, drain unblocking West London, commercial plumbing services Kensington Chelsea Hammersmith Fulham, Gas Safe registered plumbers, bathrooms en-suites installation, kitchen installations, property renovation West London">
-    <meta name="description" content="Discover the story of Kensington Plumbing Services, a family-run local plumbing company serving Kensington, Chelsea, Hammersmith & Fulham since 1962. Expert in emergency plumber repairs, boiler installations, drain unblocking, bathrooms en-suites, kitchen installations, and property renovations. Trusted, affordable 24/7 plumbing services for residents and independent retailers in West London.">
+    <title>Free Eligibility Check | Attendance Allowance, Pension Credit & Blue Badge | Claim For Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free quick eligibility check for Attendance Allowance, Pension Credit and Blue Badge if you're over State Pension age (66+). No obligation, no upfront fees.">
+    <meta name="keywords" content="free attendance allowance eligibility check, pension credit eligibility check, blue badge eligibility check, benefits eligibility over 66, attendance allowance qualification, pension credit qualification, blue badge qualification">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
+    <!-- Same styles and fonts as home page -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Kensington Plumbing Services",
-      "image": "https://static.wixstatic.com/media/d8b82a_299630ab00a440858be466e5b434bc08~mv2.jpg/v1/fill/w_1898,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d8b82a_299630ab00a440858be466e5b434bc08~mv2.jpg",
-      "priceRange": "$$",
-      "telephone": "0207 371 3333",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "33 Gunterstone Rd",
-        "addressLocality": "London",
-        "postalCode": "W14 9BP",
-        "addressCountry": "GB"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.4912,
-        "longitude": -0.2075
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": ["https://facebook.com/yourpage", "https://twitter.com/yourhandle"],
-      "description": "Family-run local plumbers in Kensington, Chelsea, Hammersmith & Fulham since 1962. Specializing in emergency plumber repairs, boiler installations, drain unblocking, bathrooms en-suites, kitchen installations, and property renovations for residents and independent retailers in West London."
-    }
-    </script>
+    <style>
+        :root {
+            --primary: #FF6600;
+            --secondary: #808080;
+            --light: #d3d3d3;
+            --dark: #333;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-primary:hover {
+            background-color: #e65c00;
+            border-color: #e65c00;
+        }
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .quiz-step {
+            display: none;
+        }
+        .quiz-step.active {
+            display: block;
+        }
+        .progress {
+            height: 10px;
+            margin-bottom: 2rem;
+        }
+        .progress-bar {
+            background-color: var(--primary);
+        }
+        .form-check-label {
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .result-box {
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            padding: 1.5rem;
+            background-color: white;
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Topbar Start -->
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Topbar -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
-            <div class="col-lg-3 col-md-12 text-center text-lg-start">
-                <a href="" class="navbar-brand m-0 p-0">
-                    <h2 class="text-primary m-0">Kensington Plumbing Services</h2>
+            <div class="col-lg-6 col-md-12 text-center text-lg-start">
+                <a href="index.html" class="navbar-brand m-0 p-0">
+                    <h1 class="text-primary m-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.8rem;">Claim For Me</h1>
                 </a>
             </div>
-            <div class="col-lg-9 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                    <p class="m-0">33 gunterstone rd London w14 9bp</p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="far fa-envelope-open text-primary me-2"></i>
-                    <p class="m-0">info@kensington.biz</p>
-                </div>
+            <div class="col-lg-6 col-md-12 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="me-5 text-end">
+                        <p class="mb-0" style="font-size: 1.4rem; font-weight: 700; color: #FF6600;">020 7122 8324</p>
+                        <p class="mb-0">Call us anytime</p>
+                    </div>
+                    <a class="btn btn-sm-square bg-success text-white" href="https://wa.me/442071228324" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
-
-    <!-- Navbar Start -->
+    <!-- Navbar -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-            <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="text-primary m-0">kensington plumbing services</h1>
+            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+                <h1 class="text-primary m-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.8rem;">Claim For Me</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -106,216 +117,189 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About</a>
-                    
-                   
-                   
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="free-check.html" class="nav-item nav-link active">Free Check</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
-                        <i class="fa fa-phone-alt text-primary"></i>
-                    </div>
-                    <div class="ms-3">
-                        <p class="mb-1 text-white">Call us 24/7</p>
-                        <h5 class="m-0 text-secondary">0207 371 3333</h5>
-                    </div>
                 </div>
             </div>
         </nav>
     </div>
-    <!-- Navbar End -->
 
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">About Us</h6>
-                    <h1 class="mb-4">Family-Run Local Plumbers Serving Kensington, Chelsea, Hammersmith & Fulham Since 1962</h1>
-                    <p class="mb-4">Welcome to the story of Kensington Plumbing Services—one that spans generations of expert local plumbers in Kensington, Chelsea, Hammersmith & Fulham. Still today, you will see our team of certified Gas Safe registered plumbers drinking in your pubs, eating in your restaurants, with children going to the same schools in West London. We pride ourselves on being part of the local community and have been since it started with my father, Joe, and his two brothers, Stan and Bob, back in 1962, providing reliable plumbing services, emergency plumber repairs, boiler installations, drain unblocking, bathrooms en-suites installations, kitchen installations, and property renovations for residents and independent retailers in Kensington, Chelsea, Hammersmith & Fulham.</p>
-                    <img class="img-fluid mb-4" src="https://static.wixstatic.com/media/d8b82a_299630ab00a440858be466e5b434bc08~mv2.jpg/v1/fill/w_1898,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d8b82a_299630ab00a440858be466e5b434bc08~mv2.jpg" alt="Local plumbers in Kensington, Chelsea, Hammersmith & Fulham since 1962 - family-run plumbing company West London" loading="lazy">
-                    <p class="mb-4">Back in 1962, these three young men left the industrial backdrop of post-war Bradford and headed south to London to create better lives, bringing with them skill, determination, and a willingness to learn on the job as local plumbers serving the communities of Kensington, Chelsea, Hammersmith & Fulham. Joe, my father, was a bricklayer; Stan, the middle brother, specialised in plastering; and Bob, the youngest, had just finished his engineering studies at Bradford University. Together, they were a dynamic team, willing to take on any work that came their way, including emergency plumber repairs, boiler installations, drain unblocking, and property renovations in West London.</p>
-                    <img class="img-fluid mb-4" src="https://static.wixstatic.com/media/d8b82a_8b49c036f25846159d62db94d37c77eb~mv2.jpg/v1/fill/w_1788,h_755,al_c,q_85,enc_avif,quality_auto/d8b82a_8b49c036f25846159d62db94d37c77eb~mv2.jpg" alt="Expert local plumbing services in Kensington, Chelsea, Hammersmith & Fulham - family legacy since 1962 West London" loading="lazy">
-                    <p class="mb-4">Their first significant project as local plumbers in West London? Working as a “2 and 1” gang on London’s Millbank Tower—a major milestone that marked the beginning of their long journey in the construction and plumbing world, offering affordable plumbing solutions, 24/7 emergency plumber services, boiler installations, bathrooms en-suites, kitchen installations, and commercial plumbing for independent retailers in Kensington, Chelsea, Hammersmith & Fulham.</p>
-                    <img class="img-fluid mb-4" src="https://static.wixstatic.com/media/d8b82a_a71c6e83e810442d996491996f1e4371~mv2.jpg/v1/fill/w_1628,h_661,al_c,q_85,enc_avif,quality_auto/d8b82a_a71c6e83e810442d996491996f1e4371~mv2.jpg" alt="Gas Safe registered plumbers for boiler installations and drain unblocking in Hammersmith & Fulham, Kensington & Chelsea" loading="lazy">
-                    <p class="mb-4">As London opened up to more opportunities for local plumbers, a chance meeting at the Black Bull pub on the Kings Road in Chelsea in the late 1960s led to their first home purchase and renovation on Hugon Road, SW6—a project that solidified both their personal and professional ties, expanding their services to include property renovations, bathrooms en-suites installations, kitchen installations, and commercial plumbing for businesses in West London areas like Kensington, Chelsea, Hammersmith & Fulham.</p>
-                    <p class="mb-4">In the years that followed, the family grew, with my brother James born in 1980 and myself in 1982. The business also evolved, with Joe and Bob founding Armour Trading Building Co., where they not only renovated houses but also collaborated with other property developers across London, providing expert plumbing services, emergency repairs, boiler installations, drain unblocking, and more to residents and independent retailers in Kensington, Chelsea, Hammersmith & Fulham.</p>
-                    <img class="img-fluid mb-4" src="https://static.wixstatic.com/media/d8b82a_959d0a9d20924ae7a27f4cf553a33df0~mv2.jpg/v1/fill/w_1898,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d8b82a_959d0a9d20924ae7a27f4cf553a33df0~mv2.jpg" alt="Affordable 24/7 local plumbing solutions for residents and independent retailers in West London - Kensington Plumbing Services" loading="lazy">
-                    <p class="mb-4">I grew up surrounded by this work, learning the ins and outs of the plumbing industry alongside my father, just as he had learned with his brothers, focusing on becoming Gas Safe registered plumbers offering reliable services in West London. After Joe’s passing in 2015, I took the reins, branching out on my own while honouring the family legacy of local plumbers in Kensington, Chelsea, Hammersmith & Fulham. Today, I’m proud to be teaching my own son the trade, continuing the tradition that Joe, Stan, and Bob started more than 60 years ago, delivering top-notch emergency plumber repairs, boiler installations, drain unblocking, bathrooms en-suites, kitchen installations, property renovations, and commercial plumbing services to the communities of Kensington, Chelsea, Hammersmith & Fulham in West London.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Family-run local plumbers since 1962 in Kensington, Chelsea, Hammersmith & Fulham</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Gas Safe registered for boiler installations and central heating services in West London</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Expert in emergency plumber repairs, drain unblocking, bathrooms en-suites, kitchen installations</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Affordable commercial plumbing for independent retailers in Hammersmith & Fulham, Kensington & Chelsea</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>24/7 reliable plumbing services for residents and businesses in West London</p>
-                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <p class="fs-5 fw-medium mb-2 text-white">Emergency 24/7 Local Plumber in Kensington, Chelsea, Hammersmith & Fulham</p>
-                            <h3 class="m-0 text-secondary">0207 371 3333</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-4" style="min-height: 500px;">
-                    <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="https://static.wixstatic.com/media/d8b82a_8b49c036f25846159d62db94d37c77eb~mv2.jpg/v1/fill/w_1788,h_755,al_c,q_85,enc_avif,quality_auto/d8b82a_8b49c036f25846159d62db94d37c77eb~mv2.jpg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Family-run local plumbers starting in 1962 - emergency plumbing services in Kensington, Chelsea, Hammersmith & Fulham" loading="lazy">
-                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="https://static.wixstatic.com/media/d8b82a_a71c6e83e810442d996491996f1e4371~mv2.jpg/v1/fill/w_1628,h_661,al_c,q_85,enc_avif,quality_auto/d8b82a_a71c6e83e810442d996491996f1e4371~mv2.jpg" style="object-fit: cover;" alt="Gas Safe registered engineers for boiler installations and drain unblocking in West London - Kensington Plumbing Services" loading="lazy">
-                    </div>
-                </div>
-            </div>
+    <!-- Page Header -->
+    <div class="container-fluid bg-light py-5 mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3" style="font-family: 'Montserrat', sans-serif; color: #808080;">Free Eligibility Check</h1>
+            <p class="lead text-secondary">Quick 4-step check to see if you may qualify for Attendance Allowance, Pension Credit or Blue Badge</p>
+            <p class="text-muted">Takes less than 2 minutes • No personal details saved • No obligation</p>
         </div>
     </div>
-    <!-- About End -->
 
-    <!-- FAQ Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">FAQ</h6>
-                <h1 class="mb-5">Frequently Asked Questions about Local Plumbing Services in Kensington, Chelsea, Hammersmith & Fulham</h1>
+    <!-- Quiz Section -->
+    <div class="container py-5">
+        <div class="quiz-container bg-white p-5 rounded shadow">
+            <div class="progress mb-4">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" id="progress-bar"></div>
             </div>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-                            What emergency plumbing services do you offer in Kensington & Chelsea?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our family-run local plumbers provide 24/7 emergency plumber repairs, drain unblocking, leak detection, and burst pipe fixes for residents and independent retailers in Kensington & Chelsea, Hammersmith & Fulham, ensuring fast, affordable solutions in West London.
-                        </div>
-                    </div>
+
+            <!-- Step 1 -->
+            <div class="quiz-step active" id="step1">
+                <h4 class="mb-4">1. Are you at State Pension age or older?</h4>
+                <p class="mb-4">Current State Pension age is 66 (rising in future years).</p>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="age" id="age-yes" value="yes" required>
+                    <label class="form-check-label" for="age-yes">Yes, I am 66 or older</label>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                            Are you Gas Safe registered for boiler installations in Hammersmith & Fulham?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, our certified Gas Safe registered engineers specialize in boiler installations, central heating repairs, and maintenance for homes and businesses in Hammersmith & Fulham, Kensington & Chelsea, providing reliable local plumbing services in West London since 1962.
-                        </div>
-                    </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="age" id="age-no" value="no">
+                    <label class="form-check-label" for="age-no">No, I am younger than 66</label>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                            Do you handle bathrooms en-suites and kitchen installations in West London?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Absolutely, as a family-run plumbing company, we offer expert bathrooms en-suites installations, kitchen installations, and property renovations for residents and independent retailers in Kensington, Chelsea, Hammersmith & Fulham, with affordable, high-quality local plumbing solutions in West London.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                            What commercial plumbing services do you provide for independent retailers in Hammersmith & Fulham?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We provide comprehensive commercial plumbing services, including drain unblocking, leak repairs, boiler installations, and maintenance for independent retailers in Hammersmith & Fulham, Kensington & Chelsea, ensuring minimal disruption with our 24/7 local plumber support in West London.
-                        </div>
-                    </div>
-                </div>
+                <button type="button" class="btn btn-primary py-3 px-5 mt-3 btn-next">Next →</button>
             </div>
+
+            <!-- Step 2 -->
+            <div class="quiz-step" id="step2">
+                <h4 class="mb-4">2. Do you need help or supervision with personal care?</h4>
+                <p class="mb-4">This includes washing, dressing, using the toilet, eating, or needing someone to keep an eye on you due to illness/disability (Attendance Allowance key question).</p>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="care" id="care-yes" value="yes" required>
+                    <label class="form-check-label" for="care-yes">Yes, I need help or supervision</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="care" id="care-no" value="no">
+                    <label class="form-check-label" for="care-no">No</label>
+                </div>
+                <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">← Back</button>
+                <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="quiz-step" id="step3">
+                <h4 class="mb-4">3. Is your weekly income low?</h4>
+                <p class="mb-4">Rough guide for Pension Credit: below ~£201/week (single) or ~£307/week (couple) after housing costs. This is approximate – we can check accurately.</p>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="income" id="income-low" value="low" required>
+                    <label class="form-check-label" for="income-low">Yes, my income is low</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="income" id="income-high" value="high">
+                    <label class="form-check-label" for="income-high">No, my income is higher</label>
+                </div>
+                <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">← Back</button>
+                <button type="button" class="btn btn-primary py-3 px-5 btn-next">Next →</button>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="quiz-step" id="step4">
+                <h4 class="mb-4">4. Do you have mobility difficulties?</h4>
+                <p class="mb-4">Do you have severe walking problems, need help to move around, or have a condition that affects your ability to walk safely? (Key for Blue Badge)</p>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="mobility" id="mobility-yes" value="yes" required>
+                    <label class="form-check-label" for="mobility-yes">Yes, I have significant mobility issues</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="mobility" id="mobility-no" value="no">
+                    <label class="form-check-label" for="mobility-no">No</label>
+                </div>
+                <button type="button" class="btn btn-secondary py-3 px-5 me-3 btn-prev">← Back</button>
+                <button type="button" class="btn btn-primary py-3 px-5" id="submit-quiz">Show Results</button>
+            </div>
+
+            <!-- Results -->
+            <div class="quiz-step" id="result">
+                <h4 class="mb-4 text-primary">Your Possible Eligibility</h4>
+                <div id="results-content" class="mb-4"></div>
+                <p class="mb-4">This is a quick guide only. For a proper assessment call us on <strong>020 7122 8324</strong> – free, no obligation.</p>
+                <a href="tel:02071228324" class="btn btn-primary py-3 px-5 me-3">Call Now</a>
+                <button type="button" class="btn btn-secondary py-3 px-5 btn-prev">Back to Start</button>
+            </div>
+        </form>
+
+        <!-- Decorative image -->
+        <div class="text-center mt-5">
+            <img src="aa6.jpg" alt="Senior checking eligibility" class="img-fluid rounded shadow" style="max-height: 400px;">
         </div>
     </div>
-    <!-- FAQ End -->
+</div>
+</div>
 
- <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Contact Local Plumbers in Kensington, Chelsea, Hammersmith & Fulham</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>33 Gunterstone Rd, London W14 9BP - Serving West London Communities</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0207 371 3333 - 24/7 Emergency Plumber in Kensington & Chelsea</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kensington.biz - Plumbing Services for Hammersmith & Fulham Residents and Retailers</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours - 24/7 Local Plumbing in West London</h4>
-                    <h6 class="text-light">Monday - Sunday:</h6>
-                    <p class="mb-4">Open 24 Hours - Emergency Plumber, Boiler Installations, Drain Unblocking Available in Kensington, Chelsea, Hammersmith & Fulham</p>
-                    <h6 class="text-light">Holidays:</h6>
-                    <p class="mb-0">Open 24 Hours - Reliable Family-Run Plumbing Services for West London Residents and Independent Retailers</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Our Local Plumbing Services in Kensington, Chelsea, Hammersmith & Fulham</h4>
-                    <p class="btn btn-link">Emergency Plumber Repairs Kensington & Chelsea</p>
-                    <p class="btn btn-link">Boiler Installations Hammersmith & Fulham</p>
-                    <p class="btn btn-link">Drain Unblocking West London</p>
-                    <p class="btn btn-link">Bathrooms En-Suites Installations Kensington</p>
-                    <p class="btn btn-link">Kitchen Installations Chelsea</p>
-                    <p class="btn btn-link">Commercial Plumbing for Independent Retailers Hammersmith</p>
-                    <p class="btn btn-link">Property Renovations Fulham</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter - Local Plumbing Tips for Kensington, Chelsea, Hammersmith & Fulham</h4>
-                    <p>Subscribe for expert tips on emergency plumber repairs, boiler installations, drain unblocking, bathrooms en-suites, kitchen installations, property renovations, and commercial plumbing services in West London. Stay updated with our family-run local plumbers serving residents and independent retailers in Kensington, Chelsea, Hammersmith & Fulham.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.1691752015104!2d-0.21142502448533299!3d51.49176291184696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760fb4e226f73d%3A0xb8c7d1e74c866d1b!2sKensington%20plumbing%20services!5e0!3m2!1sen!2suk!4v1752743406988!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="col-md-5">
-                    <iframe src='https://widgets.sociablekit.com/google-business-profile/iframe/25579254' frameborder='0' width='100%' height='300'></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="#">Kensington Plumbing Services</a>, All Rights Reserved. Family-Run Local Plumbers in Kensington, Chelsea, Hammersmith & Fulham - Emergency Repairs, Boiler Installations, Drain Unblocking, Bathrooms En-Suites, Kitchen Installations, Property Renovations, Commercial Plumbing Services in West London Since 1998.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+<!-- JavaScript for Quiz Logic -->
+<script>
+    const form = document.getElementById('eligibility-form');
+    const steps = document.querySelectorAll('.quiz-step');
+    const progressBar = document.getElementById('progress-bar');
+    let currentStep = 0;
 
+    function showStep(n) {
+        steps.forEach(step => step.classList.remove('active'));
+        steps[n].classList.add('active');
+        progressBar.style.width = ((n + 1) * 25) + '%';
+    }
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    document.querySelectorAll('.btn-next').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep < steps.length - 2) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+    });
 
+    document.querySelectorAll('.btn-prev').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
+    });
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    document.getElementById('submit-quiz').addEventListener('click', () => {
+        currentStep = steps.length - 1;
+        showStep(currentStep);
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        const age = document.querySelector('input[name="age"]:checked')?.value;
+        const care = document.querySelector('input[name="care"]:checked')?.value;
+        const income = document.querySelector('input[name="income"]:checked')?.value;
+        const mobility = document.querySelector('input[name="mobility"]:checked')?.value;
+
+        let results = '<ul class="list-unstyled">';
+
+        if (age === 'yes') {
+            if (care === 'yes') {
+                results += '<li class="mb-3"><strong>Attendance Allowance:</strong> <span class="text-success">Likely eligible</span> – worth up to £5,741 per year</li>';
+            } else {
+                results += '<li class="mb-3"><strong>Attendance Allowance:</strong> <span class="text-warning">Possibly not eligible</span> – needs daily care or supervision</li>';
+            }
+
+            if (income === 'low') {
+                results += '<li class="mb-3"><strong>Pension Credit:</strong> <span class="text-success">Likely eligible</span> – average £3,900 per year top-up</li>';
+            } else {
+                results += '<li class="mb-3"><strong>Pension Credit:</strong> <span class="text-warning">Possibly not eligible</span> – depends on exact income and savings</li>';
+            }
+
+            if (mobility === 'yes') {
+                results += '<li class="mb-3"><strong>Blue Badge:</strong> <span class="text-success">Likely eligible</span> – easier parking access</li>';
+            } else {
+                results += '<li class="mb-3"><strong>Blue Badge:</strong> <span class="text-warning">Possibly not eligible</span> – needs significant mobility problems</li>';
+            }
+        } else {
+            results += '<li class="mb-3 text-danger">These benefits are for people at State Pension age (66+) or older. If you are under 66, you may be eligible for other support – call us to discuss.</li>';
+        }
+
+        results += '</ul>';
+        document.getElementById('results-content').innerHTML = results;
+    });
+
+    // Reset quiz
+    document.querySelectorAll('.btn-prev').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentStep === steps.length - 1) {
+                currentStep = 0;
+                showStep(0);
+                form.reset();
+            }
+        });
+    });
+</script>
 </body>
-
 </html>
