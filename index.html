@@ -43,19 +43,21 @@
         .service-carousel .bg-light { min-height: 400px; }
         .testimonial-carousel .testimonial-text { min-height: 150px; }
         .navbar-brand img { height: 60px; width: auto; }
-        /* Better contact font in topbar */
-        .topbar-contact {
+        /* Topbar phone styling */
+        .topbar-phone {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #FF6600;
+            margin: 0;
+        }
+        .topbar-email {
             font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
             font-size: 1.1rem;
             color: #333;
         }
-        .topbar-phone {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #FF6600;
-        }
         @media (max-width: 767px) {
+            .topbar-phone { font-size: 1.6rem; }
             .navbar-brand img { height: 40px !important; }
             .display-3 { font-size: 2rem !important; }
             .container-xxl { padding: 0 !important; }
@@ -69,7 +71,6 @@
             .accordion-item .accordion-button { font-size: 1rem; }
             table.table { font-size: 0.9rem; }
             table.table td, table.table th { padding: 0.5rem; }
-            .topbar-phone { font-size: 1.2rem; }
         }
         .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label { opacity: 0.65; transform: scale(.85) translateY(-.75rem) translateX(.15rem); }
         body { overflow-x: hidden; }
@@ -108,20 +109,15 @@
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
             <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                <a href="" class="navbar-brand m-0 p-0 d-flex align-items-center">
-                    <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 60px; width: auto;">
-                    <h1 class="ms-3 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
+                <a href="" class="navbar-brand m-0 p-0">
+                    <h1 class="text-primary m-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.8rem;">Claim For Me</h1>
                 </a>
             </div>
             <div class="col-lg-6 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center topbar-contact">
-                    <div class="me-5">
-                        <p class="mb-0">Call us anytime</p>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <div class="me-5 text-end">
                         <p class="mb-0 topbar-phone">020 7122 8324</p>
-                    </div>
-                    <div class="me-4">
-                        <i class="far fa-envelope-open text-primary me-2"></i>
-                        <span>info@claimforme.co.uk</span>
+                        <p class="mb-0 topbar-email">Call us anytime for help</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -141,8 +137,7 @@
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <img src="img/mend-logo.png" alt="Claim For Me Logo - Benefits Claim Help Over 66" style="height: 40px; width: auto;">
-                <h1 class="ms-2 mb-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: #808080;">Claim For <span style="color: #FF6600;">Me</span></h1>
+                <h1 class="text-primary m-0" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.8rem;">Claim For Me</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -222,8 +217,8 @@
                 </div>
                 <div class="col-lg-6 pt-4" style="min-height: 500px;">
                     <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/mend-logo.png" style="object-fit: contain; padding: 0 0 50px 100px;" alt="Claim For Me Benefits Assistance">
-                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="https://cdn-icons-png.flaticon.com/512/5099/5099885.png" style="object-fit: contain;" alt="Benefits support icon">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about-1.jpg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Claim For Me Benefits Assistance">
+                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="img/about-2.jpg" style="object-fit: cover;" alt="Benefits support">
                     </div>
                 </div>
             </div>
@@ -610,15 +605,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                    </div>
+            <!-- Footer replacement for map - relevant call-to-action -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center">
+                    <h5 class="text-light mb-3">Don't miss out on benefits you're entitled to</h5>
+                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year. Get your free eligibility check today.</p>
+                    <a href="free-check.html" class="btn btn-outline-primary py-3 px-5 mt-2">Start Free Eligibility Check</a>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="copyright text-center">
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
                 </div>
             </div>
         </div>
