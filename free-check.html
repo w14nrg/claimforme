@@ -27,6 +27,7 @@
         .quiz-step { display: none; }
         .quiz-step.active { display: block; }
         .btn-next, .btn-prev { min-width: 120px; }
+        #enquiry-form { display: none; }
     </style>
 </head>
 <body>
@@ -81,7 +82,7 @@
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #808080;">Free Eligibility Check</h1>
-            <p class="fs-4 fst-italic text-secondary">Answer the questions to see if you may qualify for Attendance Allowance, Pension Credit or Blue Badge</p>
+            <p class="fs-4 fst-italic text-secondary">Answer the questions to see if you may qualify</p>
         </div>
     </div>
 
@@ -371,7 +372,7 @@
 
                 <div class="quiz-step" id="result">
                     <h4 class="mb-4 text-primary">Your Results</h4>
-                    <div id="results-content" class="result-box mb-4">
+                    <div id="results-content" class="alert alert-info mb-4">
                         <p>We will review your answers and be in touch if you are likely to be eligible for any of these benefits.</p>
                         <p>Thank you for completing the check. We will contact you soon if you appear to qualify.</p>
                     </div>
@@ -380,10 +381,25 @@
                 </div>
             </form>
 
-            <div id="enquiry-form" class="mt-5" style="display:none;">
-                <h4 class="mb-4 text-primary">We will review your answers</h4>
-                <p class="mb-4">If you are likely to be eligible, we will be in touch shortly. You can also call us now on 020 7122 8324.</p>
-                <a href="tel:02071228324" class="btn btn-primary py-3 px-5">Call Now</a>
+            <div id="enquiry-form" class="mt-5">
+                <h4 class="mb-4 text-primary">Send Your Results to Us</h4>
+                <p class="mb-4">We'll email you the summary and be in touch if you are likely to be eligible.</p>
+                <form action="mailto:claimsformeuk@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control py-3" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control py-3" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="tel" class="form-control py-3" name="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <textarea class="form-control py-3" name="extra" rows="4" placeholder="Any extra details..."></textarea>
+                    </div>
+                    <input type="hidden" name="subject" value="Free Eligibility Check Results">
+                    <button type="submit" class="btn btn-primary py-3 px-5 w-100">Send Results & Get Help</button>
+                </form>
             </div>
         </div>
     </div>
@@ -394,7 +410,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
@@ -403,11 +419,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours</h4>
+                    <h4 class="text-light mb-4">Opening Hours - Benefits Claim Support</h4>
                     <h6 class="text-light">Monday - Sunday:</h6>
-                    <p class="mb-4">Flexible – Call or Enquire Anytime</p>
+                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
                     <h6 class="text-light">Holidays:</h6>
-                    <p class="mb-0">Enquiries Welcome</p>
+                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Our Services</h4>
@@ -418,8 +434,8 @@
                     <p class="btn btn-link">Full Application Guidance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Subscribe for benefits tips over 66.</p>
+                    <h4 class="text-light mb-4">Newsletter - Benefits Tips Over 66</h4>
+                    <p>Subscribe for updates and tips on claiming Attendance Allowance, Pension Credit, Blue Badge and other benefits for people over State Pension age.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
@@ -435,7 +451,7 @@
             </div>
             <div class="container mt-5">
                 <div class="copyright text-center">
-                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved.
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
                 </div>
             </div>
         </div>
