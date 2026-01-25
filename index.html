@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
     <meta charset="utf-8">
     <title>Claim Attendance Allowance & Pension Credit | Expert Help Over 66 | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
-    <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
+    <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. Success-based fee from £99. 99% success rate. Call 020 7122 8324.">
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
-    <!-- Google Web Fonts - Added Merriweather for warmer headings -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -23,115 +23,59 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
+    <!-- Soft Colour/Font Scheme -->
     <style>
-        /* Primary colours kept for CTAs */
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
         .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
         .text-secondary { color: #808080 !important; }
-        .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
-        .bg-dark { background-color: #808080 !important; }
-        .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
-        .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
-        .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
-
-        /* Softer headings - Merriweather serif for warmth and elegance */
+        .bg-light { background-color: #f8f8f8 !important; }
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
             color: #333333 !important;
             line-height: 1.3 !important;
         }
-
-        /* Hero title slightly less bold */
-        .display-3 {
-            font-weight: 600 !important;
-            font-size: 3rem !important;
-        }
-
-        /* Logo - elegant and calm */
+        .display-3 { font-weight: 600 !important; }
         .navbar-brand h1 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
             font-size: 2.6rem !important;
             color: #333333 !important;
         }
-
-        /* Body text - highly readable for seniors */
-        body, p, li, .accordion-body, .table {
+        body, p, li, .accordion-body {
             font-family: 'Open Sans', sans-serif !important;
             color: #444444 !important;
             font-size: 1.1rem !important;
             line-height: 1.6 !important;
         }
-
-        /* Nav links - softer */
         .navbar-light .navbar-nav .nav-link {
             color: #444444 !important;
             font-weight: 500 !important;
-            font-family: 'Open Sans', sans-serif !important;
         }
         .navbar-light .navbar-nav .nav-link:hover,
         .navbar-light .navbar-nav .nav-link.active {
             color: #FF6600 !important;
         }
-
-        /* Dropdown styling */
-        .dropdown-menu {
-            border: none !important;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .dropdown-item:hover {
-            background-color: #fff8f2 !important;
-            color: #FF6600 !important;
-        }
-
-        /* Cleaner nav bar */
         .nav-bar { background-color: #ffffff !important; }
-
-        /* Other section tweaks */
-        .video {
-            background-color: #FF6600 !important;
-            background-image: none !important;
-            padding: 100px 0 !important;
-            color: white !important;
+        .service-item-top { 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            cursor: pointer;
+            display: block;
         }
-        .video h1, .video h3 {
-            color: white !important;
+        .service-item-top:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .fact {
-            background-image: none !important;
-            background-color: #FF6600 !important;
-        }
-        .testimonial-text {
-            background-color: #fff8f2 !important;
-            border: 1px solid #ffe0cc !important;
-            border-left: 5px solid #FF6600 !important;
-            color: #333 !important;
-        }
-        .testimonial-text p {
-            color: #333 !important;
-        }
-
+        .fact h2 a { color: white !important; text-decoration: none; }
+        .fact h2 a:hover { text-decoration: underline; }
+        .video { background-color: #FF6600 !important; padding: 100px 0 !important; color: white !important; }
+        .fact { background-color: #FF6600 !important; }
+        .testimonial-text { background-color: #fff8f2 !important; border-left: 5px solid #FF6600 !important; }
         @media (max-width: 767px) {
             .display-3 { font-size: 2.5rem !important; }
-            .container-xxl { padding: 0 !important; }
-            .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-            .mb-5 { margin-bottom: 3rem !important; }
-            .mb-4 { margin-bottom: 1.5rem !important; }
-            .mb-3 { margin-bottom: 1rem !important; }
-            .service-item-top .overflow-hidden { height: auto !important; }
-            .service-carousel .bg-light { min-height: auto; padding: 15px !important; }
-            .fact .row g-4 { flex-direction: column; }
-            .accordion-item .accordion-button { font-size: 1.1rem; }
-            table.table { font-size: 1rem; }
-            table.table td, table.table th { padding: 0.75rem; }
         }
         body { overflow-x: hidden; }
-        .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
-        .row { margin-left: -15px; margin-right: -15px; }
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
     </style>
     <!-- Local Business Schema -->
@@ -219,8 +163,9 @@
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
-            <p class="fs-4 fst-italic text-secondary">"trusted help, better outcomes" – Attendance Allowance, Pension Credit, Blue Badge for over 66</p>
-            <a href="free-check.html" class="btn btn-primary py-3 px-5 mt-3">Start Free Eligibility Check</a>
+            <p class="fs-4 fst-italic text-secondary mb-4">"trusted help, better outcomes" – Attendance Allowance, Pension Credit, Blue Badge for over 66</p>
+            <p class="fs-3 text-primary fw-bold">Success-based fee from £99 – no upfront costs</p>
+            <p class="fs-5">Choose a benefit below or from the menu above to start your free eligibility quiz</p>
         </div>
     </div>
     <!-- Hero Section End -->
@@ -229,30 +174,33 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
+                <a href="eligibility-attendance-allowance.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.1s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="aa1.jpg" alt="Attendance Allowance illustration" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="aa1.jpg" alt="Senior receiving care – Attendance Allowance" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Attendance Allowance</h5>
+                        <i class="fa fa-arrow-right text-primary"></i>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
+                </a>
+                <a href="eligibility-pension-credit.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="aa2.jpg" alt="Pension Credit illustration" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="aa2.jpg" alt="Financial support for pensioners – Pension Credit" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Pension Credit</h5>
+                        <i class="fa fa-arrow-right text-primary"></i>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
+                </a>
+                <a href="eligibility-blue-badge.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
                     <div class="overflow-hidden" style="height: 300px !important;">
-                        <img class="img-fluid w-100 h-100" src="aa3.jpg" alt="Blue Badge illustration" style="object-fit: cover !important;">
+                        <img class="img-fluid w-100 h-100" src="aa3.jpg" alt="Blue Badge parking permit card" style="object-fit: cover !important;">
                     </div>
                     <div class="d-flex align-items-center justify-content-between bg-light p-4">
                         <h5 class="text-truncate me-3 mb-0">Blue Badge</h5>
+                        <i class="fa fa-arrow-right text-primary"></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -265,7 +213,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">About Claim For Me</h6>
                     <h1 class="mb-4">Expert Assistance to Claim Benefits You're Entitled To</h1>
-                    <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
+                    <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee from £99 is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
@@ -354,23 +302,23 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fas fa-hand-holding-usd fa-2x text-white mb-3"></i>
-                    <h2 class="mb-2 text-white">Attendance Allowance</h2>
+                    <h2 class="mb-2 text-white"><a href="eligibility-attendance-allowance.html">Attendance Allowance</a></h2>
                     <p class="text-white">Extra financial support for over 66s needing help with daily living due to illness or disability – worth up to £5,741 per year. We manage the entire claim process.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fas fa-piggy-bank fa-2x text-white mb-3"></i>
-                    <h2 class="mb-2 text-white">Pension Credit</h2>
+                    <h2 class="mb-2 text-white"><a href="eligibility-pension-credit.html">Pension Credit</a></h2>
                     <p class="text-white">Top-up for those on low income – average award around £3,900 annually. We check eligibility and handle your application.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fas fa-parking fa-2x text-white mb-3"></i>
-                    <h2 class="mb-2 text-white">Blue Badge</h2>
+                    <h2 class="mb-2 text-white"><a href="eligibility-blue-badge.html">Blue Badge</a></h2>
                     <p class="text-white">Parking permit for people with mobility difficulties – we provide complete application support.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fas fa-search fa-2x text-white mb-3"></i>
                     <h2 class="mb-2 text-white">Free Eligibility Check</h2>
-                    <p class="text-white">Quick, no-obligation conversation to discover which benefits you could receive – call today.</p>
+                    <p class="text-white">Quick, no-obligation quiz to discover which benefits you could receive – choose above.</p>
                 </div>
             </div>
         </div>
@@ -396,31 +344,25 @@
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-hand-holding-heart fa-2x text-primary"></i>
                             </div>
-                            <h4 class="mb-3">Attendance Allowance Claim Help</h4>
+                            <h4 class="mb-3"><a href="eligibility-attendance-allowance.html">Attendance Allowance Claim Help</a></h4>
                             <p>Financial support for those over 66 with health-related daily living needs – up to £5,741 per year. We manage your application from start to finish.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Up to £5,741 annually</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>No means-testing</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Possible backdated payments</p>
+                            <a href="eligibility-attendance-allowance.html" class="btn btn-primary mt-3">Check Eligibility →</a>
                         </div>
                         <div class="bg-light p-4">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-wallet fa-2x text-primary"></i>
                             </div>
-                            <h4 class="mb-3">Pension Credit Claim Assistance</h4>
+                            <h4 class="mb-3"><a href="eligibility-pension-credit.html">Pension Credit Claim Assistance</a></h4>
                             <p>Supplement to State Pension for those on low incomes – average £3,900 per year. We check eligibility and complete your claim.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Average £3,900 per year</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Backdated payments possible</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Full application support</p>
+                            <a href="eligibility-pension-credit.html" class="btn btn-primary mt-3">Check Eligibility →</a>
                         </div>
                         <div class="bg-light p-4">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-parking fa-2x text-primary"></i>
                             </div>
-                            <h4 class="mb-3">Blue Badge Application Support</h4>
+                            <h4 class="mb-3"><a href="eligibility-blue-badge.html">Blue Badge Application Support</a></h4>
                             <p>Parking permit for people with mobility challenges – we guide you through the entire application process.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Improved parking access</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>For drivers and passengers</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert guidance</p>
+                            <a href="eligibility-blue-badge.html" class="btn btn-primary mt-3">Check Eligibility →</a>
                         </div>
                     </div>
                 </div>
@@ -432,9 +374,9 @@
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
-            <h1 class="mb-4">Ready to Claim What You're Entitled To?</h1>
-            <p class="mb-4">Many people over 66 miss out on thousands of pounds every year. Start your free eligibility check today – no obligation, no upfront cost.</p>
-            <a href="free-check.html" class="btn btn-secondary py-3 px-5">Start Free Eligibility Check</a>
+            <h1 class="mb-4">Ready to Check Your Eligibility?</h1>
+            <p class="mb-4">Choose a benefit from the menu above or the sections on this page</p>
+            <a href="#top" class="btn btn-secondary py-3 px-5">Back to Menu ↑</a>
         </div>
     </div>
     <!-- Call to Action End -->
@@ -570,7 +512,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            No. There are no upfront or initial fees. You only pay a one-time fee if your claim is successful, and in most cases this is covered by the backdated payment you receive from the Department for Work and Pensions.
+                            No. There are no upfront or initial fees. You only pay a one-time fee from £99 if your claim is successful, and in most cases this is covered by the backdated payment you receive from the Department for Work and Pensions.
                         </div>
                     </div>
                 </div>
@@ -662,9 +604,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Our Services</h4>
-                    <p class="btn btn-link">Attendance Allowance Claims</p>
-                    <p class="btn btn-link">Pension Credit Applications</p>
-                    <p class="btn btn-link">Blue Badge Support</p>
+                    <p class="btn btn-link"><a href="eligibility-attendance-allowance.html">Attendance Allowance Claims</a></p>
+                    <p class="btn btn-link"><a href="eligibility-pension-credit.html">Pension Credit Applications</a></p>
+                    <p class="btn btn-link"><a href="eligibility-blue-badge.html">Blue Badge Support</a></p>
                     <p class="btn btn-link">Free Eligibility Checks</p>
                     <p class="btn btn-link">Full Application Guidance</p>
                 </div>
@@ -680,8 +622,8 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-md-8 text-center">
                     <h5 class="text-light mb-3">Don't miss out on benefits you're entitled to</h5>
-                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year. Get your free eligibility check today.</p>
-                    <a href="free-check.html" class="btn btn-outline-primary py-3 px-5 mt-2">Start Free Eligibility Check</a>
+                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year.</p>
+                    <a href="#top" class="btn btn-outline-primary py-3 px-5 mt-2">Choose a Benefit Above</a>
                 </div>
             </div>
             <div class="container mt-5">
