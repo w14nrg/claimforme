@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pension Credit Eligibility Quiz | Average £3,900/Year | Claim For Me</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="Free 25-question Pension Credit eligibility quiz. Answers emailed for expert review – no obligation, success-based fee from £99.">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Soft Colour/Font Scheme -->
+    <style>
+        .text-primary { color: #FF6600 !important; }
+        .bg-primary { background-color: #FF6600 !important; }
+        .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
+        .bg-light { background-color: #f8f8f8 !important; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Merriweather', serif !important; color: #333333 !important; }
+        body, p, label, .form-check-label { font-family: 'Open Sans', sans-serif !important; color: #444444 !important; font-size: 1.1rem !important; }
+        .navbar-light .navbar-nav .nav-link { color: #444444 !important; }
+        .navbar-light .navbar-nav .nav-link:hover, .nav-link.active { color: #FF6600 !important; }
+        .nav-bar { background-color: #ffffff !important; }
+        .quiz-step { display: none; }
+        .quiz-step.active { display: block; }
+        .progress { height: 10px; }
+        .form-check-input:checked { background-color: #FF6600; border-color: #FF6600; }
+        .bg-dark { background-color: #808080 !important; }
+        .button-group { display: flex; justify-content: space-between; margin-top: 30px; }
+        .button-group .btn { min-width: 120px; }
+        .error-message { color: red; font-size: 0.9rem; margin-top: 5px; display: none; }
+        .thank-you { display: none; text-align: center; padding: 60px 20px; background: #fff8f2; border-left: 5px solid #FF6600; margin-top: 40px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-6 col-md-12 text-center text-lg-start">
+                <a href="index.html" class="navbar-brand m-0 p-0">
+                    <h1 class="m-0">Claim For Me</h1>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <div class="me-5 text-end">
+                        <p class="mb-0 topbar-phone">020 7122 8324</p>
+                        <p class="mb-0 topbar-email">Call us anytime for help</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+                <h1 class="m-0">Claim For Me</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Eligibility Check
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="eligibilityDropdown">
+                            <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                            <li><a class="dropdown-item active" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                            <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-light py-5 mb-5">
+        <div class="container text-center">
+            <h1 class="display-3 mb-4">Pension Credit<br><span class="text-primary">25-Question Eligibility Quiz</span></h1>
+            <p class="fs-4 mb-4">Your answers will be emailed to our experts for free review and follow-up call.</p>
+            <a href="tel:02071228324" class="btn btn-primary py-3 px-5">Call Now: 020 7122 8324</a>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Explanation Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">What is Pension Credit?</h2>
+                    <p>Pension Credit is an income-related benefit for people over State Pension age on low income. It tops up your weekly income to a guaranteed minimum level and can provide extra for savings, disability, or caring responsibilities.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Guarantee Credit:</strong> Tops up income to minimum level (e.g., £201.05 single / £306.85 couple per week – 2024/25 rates, subject to change).</li>
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Savings Credit:</strong> Extra for modest savings (available if reached State Pension age before 6 April 2016).</li>
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Average award:</strong> Around £3,900 per year.</li>
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Eligibility basics:</strong> Over qualifying age, low income, UK resident, savings generally under £10,000 for full amount.</li>
+                        <li class="mb-3"><i class="fa fa-check text-primary me-3"></i><strong>Extras:</strong> Severe disability premium, carer premium, housing costs help.</li>
+                    </ul>
+                    <p>We specialise in these claims – 99% success rate. Success-based fee from £99 only if you win (often covered by backpayments).</p>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded" src="aa2.jpg" alt="Financial support for pensioners – Pension Credit">
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p class="fs-5 fw-bold">Complete the quiz below – we will review your answers and call you.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Explanation End -->
+
+    <!-- Quiz Form Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">25-Question Eligibility Quiz</h2>
+            <p class="text-center mb-5">Answer Yes or No to each question. The more "Yes" answers in relevant sections, the stronger the potential case.</p>
+
+            <div class="progress mb-5">
+                <div class="progress-bar bg-primary" id="progressBar" style="width: 0%;"></div>
+            </div>
+
+            <form id="quizForm" action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Pension Credit Quiz Submission">
+                <input type="hidden" name="_autoresponse" value="Thank you for completing the Pension Credit eligibility quiz. We have received your answers and will call you soon to discuss next steps.">
+
+                <!-- Question 1 -->
+                <div class="quiz-step active" id="step1">
+                    <h5>1. Are you over the qualifying age for Pension Credit?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q1" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q1" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error1">Please select Yes or No</div>
+                    <div class="button-group">
+                        <div></div>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-step" id="step2">
+                    <h5>2. Do you have a low income below the Pension Credit threshold?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q2" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q2" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error2">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-step" id="step3">
+                    <h5>3. Do you have savings or investments under £10,000?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q3" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q3" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error3">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(3)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-step" id="step4">
+                    <h5>4. Do you live permanently in the UK?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q4" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q4" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error4">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(4)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-step" id="step5">
+                    <h5>5. Do you have the right to reside in the UK (e.g., British citizen)?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q5" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q5" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error5">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(5)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="quiz-step" id="step6">
+                    <h5>6. Are you registered blind or severely sight impaired?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q6" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q6" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error6">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(6)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="quiz-step" id="step7">
+                    <h5>7. Do you have a partner living with you?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q7" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q7" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error7">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(7)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="quiz-step" id="step8">
+                    <h5>8. Does your partner live permanently in a care home?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q8" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q8" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error8">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(8)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="quiz-step" id="step9">
+                    <h5>9. Are you separated from your partner?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q9" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q9" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error9">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(9)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="quiz-step" id="step10">
+                    <h5>10. Do you have any children or qualifying young people you want to claim for?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q10" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q10" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error10">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(10)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="quiz-step" id="step11">
+                    <h5>11. Does a child live with you all the time?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q11" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q11" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error11">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(11)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="quiz-step" id="step12">
+                    <h5>12. Do you pay rent, Council Tax, or both for your home?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q12" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q12" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error12">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(12)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="quiz-step" id="step13">
+                    <h5>13. Do you live in a care home?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q13" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q13" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error13">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(13)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="quiz-step" id="step14">
+                    <h5>14. Do you have savings or investments over £10,000?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q14" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q14" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error14">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(14)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="quiz-step" id="step15">
+                    <h5>15. Are you entitled to Disability Living Allowance?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q15" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q15" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error15">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(15)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="quiz-step" id="step16">
+                    <h5>16. Is a child entitled to Personal Independence Payment?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q16" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q16" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error16">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(16)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="quiz-step" id="step17">
+                    <h5>17. Do you receive Carer's Allowance?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q17" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q17" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error17">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(17)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="quiz-step" id="step18">
+                    <h5>18. Do you spend 35 hours a week caring for someone on disability benefits?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q18" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q18" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error18">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(18)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 19 -->
+                <div class="quiz-step" id="step19">
+                    <h5>19. Do you receive a private pension?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q19" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q19" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error19">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(19)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 20 -->
+                <div class="quiz-step" id="step20">
+                    <h5>20. Are you doing paid work now?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q20" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q20" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error20">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(20)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 21 -->
+                <div class="quiz-step" id="step21">
+                    <h5>21. Do you have other money coming in (e.g., lodging allowance)?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q21" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q21" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error21">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(21)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 22 -->
+                <div class="quiz-step" id="step22">
+                    <h5>22. Are you in hospital as an inpatient?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q22" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q22" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error22">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(22)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 23 -->
+                <div class="quiz-step" id="step23">
+                    <h5>23. Have you recently arrived in the UK from abroad?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q23" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q23" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error23">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(23)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 24 -->
+                <div class="quiz-step" id="step24">
+                    <h5>24. Does your immigration status allow access to public funds?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q24" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q24" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error24">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(24)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Question 25 -->
+                <div class="quiz-step" id="step25">
+                    <h5>25. Do you expect to receive money in the next 12 months?</h5>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Q25" value="Yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q25" value="No">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="error-message" id="error25">Please select Yes or No</div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep(25)">Next →</button>
+                    </div>
+                </div>
+
+                <!-- Final Step -->
+                <div class="quiz-step" id="step-final">
+                    <h4>Your Details (all required)</h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label>Name *</label>
+                            <input type="text" name="Name" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="Phone" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                            <label>Full Address (including postcode) *</label>
+                            <textarea name="Address" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label>Email *</label>
+                            <input type="email" name="Email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <h4 class="mt-5">Anything else we should know?</h4>
+                    <p>(Optional – e.g., details about your income, savings, or circumstances)</p>
+                    <textarea name="AdditionalInfo" class="form-control" rows="5"></textarea>
+
+                    <p class="mt-4">Click Submit – your answers will be sent directly to our team.</p>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-outline-primary" onclick="prevStep()">← Back</button>
+                        <button type="submit" class="btn btn-primary">Submit Answers</button>
+                    </div>
+                </div>
+
+                <!-- Thank You Message -->
+                <div class="thank-you" id="thankYou">
+                    <h3>Thank You!</h3>
+                    <p>Your quiz answers have been sent successfully.</p>
+                    <p>We will review them and call you soon to discuss next steps.</p>
+                    <a href="index.html" class="btn btn-primary mt-3">Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Quiz Form End -->
+
+    <script>
+        const steps = ['step1','step2','step3','step4','step5','step6','step7','step8','step9','step10','step11','step12','step13','step14','step15','step16','step17','step18','step19','step20','step21','step22','step23','step24','step25','step-final'];
+        let current = 0;
+
+        function updateProgress() {
+            const progress = ((current + 1) / steps.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextStep(questionNumber) {
+            const radioName = 'Q' + questionNumber;
+            const selected = document.querySelector(`input[name="${radioName}"]:checked`);
+            const errorId = 'error' + questionNumber;
+            const errorElement = document.getElementById(errorId);
+
+            if (!selected) {
+                errorElement.style.display = 'block';
+                return;
+            } else {
+                errorElement.style.display = 'none';
+            }
+
+            document.getElementById(steps[current]).classList.remove('active');
+            current++;
+            document.getElementById(steps[current]).classList.add('active');
+            updateProgress();
+        }
+
+        function prevStep() {
+            document.getElementById(steps[current]).classList.remove('active');
+            current--;
+            document.getElementById(steps[current]).classList.add('active');
+            updateProgress();
+        }
+
+        function showThankYou() {
+            document.getElementById('quizForm').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+        }
+
+        updateProgress();
+    </script>
+
+    <!-- Inline Spinner Hide -->
+    <script>
+        window.addEventListener('load', function() {
+            const spinner = document.getElementById('spinner');
+            if (spinner) {
+                spinner.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contact Claim For Me</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@claimforme.co.uk</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Opening Hours - Benefits Claim Support</h4>
+                    <h6 class="text-light">Monday - Sunday:</h6>
+                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
+                    <h6 class="text-light">Holidays:</h6>
+                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Services</h4>
+                    <p class="btn btn-link">Attendance Allowance Claims</p>
+                    <p class="btn btn-link">Pension Credit Applications</p>
+                    <p class="btn btn-link">Blue Badge Support</p>
+                    <p class="btn btn-link">Free Eligibility Checks</p>
+                    <p class="btn btn-link">Full Application Guidance</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter - Benefits Tips Over 66</h4>
+                    <p>Subscribe for updates and tips on claiming Attendance Allowance, Pension Credit, Blue Badge and other benefits for people over State Pension age.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center">
+                    <h5 class="text-light mb-3">Don't miss out on benefits you're entitled to</h5>
+                    <p class="text-muted">Many people over 66 are missing thousands of pounds each year. Get your free eligibility check today.</p>
+                    <a href="index.html" class="btn btn-outline-primary py-3 px-5 mt-2">Back to Home</a>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="copyright text-center">
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
