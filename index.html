@@ -130,27 +130,35 @@
         }
         .fact h2 a { color: white !important; text-decoration: none; }
         .fact h2 a:hover { text-decoration: underline; }
-        /* Stronger pulse animation for price line – now more noticeable */
-        @keyframes pricePulse {
+        /* Orange flashing badge for "from £99" */
+        @keyframes badgePulse {
             0% {
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
                 transform: scale(1);
-                text-shadow: 0 0 0 rgba(255, 102, 0, 0);
             }
             50% {
-                transform: scale(1.1);
-                text-shadow: 0 0 35px rgba(255, 102, 0, 1);
+                box-shadow: 0 0 30px rgba(255, 102, 0, 0.9);
+                transform: scale(1.08);
             }
             100% {
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
                 transform: scale(1);
-                text-shadow: 0 0 0 rgba(255, 102, 0, 0);
             }
         }
-        .price-line {
+        .price-badge {
             display: inline-block;
-            animation: pricePulse 2.5s ease-in-out infinite;
+            background-color: #FF6600;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin: 20px 0;
+            animation: badgePulse 3s ease-in-out infinite;
         }
         @media (max-width: 767px) {
             .display-3 { font-size: 2.5rem !important; }
+            .price-badge { font-size: 1.6rem; padding: 10px 24px; }
             .container-xxl { padding: 0 !important; }
             .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
             .mb-5 { margin-bottom: 3rem !important; }
@@ -252,13 +260,14 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <!-- Hero Section Start -->
+    <!-- Hero Section Start - Static text + flashing orange badge -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
             <p class="fs-4 fst-italic text-secondary mb-4">"trusted help, better outcomes" – Attendance Allowance, Pension Credit, Blue Badge for over 66</p>
-            <p class="fs-3 text-primary fw-bold mb-3 price-line">Success-based fee from £99 – no upfront costs</p>
-            <p class="fs-5">Choose a benefit below or from the menu above to start your free eligibility quiz</p>
+            <p class="fs-3 text-primary fw-bold mb-2">Success-based – no upfront costs</p>
+            <div class="price-badge">from £99</div>
+            <p class="fs-5 mt-4">Choose a benefit below or from the menu above to start your free eligibility quiz</p>
         </div>
     </div>
     <!-- Hero Section End -->
