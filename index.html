@@ -54,6 +54,18 @@
             font-weight: 700 !important;
             font-size: 2.6rem !important;
             color: #333333 !important;
+            margin: 0;
+        }
+        /* Fancy logo - orange C with wavy orange squiggle/tail under the rest */
+        .navbar-brand .logo-c {
+            color: #FF6600 !important;
+        }
+        .navbar-brand .logo-rest {
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #FF6600;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 6px;
         }
         /* Body text - highly readable for seniors */
         body, p, li, .accordion-body, .table {
@@ -169,7 +181,9 @@
         <div class="row align-items-center top-bar">
             <div class="col-lg-6 col-md-12 text-center text-lg-start">
                 <a href="index.html" class="navbar-brand m-0 p-0">
-                    <h1 class="m-0">Claim For Me</h1>
+                    <h1 class="m-0">
+                        <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
+                    </h1>
                 </a>
             </div>
             <div class="col-lg-6 col-md-12 text-end">
@@ -192,7 +206,9 @@
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
             <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="m-0">Claim For Me</h1>
+                <h1 class="m-0">
+                    <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
+                </h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -217,12 +233,12 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <!-- Hero Section Start - Updated: removed button, added from £99 and direction text -->
+    <!-- Hero Section Start - Updated: removed button, added from £99 and direction text + pulsing price line -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
             <p class="fs-4 fst-italic text-secondary mb-4">"trusted help, better outcomes" – Attendance Allowance, Pension Credit, Blue Badge for over 66</p>
-            <p class="fs-3 text-primary fw-bold mb-3">Success-based fee from £99 – no upfront costs</p>
+            <p class="fs-3 text-primary fw-bold mb-3 animate__animated animate__pulse animate__infinite animate__slow">Success-based fee from £99 – no upfront costs</p>
             <p class="fs-5">Choose a benefit below or from the menu above to start your free eligibility quiz</p>
         </div>
     </div>
