@@ -560,7 +560,7 @@
                         </div>
                         <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
 
-                        <!-- Form with AJAX submission for instant pop-up confirmation -->
+                        <!-- Form with AJAX submission -->
                         <form id="callback-form">
                             <!-- Personal Details -->
                             <div class="row g-3 mb-5">
@@ -594,7 +594,6 @@
                                     </h2>
                                     <div id="collapseEligibility" class="accordion-collapse collapse" aria-labelledby="headingEligibility" data-bs-parent="#eligibilityAccordion">
                                         <div class="accordion-body text-start">
-                                            <!-- (All 5 questions unchanged from previous) -->
                                             <div class="mb-4">
                                                 <p class="fw-bold mb-3">1. Are you aged 66 or older? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
@@ -608,7 +607,62 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Repeat the other 4 questions exactly as in your last working version -->
+
+                                            <div class="mb-4">
+                                                <p class="fw-bold mb-3">2. Do you live in England, Scotland, or Wales? *</p>
+                                                <div class="d-flex flex-wrap gap-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_yes" value="Yes" required>
+                                                        <label class="form-check-label" for="residency_yes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_no" value="No" required>
+                                                        <label class="form-check-label" for="residency_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <p class="fw-bold mb-3">3. Do you have a long-term physical or mental health condition or disability (lasting or expected to last at least 6 months)? *</p>
+                                                <div class="d-flex flex-wrap gap-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_yes" value="Yes" required>
+                                                        <label class="form-check-label" for="condition_yes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_no" value="No" required>
+                                                        <label class="form-check-label" for="condition_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
+                                                <div class="d-flex flex-wrap gap-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
+                                                        <label class="form-check-label" for="care_yes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_no" value="No" required>
+                                                        <label class="form-check-label" for="care_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <p class="fw-bold mb-3">5. Do you have severe difficulty walking or getting around outdoors due to your condition (e.g., pain, breathlessness, or balance issues)? *</p>
+                                                <div class="d-flex flex-wrap gap-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_yes" value="Yes" required>
+                                                        <label class="form-check-label" for="mobility_yes">Yes</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_no" value="No" required>
+                                                        <label class="form-check-label" for="mobility_no">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -642,20 +696,17 @@
         </div>
     </div>
 
-    <!-- AJAX Form Submission Script -->
+    <!-- AJAX Submission Script -->
     <script>
         const form = document.getElementById('callback-form');
         const submitBtn = document.getElementById('submit-btn');
         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
 
         form.addEventListener('submit', async function (e) {
-            e.preventDefault(); // Prevent page reload
-
-            // Disable button and show loading
+            e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending...';
 
-            // Collect form data
             const formData = new FormData(form);
             formData.append('_subject', 'New Callback Request - ClaimFor.me.uk');
             formData.append('_template', 'table');
@@ -667,21 +718,18 @@
                 });
 
                 if (response.ok) {
-                    successModal.show(); // Show pop-up immediately on success
+                    successModal.show(); // Show pop-up
                 } else {
-                    alert('There was an error sending your request. Please try again or call us directly.');
+                    alert('Error sending request. Please try again or call us.');
                 }
             } catch (error) {
-                alert('There was an error sending your request. Please try again or call us directly.');
+                alert('Error sending request. Please try again or call us.');
             } finally {
-                // Re-enable button
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Request Call Back';
             }
         });
     </script>
-
-    <!-- The rest of the page (Testimonial, FAQ teaser, Footer, Scripts) is unchanged from the last full version you had -->
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
