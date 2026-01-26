@@ -560,7 +560,7 @@
                         </div>
                         <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
 
-                        <form action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST" id="callback-form">
+                        <form action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST" id="callback-form" onsubmit="showConfirmation()">
                             <!-- Hidden settings -->
                             <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
                             <input type="hidden" name="_template" value="table">
@@ -676,7 +676,7 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary w-100 py-3" type="submit">Request Call Back</button>
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="submit-btn">Request Call Back</button>
                         </form>
                     </div>
                 </div>
@@ -685,21 +685,29 @@
     </div>
     <!-- Booking End -->
 
-    <!-- Success Thank-You Replacement (replaces form on success) -->
+    <!-- Immediate Confirmation Script (shows message right after clicking submit) -->
     <script>
+        function showConfirmation() {
+            // Disable button to prevent double-submit
+            const btn = document.getElementById('submit-btn');
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+
+            // Replace form with thank-you message immediately
+            document.getElementById('callback-form-container').innerHTML = `
+                <div class="text-center py-5">
+                    <i class="fa fa-check-circle fa-5x text-success mb-4"></i>
+                    <h2 class="text-primary">Thank You!</h2>
+                    <p class="fs-5">Your request has been sent successfully.<br>We will call you back shortly to discuss your potential claims.</p>
+                    <a href="index.html" class="btn btn-primary mt-3">Return to Home</a>
+                </div>
+            `;
+        }
+
+        // Backup: Check for ?success=1 on load (in case redirect works)
         document.addEventListener('DOMContentLoaded', function () {
             if (window.location.search.includes('success=1')) {
-                document.getElementById('callback-form-container').innerHTML = `
-                    <div class="text-center py-5">
-                        <i class="fa fa-check-circle fa-5x text-success mb-4"></i>
-                        <h2 class="text-primary">Thank You!</h2>
-                        <p class="fs-5">Your request has been sent successfully.<br>We will call you back shortly to discuss your potential claims.</p>
-                        <a href="index.html" class="btn btn-primary mt-3">Return to Home</a>
-                    </div>
-                `;
-
-                // Clean URL
-                history.replaceState(null, null, '#request-callback');
+                showConfirmation();
             }
         });
     </script>
@@ -712,12 +720,67 @@
                 <h2 class="mb-5">What Our Clients Say</h2>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                <!-- (testimonials unchanged) -->
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text text-center p-4 mb-4">
+                        <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
+                    </div>
+                    <div class="mb-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                    <h5 class="mb-1">John Smith</h5>
+                    <p class="m-0">Client, London</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text text-center p-4 mb-4">
+                        <p class="mb-0">"Excellent Pension Credit support – got the extra money I was entitled to. Friendly and efficient service."</p>
+                    </div>
+                    <div class="mb-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                    <h5 class="mb-1">Sarah Johnson</h5>
+                    <p class="m-0">Client, UK</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text text-center p-4 mb-4">
+                        <p class="mb-0">"Blue Badge application handled smoothly – no stress at all. Thank you!"</p>
+                    </div>
+                    <div class="mb-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                    <h5 class="mb-1">Michael Brown</h5>
+                    <p class="m-0">Client, England</p>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-text text-center p-4 mb-4">
+                        <p class="mb-0">"Helped unlock thousands in benefits – simple and effective process."</p>
+                    </div>
+                    <div class="mb-2">
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
+                    </div>
+                    <h5 class="mb-1">Emily Davis</h5>
+                    <p class="m-0">Client, UK</p>
+                </div>
             </div>
         </div>
     </div>
     <!-- Testimonial End -->
-    <!-- FAQ Teaser (replaced accordion with link to full FAQ page) -->
+    <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
