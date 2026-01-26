@@ -176,6 +176,16 @@
         .footer .copyright {
             color: #666666 !important;
         }
+        /* Darker footer links for better visibility */
+        .footer-links a {
+            color: #333333 !important;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: #FF6600 !important;
+            text-decoration: underline;
+        }
         @media (max-width: 767px) {
             .display-3 { font-size: 2.5rem !important; }
             .price-badge { font-size: 1.6rem; padding: 10px 24px; }
@@ -873,9 +883,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Opening Hours - Benefits Claim Support</h4>
                     <h6>Monday - Sunday:</h6>
-                    <p class="mb-4">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
-                    <h6>Holidays:</h6>
-                    <p class="mb-0">Enquiries Welcome – Expert Help for Benefits Over 66</p>
+                    <p class="mb-0">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Our Services</h4>
@@ -908,9 +916,11 @@
                 <div class="copyright text-center">
                     © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for Over 66s – No Upfront Fees.
                     <br><br>
-                    <a href="faq.html">FAQ</a> |
-                    <a href="privacy-policy.html">Privacy Policy</a> |
-                    <a href="terms-conditions.html">Terms & Conditions</a>
+                    <div class="footer-links">
+                        <a href="faq.html">FAQ</a> |
+                        <a href="privacy-policy.html">Privacy Policy</a> |
+                        <a href="terms-conditions.html">Terms & Conditions</a>
+                    </div>
                 </div>
             </div>
         </div>
