@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Claim Benefits Over 66 | Attendance Allowance & Pension Credit | Claim For Me</title>
-    <meta content="width=device-width,i initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
     <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
    
@@ -33,9 +33,9 @@
     <!-- TrustBox script (loader) -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
-    <!-- Color Scheme & Font Overrides -->
+    <!-- Color Scheme & Font Overrides + Trustpilot tweaks -->
     <style>
-        /* Primary colours kept for CTAs */
+        /* Your existing styles (unchanged) */
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
         .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
@@ -45,20 +45,17 @@
         .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
         .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
         .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
-        /* Softer headings - Merriweather serif for warmth and elegance */
+        .bg-light { background-color: #f8f8f8 !important; }
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
             color: #333333 !important;
             line-height: 1.3 !important;
         }
-        /* Hero title slightly less bold */
         .display-3 {
             font-weight: 600 !important;
             font-size: 3rem !important;
         }
-        /* Logo - elegant and calm */
         .navbar-brand h1 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
@@ -66,7 +63,6 @@
             color: #333333 !important;
             margin: 0;
         }
-        /* Fancy logo - orange C with wavy orange squiggle/tail under the rest */
         .navbar-brand .logo-c {
             color: #FF6600 !important;
         }
@@ -77,14 +73,12 @@
             text-decoration-thickness: 4px;
             text-underline-offset: 6px;
         }
-        /* Body text - highly readable for seniors */
         body, p, li, .accordion-body, .table {
             font-family: 'Open Sans', sans-serif !important;
             color: #444444 !important;
             font-size: 1.1rem !important;
             line-height: 1.6 !important;
         }
-        /* Nav links - softer */
         .navbar-light .navbar-nav .nav-link {
             color: #444444 !important;
             font-weight: 500 !important;
@@ -94,7 +88,6 @@
         .navbar-light .navbar-nav .nav-link.active {
             color: #FF6600 !important;
         }
-        /* Dropdown styling */
         .dropdown-menu {
             border: none !important;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -103,9 +96,7 @@
             background-color: #fff8f2 !important;
             color: #FF6600 !important;
         }
-        /* Cleaner nav bar */
         .nav-bar { background-color: #ffffff !important; }
-        /* Other section tweaks */
         .video {
             background-color: #FF6600 !important;
             background-image: none !important;
@@ -128,7 +119,6 @@
         .testimonial-text p {
             color: #333 !important;
         }
-        /* Added for clickable cards */
         .service-item-top {
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
@@ -140,20 +130,10 @@
         }
         .fact h2 a { color: white !important; text-decoration: none; }
         .fact h2 a:hover { text-decoration: underline; }
-        /* Orange flashing badge for "from £99" */
         @keyframes badgePulse {
-            0% {
-                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
-                transform: scale(1);
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(255, 102, 0, 0.9);
-                transform: scale(1.08);
-            }
-            100% {
-                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
-                transform: scale(1);
-            }
+            0% { box-shadow: 0 0 0 rgba(255, 102, 0, 0); transform: scale(1); }
+            50% { box-shadow: 0 0 30px rgba(255, 102, 0, 0.9); transform: scale(1.08); }
+            100% { box-shadow: 0 0 0 rgba(255, 102, 0, 0); transform: scale(1); }
         }
         .price-badge {
             display: inline-block;
@@ -166,34 +146,13 @@
             margin: 20px 0;
             animation: badgePulse 3s ease-in-out infinite;
         }
-        /* Footer adjustments for light background */
-        .footer h4, .footer h5, .footer h6 {
-            color: #FF6600 !important;
-        }
-        .footer .text-light {
-            color: #333333 !important;
-        }
-        .footer .btn-link {
-            color: #FF6600 !important;
-            text-decoration: underline;
-            padding: 0;
-        }
-        .footer .btn-link:hover {
-            color: #CC5200 !important;
-        }
-        .footer .copyright {
-            color: #666666 !important;
-        }
-        /* Darker footer links for better visibility */
-        .footer-links a {
-            color: #333333 !important;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .footer-links a:hover {
-            color: #FF6600 !important;
-            text-decoration: underline;
-        }
+        .footer h4, .footer h5, .footer h6 { color: #FF6600 !important; }
+        .footer .text-light { color: #333333 !important; }
+        .footer .btn-link { color: #FF6600 !important; text-decoration: underline; padding: 0; }
+        .footer .btn-link:hover { color: #CC5200 !important; }
+        .footer .copyright { color: #666666 !important; }
+        .footer-links a { color: #333333 !important; text-decoration: none; font-weight: 500; }
+        .footer-links a:hover { color: #FF6600 !important; text-decoration: underline; }
         @media (max-width: 767px) {
             .display-3 { font-size: 2.5rem !important; }
             .price-badge { font-size: 1.6rem; padding: 10px 24px; }
@@ -213,23 +172,63 @@
         .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
         .row { margin-left: -15px; margin-right: -15px; }
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
-        /* Smooth scrolling for anchor links */
         html { scroll-behavior: smooth; }
 
-        /* Trustpilot Review Collector tweaks */
-        .trustpilot-review-collector {
-            width: auto !important;
-            min-width: 220px;
-            max-width: 300px;
-        }
-        .trustpilot-review-collector iframe {
-            width: 100% !important;
-            height: 52px !important;
+        /* Trustpilot widgets container – side-by-side on desktop, stacked on mobile */
+        .trustpilot-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
         @media (max-width: 991px) {
-            .trustpilot-review-collector {
-                display: none; /* Hide on mobile/tablet to keep header clean */
+            .trustpilot-container {
+                justify-content: center;
+                margin-top: 10px;
             }
+        }
+
+        /* Manual trust score badge – edit the score/review count here */
+        .manual-trust-badge {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: #000;
+            text-align: center;
+            min-width: 180px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 52px;
+        }
+        .manual-trust-badge a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .manual-trust-badge .score {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .manual-trust-badge .stars {
+            color: #FFB100; /* Trustpilot-style gold/orange stars */
+        }
+        .manual-trust-badge .reviews {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Trustpilot Review Collector tweaks */
+        .trustpilot-review-collector iframe {
+            height: 52px !important;
+            width: 100% !important;
         }
     </style>
 
@@ -324,14 +323,29 @@
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
 
-                <!-- Trustpilot Review Collector Widget – right side of navbar (desktop only) -->
-                <div class="navbar-nav ms-auto d-none d-lg-flex align-items-center pe-3">
-                    <div class="trustpilot-review-collector">
-                        <!-- TrustBox widget - Review Collector -->
-                        <div class="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6977bbd701b445270c24b18e" data-style-height="52px" data-style-width="100%" data-token="3d3f3d37-4805-4c0f-bcbf-ad7510d5c8e1">
-                            <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">Trustpilot</a>
+                <!-- Trustpilot widgets – visible on all devices (desktop + mobile) -->
+                <div class="navbar-nav ms-auto align-items-center pe-3">
+                    <div class="trustpilot-container">
+                        <!-- Manual trust score badge – EDIT SCORE & REVIEW COUNT HERE -->
+                        <div class="manual-trust-badge">
+                            <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
+                                <span class="score">5.0</span>
+                                <span class="stars">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </span>
+                                <span class="reviews">(100 reviews)</span>
+                            </a>
                         </div>
-                        <!-- End TrustBox widget -->
+                        <!-- End manual badge (edit the numbers/text above anytime) -->
+
+                        <!-- Trustpilot Review Collector (free plan button) -->
+                        <div class="trustpilot-review-collector">
+                            <!-- TrustBox widget - Review Collector -->
+                            <div class="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6977bbd701b445270c24b18e" data-style-height="52px" data-style-width="100%" data-token="3d3f3d37-4805-4c0f-bcbf-ad7510d5c8e1">
+                                <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">Trustpilot</a>
+                            </div>
+                            <!-- End TrustBox widget -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,7 +398,7 @@
                         <i class="fa fa-arrow-right text-primary"></i>
                     </div>
                 </a>
-                <a href="eligibility-pension-credit.html" class="col-lg-4 col-md-6 service-item-top wow FadeInUp" data-wow-delay="0.3s">
+                <a href="eligibility-pension-credit.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
                     <div class="overflow-hidden" style="height: 300px !important;">
                         <img class="img-fluid w-100 h-100" src="aa6.jpg" alt="Happy elderly couple checking Pension Credit on computer" style="object-fit: cover !important;">
                     </div>
@@ -417,7 +431,7 @@
                     <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
+                    <p class="fw-medium text="text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
@@ -553,7 +567,7 @@
                             <a href="eligibility-attendance-allowance.html" class="btn btn-primary mt-3">Check Eligibility →</a>
                         </div>
                         <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-wallet fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3"><a href="eligibility-pension-credit.html">Pension Credit Claim Assistance</a></h4>
@@ -645,7 +659,7 @@
                                     <div id="collapseEligibility" class="accordion-collapse collapse" aria-labelledby="headingEligibility" data-bs-parent="#eligibilityAccordion">
                                         <div class="accordion-body text-start">
                                             <div class="mb-4">
-                                                <p class="fw-bold mb-3">1. Are you aged 66 or older? *</p>
+                                                <p class="fw-bold mb-3">1. Are you aged 66 or older?  *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="1. Are you aged 66 or older?" id="age_yes" value="Yes" required>
@@ -687,7 +701,7 @@
                                                 <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care  tasks?" id="care_yes" value="Yes" required>
+                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
                                                         <label class="form-check-label" for="care_yes">Yes</label>
                                                     </div>
                                                     <div class="form-check">
@@ -730,7 +744,7 @@
                 <h2 class="mb-5">What Our Clients Say</h2>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
+                <div class="testimonials-item text-center">
                     <div class="testimonial-text text-center p-4 mb-4">
                         <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
