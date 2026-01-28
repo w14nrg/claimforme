@@ -6,15 +6,15 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
     <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
-   
+    
     <!-- Trustpilot domain verification -->
     <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
-   
+    
     <!-- Canonical tag to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.claimfor.me.uk/" />
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
-    <!-- Google Web Fonts -->
+    <!-- Google Web Fonts - Added Merriweather for warmer headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -29,10 +29,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- Color Scheme & Font Overrides + Manual Trustpilot MicroCombo-style badge -->
+    <!-- Reviews.io Carousel Widget CSS -->
+    <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
+    <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
+    <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
     <style>
-        /* Your existing styles (unchanged) */
+        /* Primary colours kept for CTAs */
         .text-primary { color: #FF6600 !important; }
         .bg-primary { background-color: #FF6600 !important; }
         .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
@@ -41,18 +43,21 @@
         .bg-dark { background-color: #808080 !important; }
         .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
         .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
-        .spinnermobile-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #f8f8f8 !important; }
+        .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
+        .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
+        /* Softer headings - Merriweather serif for warmth and elegance */
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
             color: #333333 !important;
             line-height: 1.3 !important;
         }
+        /* Hero title slightly less bold */
         .display-3 {
             font-weight: 600 !important;
             font-size: 3rem !important;
         }
+        /* Logo - elegant and calm */
         .navbar-brand h1 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
@@ -60,6 +65,7 @@
             color: #333333 !important;
             margin: 0;
         }
+        /* Fancy logo - orange C with wavy orange squiggle/tail under the rest */
         .navbar-brand .logo-c {
             color: #FF6600 !important;
         }
@@ -70,12 +76,14 @@
             text-decoration-thickness: 4px;
             text-underline-offset: 6px;
         }
+        /* Body text - highly readable for seniors */
         body, p, li, .accordion-body, .table {
             font-family: 'Open Sans', sans-serif !important;
             color: #444444 !important;
             font-size: 1.1rem !important;
             line-height: 1.6 !important;
         }
+        /* Nav links - softer */
         .navbar-light .navbar-nav .nav-link {
             color: #444444 !important;
             font-weight: 500 !important;
@@ -85,6 +93,7 @@
         .navbar-light .navbar-nav .nav-link.active {
             color: #FF6600 !important;
         }
+        /* Dropdown styling */
         .dropdown-menu {
             border: none !important;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -93,7 +102,9 @@
             background-color: #fff8f2 !important;
             color: #FF6600 !important;
         }
+        /* Cleaner nav bar */
         .nav-bar { background-color: #ffffff !important; }
+        /* Other section tweaks */
         .video {
             background-color: #FF6600 !important;
             background-image: none !important;
@@ -116,6 +127,7 @@
         .testimonial-text p {
             color: #333 !important;
         }
+        /* Added for clickable cards */
         .service-item-top {
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
@@ -127,10 +139,20 @@
         }
         .fact h2 a { color: white !important; text-decoration: none; }
         .fact h2 a:hover { text-decoration: underline; }
+        /* Orange flashing badge for "from £99" */
         @keyframes badgePulse {
-            0% { box-shadow: 0 0 0 rgba(255, 102, 0, 0); transform: scale(1); }
-            50% { box-shadow: 0 0 30px rgba(255, 102, 0, 0.9); transform: scale(1.08); }
-            100% { box-shadow: 0 0 0 rgba(255, 102, 0, 0); transform: scale(1); }
+            0% {
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 102, 0, 0.9);
+                transform: scale(1.08);
+            }
+            100% {
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0);
+                transform: scale(1);
+            }
         }
         .price-badge {
             display: inline-block;
@@ -143,13 +165,34 @@
             margin: 20px 0;
             animation: badgePulse 3s ease-in-out infinite;
         }
-        .footer h4, .footer h5, .footer h6 { color: #FF6600 !important; }
-        .footer .text-light { color: #333333 !important; }
-        .footer .btn-link { color: #FF6600 !important; text-decoration: underline; padding: 0; }
-        .footer .btn-link:hover { color: #CC5200 !important; }
-        .footer .copyright { color: #666666 !important; }
-        .footer-links a { color: #333333 !important; text-decoration: none; font-weight: 500; }
-        .footer-links a:hover { color: #FF6600 !important; text-decoration: underline; }
+        /* Footer adjustments for light background */
+        .footer h4, .footer h5, .footer h6 {
+            color: #FF6600 !important;
+        }
+        .footer .text-light {
+            color: #333333 !important;
+        }
+        .footer .btn-link {
+            color: #FF6600 !important;
+            text-decoration: underline;
+            padding: 0;
+        }
+        .footer .btn-link:hover {
+            color: #CC5200 !important;
+        }
+        .footer .copyright {
+            color: #666666 !important;
+        }
+        /* Darker footer links for better visibility */
+        .footer-links a {
+            color: #333333 !important;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: #FF6600 !important;
+            text-decoration: underline;
+        }
         @media (max-width: 767px) {
             .display-3 { font-size: 2.5rem !important; }
             .price-badge { font-size: 1.6rem; padding: 10px 24px; }
@@ -169,87 +212,17 @@
         .container, .container-fluid { max-width: 100%; padding-left: 15px; padding-right: 15px; }
         .row { margin-left: -15px; margin-right: -15px; }
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
+        /* Smooth scrolling for anchor links */
         html { scroll-behavior: smooth; }
-
-        /* Manual Trustpilot MicroCombo-style badge – always visible */
-        .trustpilot-badge-container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 8px 15px;
-        }
-        @media (max-width: 991px) {
-            .trustpilot-badge-container {
-                justify-content: center;
-                padding: 12px 15px;
-                background-color: #f8f8f8;
-                border-bottom: 1px solid #eee;
-                margin-top: 20px; /* Added extra space to separate from logo/squiggle */
-            }
-        }
-
-        .manual-microcombo-badge {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 6px 12px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.95rem;
-            color: #000;
-            text-align: left;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            height: 48px;
-            min-width: 260px;
-        }
-        @media (max-width: 991px) {
-            .manual-microcombo-badge {
-                height: 44px;
-                font-size: 0.9rem;
-                min-width: 240px;
-                padding: 5px 10px;
-                gap: 6px;
-            }
-        }
-        .manual-microcombo-badge a {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        @media (max-width: 991px) {
-            .manual-microcombo-badge a {
-                gap: 6px;
-            }
-        }
-        .manual-microcombo-badge .excellent {
-            color: #00b67a; /* Trustpilot green */
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        .manual-microcombo-badge .score {
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-        @media (max-width: 991px) {
-            .manual-microcombo-badge .score {
-                font-size: 1.2rem;
-            }
-        }
-        .manual-microcombo-badge .stars {
-            color: #00b67a; /* Green stars */
-            font-size: 1.1rem;
-        }
-        .manual-microcombo-badge .trustpilot-text {
-            font-size: 0.85rem;
-            color: #666;
+        /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
+        #reviewsio-carousel-widget {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            z-index: 1000;
         }
     </style>
-
-    <!-- Local Business Schema -->
+    <!-- Local Business Schema - Fully valid with address, url, and required fields -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -274,16 +247,20 @@
       }
     }
     </script>
+    <!-- Reviews.io Widget Loader -->
+    <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
 </head>
 <body>
+    <!-- The entire body remains unchanged -->
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary", style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
-
+    <!-- Reviews.io Carousel Widget Container – placed right at the top for a clean top-header trust bar -->
+    <div id="reviewsio-carousel-widget"></div>
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
@@ -310,7 +287,6 @@
         </div>
     </div>
     <!-- Topbar End -->
-
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
@@ -322,22 +298,6 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
-
-            <!-- Trustpilot badge – always visible on mobile (outside collapse, with extra space) -->
-            <div class="trustpilot-badge-container d-lg-none">
-                <div class="manual-microcombo-badge">
-                    <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
-                        <span class="excellent">Excellent</span>
-                        <span class="score">5.0</span>
-                        <span class="stars">
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                        </span>
-                        <span class="trustpilot-text">Trustpilot</span>
-                    </a>
-                </div>
-                <!-- EDIT HERE: Change "Excellent", score "5.0", and star icons as needed -->
-            </div>
-
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -355,27 +315,10 @@
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
-
-                <!-- Trustpilot badge – desktop (right-aligned) -->
-                <div class="navbar-nav ms-auto align-items-center pe-3 d-none d-lg-flex">
-                    <div class="trustpilot-badge-container">
-                        <div class="manual-microcombo-badge">
-                            <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
-                                <span class="excellent">Excellent</span>
-                                <span class="score">5.0</span>
-                                <span class="stars">
-                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                </span>
-                                <span class="trustpilot-text">Trustpilot</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
-
     <!-- Hero Section Start - Static text + flashing orange badge -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
@@ -387,7 +330,6 @@
         </div>
     </div>
     <!-- Hero Section End -->
-
     <!-- Frustrations Section (moved up for better flow) -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -407,7 +349,6 @@
         </div>
     </div>
     <!-- Frustrations Section End -->
-
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -443,7 +384,6 @@
         </div>
     </div>
     <!-- Service End -->
-
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -452,7 +392,7 @@
                     <h2 class="text-secondary text-uppercase">About Claim For Me</h2>
                     <h2 class="mb-4">Expert Assistance to Claim Benefits You're Entitled To</h2>
                     <p class="mb-4">Many people over State Pension age miss out on valuable government support due to complex rules and paperwork. Claim For Me takes the stress away. We start with a short conversation to identify eligible benefits, then manage everything – from forms to submission. No upfront payment – our fee is only payable if you succeed, and it's frequently covered by the initial backdated amount you receive. Our aim is that you keep more of what you're entitled to.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check succed text-success me-3"></i>No initial payment required</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>No initial payment required</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Very high success rate</p>
                     <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quick application processing</p>
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
@@ -475,7 +415,6 @@
         </div>
     </div>
     <!-- About End -->
-
     <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -533,7 +472,6 @@
         </div>
     </div>
     <!-- Stats End -->
-
     <!-- Fact Start -->
     <div class="container-fluid fact my-5 py-5">
         <div class="container">
@@ -562,7 +500,6 @@
         </div>
     </div>
     <!-- Fact End -->
-
     <!-- Services Carousel Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
@@ -617,7 +554,6 @@
         </div>
     </div>
     <!-- Services Carousel End -->
-
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
@@ -627,7 +563,6 @@
         </div>
     </div>
     <!-- Call to Action End -->
-
     <!-- Booking Start (Request Call Back) -->
     <div class="container-fluid my-5 px-0" id="request-callback">
         <div class="video wow fadeInUp" data-wow-delay="0.1s">
@@ -758,7 +693,6 @@
         </div>
     </div>
     <!-- Booking End -->
-
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -827,7 +761,6 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
     <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -839,7 +772,6 @@
         </div>
     </div>
     <!-- FAQ Teaser End -->
-
     <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -899,10 +831,8 @@
         </div>
     </div>
     <!-- Footer End -->
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -916,5 +846,152 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- Reviews.io Carousel Initialisation -->
+    <script>
+    new carouselInlineWidget('reviewsio-carousel-widget',{
+      store: 'claimfor.me.uk',
+      sku: '',
+      lang: 'en',
+      carousel_type: 'topHeader',
+      styles_carousel: 'CarouselWidget--topHeader',
+      options:{
+        general:{
+          review_type: 'company',
+          min_reviews: '1',
+          max_reviews: '20',
+          address_format: 'CITY, COUNTRY',
+          enable_auto_scroll: 10000,
+          enable_pause_button: false,
+          enable_sorting: false,
+        },
+        header:{
+          enable_overall_stars: true,
+          rating_decimal_places: 2,
+        },
+        reviews: {
+          enable_customer_name: true,
+          enable_customer_location: true,
+          enable_verified_badge: true,
+          enable_subscriber_badge: true,
+          enable_recommends_badge: true,
+          enable_photos: true,
+          enable_videos: true,
+          enable_review_date: true,
+          disable_same_customer: true,
+          min_review_percent: 4,
+          third_party_source: true,
+          hide_empty_reviews: true,
+          enable_product_name: true,
+          tags: "",
+          branch: "",
+          enable_branch_name: false,
+        },
+        popups: {
+          enable_review_popups: false,
+          enable_helpful_buttons: false,
+          enable_helpful_count: false,
+          enable_share_buttons: false,
+        },
+      },
+      translations: {
+        verified_customer: "Verified Customer",
+      },
+      styles:{
+        '--base-font-size': '16px',
+        '--base-maxwidth':'100%',
+        '--reviewsio-logo-style':'var(--logo-normal)',
+        '--common-star-color':' #0E1311',
+        '--common-star-disabled-color':' rgba(0,0,0,0.25)',
+        '--medium-star-size':' 22px',
+        '--small-star-size':'19px',
+        '--x-small-star-size':'16px',
+        '--x-small-star-display':'inline-flex',
+        '--header-order':'1',
+        '--header-width':'160px',
+        '--header-bg-start-color':'transparent',
+        '--header-bg-end-color':'transparent',
+        '--header-gradient-direction':'135deg',
+        '--header-padding':'0.5em',
+        '--header-border-width':'0px',
+        '--header-border-color':'rgba(0,0,0,0.1)',
+        '--header-border-radius':'0px',
+        '--header-shadow-size':'0px',
+        '--header-shadow-color':'rgba(0, 0, 0, 0.1)',
+        '--header-star-color':'#FF6600',
+        '--header-disabled-star-color':'inherit',
+        '--header-heading-text-color':'#FF6600',
+        '--header-heading-font-size':'inherit',
+        '--header-heading-font-weight':'inherit',
+        '--header-heading-line-height':'inherit',
+        '--header-heading-text-transform':'inherit',
+        '--header-subheading-text-color':'#FF6600',
+        '--header-subheading-font-size':'inherit',
+        '--header-subheading-font-weight':'inherit',
+        '--header-subheading-line-height':'inherit',
+        '--header-subheading-text-transform':'inherit',
+        '--item-maximum-columns':'5',
+        '--item-background-start-color':'transparent',
+        '--item-background-end-color':'transparent',
+        '--item-gradient-direction':'135deg',
+        '--item-padding':'0.5em',
+        '--item-border-width':'0px',
+        '--item-border-color':'rgba(0,0,0,0.1)',
+        '--item-border-radius':'0px',
+        '--item-shadow-size':'0px',
+        '--item-shadow-color':'rgba(0,0,0,0.1)',
+        '--heading-text-color':' #0E1311',
+        '--heading-text-font-weight':' 600',
+        '--heading-text-font-family':' inherit',
+        '--heading-text-line-height':' 1.4',
+        '--heading-text-letter-spacing':'0',
+        '--heading-text-transform':'none',
+        '--body-text-color':' #0E1311',
+        '--body-text-font-weight':'400',
+        '--body-text-font-family':' inherit',
+        '--body-text-line-height':' 1.4',
+        '--body-text-letter-spacing':'0',
+        '--body-text-transform':'none',
+        '--scroll-button-icon-color':'#0E1311',
+        '--scroll-button-icon-size':'24px',
+        '--scroll-button-bg-color':'transparent',
+        '--scroll-button-border-width':'0px',
+        '--scroll-button-border-color':'rgba(0,0,0,0.1)',
+        '--scroll-button-border-radius':'60px',
+        '--scroll-button-shadow-size':'0px',
+        '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
+        '--scroll-button-horizontal-position':'0px',
+        '--scroll-button-vertical-position':'0px',
+        '--badge-icon-color':'#0E1311',
+        '--badge-icon-font-size':'15px',
+        '--badge-text-color':'#0E1311',
+        '--badge-text-font-size':'inherit',
+        '--badge-text-letter-spacing':'inherit',
+        '--badge-text-transform':'inherit',
+        '--author-font-size':'inherit',
+        '--author-font-weight':'inherit',
+        '--author-text-transform':'inherit',
+        '--photo-video-thumbnail-size':'60px',
+        '--photo-video-thumbnail-border-radius':'0px',
+        '--popup-backdrop-color':'rgba(0,0,0,0.75)',
+        '--popup-color':'#ffffff',
+        '--popup-star-color':'inherit',
+        '--popup-disabled-star-color':'inherit',
+        '--popup-heading-text-color':'inherit',
+        '--popup-body-text-color':'inherit',
+        '--popup-badge-icon-color':'inherit',
+        '--popup-badge-icon-font-size':'19px',
+        '--popup-badge-text-color':'inherit',
+        '--popup-badge-text-font-size':'14px',
+        '--popup-border-width':'0px',
+        '--popup-border-color':'rgba(0,0,0,0.1)',
+        '--popup-border-radius':'0px',
+        '--popup-shadow-size':'0px',
+        '--popup-shadow-color':'rgba(0,0,0,0.1)',
+        '--popup-icon-color':'#0E1311',
+        '--tooltip-bg-color':'#0E1311',
+        '--tooltip-text-color':'#ffffff',
+      },
+    });
+    </script>
 </body>
 </html>
