@@ -128,13 +128,15 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
     }
-    /* Intro Video Modal - Wide on desktop, full on mobile, working controls */
-    #introVideoModal .modal-content { background: rgba(0,0,0,0.95); border: none; }
-    #introVideoModal .modal-dialog { max-width: 90%; margin: 1.75rem auto; }
+    /* Intro Video Modal - Full screen, higher z-index to cover navbar, video stops on close */
+    #introVideoModal { z-index: 1060 !important; }
+    #introVideoModal .modal-content { background: rgba(0,0,0,0.95); border: none; height: 100vh; }
+    #introVideoModal .modal-dialog { max-width: 90%; height: 90vh; margin: auto; }
+    #introVideoModal .modal-body { padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; }
     #introVideoModal video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-    #introVideoModal .btn-close { filter: invert(1); opacity: 0.8; position: absolute; top: 20px; right: 20px; z-index: 10; }
+    #introVideoModal .btn-close { position: absolute; top: 20px; right: 20px; z-index: 10; filter: invert(1); }
     @media (max-width: 767px) {
-        #introVideoModal .modal-dialog { max-width: 100%; margin: 0; padding: 0; }
+        #introVideoModal .modal-dialog { max-width: 100%; height: 100vh; margin: 0; }
         #introVideoModal video { max-height: 70vh; }
     }
     </style>
@@ -154,7 +156,7 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Intro Video Modal (local video, autoplay muted loop, full controls for unmute/replay) -->
+    <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, covers navbar) -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -293,7 +295,7 @@
                         <i class="fa fa-arrow-right text-primary"></i>
                     </div>
                 </a>
-                <a href="eligibility-blue-badge.html" class="" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
+                <a href="eligibility-blue-badge.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.5s">
                     <div class="overflow-hidden" style="height: 300px !important;">
                         <img class="img-fluid w-100 h-100" src="aa2.jpg" alt="Car with Blue Badge parking permit" style="object-fit: cover !important;">
                     </div>
@@ -306,8 +308,6 @@
         </div>
     </div>
     <!-- Service End -->
-
-    <!-- (All remaining sections – About, Stats, Fact, Services Carousel, Call to Action, Booking, Testimonial, FAQ Teaser, Footer – unchanged and included in full) -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -416,7 +416,7 @@
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fas fa-parking fa-2x text-white mb-3"></i>
                     <h2 class="mb-2 text-white"><a href="eligibility-blue-badge.html">Blue Badge</a></h2>
-                    <p class="text-white">Parking permit for people with mobility difficulties – we provide complete application support.</p>
+                    <p class="text-white">Parking permit for people with mobility difficulties – we provide complete application support.</.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fas fa-search fa-2x text-white mb-3"></i>
@@ -459,7 +459,7 @@
                                 <i class="fas fa-wallet fa-2x text-primary"></i>
                             </div>
                             <h4 class="mb-3"><a href="eligibility-pension-credit.html">Pension Credit Claim Assistance</a></h4>
-                            <p>Supplement to State Pension for those on sustaining low incomes – average £3,900 per year. We check eligibility and complete your claim.</p>
+                            <p>Supplement to State Pension for those on low incomes – average £3,900 per year. We check eligibility and complete your claim.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Average £3,900 per year</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Backdated payments possible</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Full application support</p>
@@ -507,7 +507,7 @@
                             <i class="fa fa-phone-alt fa-3x text-primary me-3"></i>
                             <h2 class="mb-0">Request a Call Back</h2>
                         </div>
-                        <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
+                    <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
                         <form action="https://formsubmit.co/claimsformeuk@gmail.com" method="POST">
                             <!-- Hidden settings -->
                             <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
@@ -563,7 +563,7 @@
                                                 <p class="fw-bold mb-3">2. Do you live in England, Scotland, or Wales? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_yes" value="Yes" required>
+                                                        <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residen cy_yes" value="Yes" required>
                                                         <label class="form-check-label" for="residency_yes">Yes</label>
                                                     </div>
                                                     <div class="form-check">
@@ -589,7 +589,7 @@
                                                 <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
+                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care tabs_yes" value="Yes" required>
                                                         <label class="form-check-label" for="care_yes">Yes</label>
                                                     </div>
                                                     <div class="form-check">
@@ -689,7 +689,7 @@
                     <p class="m-0">Client, UK</p>
                 </div>
             </div>
-        </div**, 
+        </div>
     </div>
     <!-- Testimonial End -->
 
@@ -711,7 +711,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Contact Claim For Me</h4>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</  p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
                             <i class="fab fa-whatsapp"></i>
@@ -781,7 +781,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Reviews.io Carousel Initialisation (full reviews with text) -->
+    <!-- Reviews.io Carousel Initialisation -->
     <script>
     new carouselInlineWidget('reviewsio-carousel-widget',{
         store: 'claimfor.me.uk',
@@ -936,6 +936,17 @@
                 var introModal = new bootstrap.Modal(document.getElementById('introVideoModal'));
                 introModal.show();
                 sessionStorage.setItem('introShown', 'true');
+            }
+        });
+    </script>
+
+    <!-- Stop video sound on modal close -->
+    <script>
+        document.getElementById('introVideoModal').addEventListener('hidden.bs.modal', function () {
+            var video = this.querySelector('video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
             }
         });
     </script>
