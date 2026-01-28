@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" id="top">
 <head>
@@ -68,7 +69,7 @@
     font-size: 1.1rem !important;
     line-height: 1.6 !important;
     }
-    .navbar-left .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
+    .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
     .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #FF6600 !important; }
     .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .dropdown-item:hover { background-color: #fff8f2 !important; color: #FF6600 !important; }
@@ -128,7 +129,7 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
     }
-    /* Intro Video Modal - Full screen, highest z-index to cover navbar completely, video stops on close */
+    /* Intro Video Modal - Full screen, hide navbar/topbar when open */
     #introVideoModal { z-index: 9999 !important; }
     #introVideoModal .modal-backdrop { z-index: 9998 !important; background: rgba(0,0,0,0.95); }
     #introVideoModal .modal-content { background: transparent; border: none; height: 100vh; width: 100vw; }
@@ -140,6 +141,8 @@
     @media (max-width: 767px) {
         #introVideoModal video { width: 100%; max-height: 70vh; }
     }
+    /* Hide navbar and topbar when modal is open */
+    .modal-open .top-bar, .modal-open .nav-bar { display: none !important; }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -157,13 +160,13 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, fully covers navbar) -->
+    <!-- Intro Video Modal (autoplay muted loop, full controls, stops on close, fully covers navbar/topbar by hiding them) -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
-                    <video autoplay muted loop playsinline controls style="width:100%;">
+                    <video autoplay muted	loop playsinline controls style="width:100%;">
                         <source src="claim-for-me.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -176,8 +179,8 @@
     </div>
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row align-items-center top-bar">
+    <div class="container-fluid bg-light d-none d-lg-block top-bar">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 text-center text-lg-start">
                 <a href="index.html" class="navbar-brand m-0 p-0">
                     <h1 class="m-0">
@@ -443,7 +446,7 @@
                         <h2 class="text-secondary text-uppercase">Our Services</h2>
                         <h2 class="mb-5">Expert Support Claiming Benefits for People Over 66</h2>
                     </div>
-                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="owl-carousel service avions carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                         <div class="bg-light p-4">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
                                 <i class="fas fa-hand-holding-heart fa-2x text-primary"></i>
@@ -618,6 +621,8 @@
                             </div>
                             <button class="btn btn-primary w-100 py-3" type="submit">Request Call Back</button>
                         </form>
+                    </  .btn-primary w-100 py-3" type="submit">Request Call Back</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -657,6 +662,7 @@
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
+
                     </div>
                     <h5 class="mb-1">Sarah Johnson</h5>
                     <p class="m-0">Client, UK</p>
@@ -692,7 +698,7 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- testimonial End -->
 
     <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -795,7 +801,7 @@
                 review_type: 'company',
                 min_reviews: '1',
                 max_reviews: '20',
-                address_format: 'CITY, COUNTRY',
+                address_format: '245 CITY, COUNTRY',
                 enable_auto_scroll: 10000,
                 enable_pause_button: false,
                 enable_sorting: false,
