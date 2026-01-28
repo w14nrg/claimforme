@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>Claim Benefits Over 66 | Attendance Allowance & Pension Credit | Claim For Me</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="width=device-width,i initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta name="keywords" content="claim attendance allowance, attendance allowance claim help, pension credit claim assistance, blue badge application help, benefits over 66, attendance allowance over state pension age, pension credit eligibility over 66, help claiming benefits UK, attendance allowance application support, pension credit help over 66">
     <meta name="description" content="Expert assistance to claim Attendance Allowance (up to £5,741/year), Pension Credit (avg £3,900/year) & Blue Badge for people over 66. No upfront fees – success-based payment. 99% success rate. Call 020 7122 8324 for free eligibility check.">
-    
+   
     <!-- Trustpilot domain verification -->
     <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
-    
+   
     <!-- Canonical tag to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.claimfor.me.uk/" />
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
-    <!-- Google Web Fonts - Added Merriweather for warmer headings -->
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -29,10 +29,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Reviews.io Carousel Widget CSS -->
-    <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
-    <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
-    <!-- Color Scheme & Font Overrides - Softer and more subtle for pensioners -->
+
+    <!-- TrustBox script (loader) -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+    <!-- Color Scheme & Font Overrides -->
     <style>
         /* Primary colours kept for CTAs */
         .text-primary { color: #FF6600 !important; }
@@ -214,15 +215,25 @@
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
         /* Smooth scrolling for anchor links */
         html { scroll-behavior: smooth; }
-        /* Small tweak for Reviews.io top header carousel – ensures it sits cleanly at the top with a light background */
-        #reviewsio-carousel-widget {
-            background-color: #ffffff;
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-            z-index: 1000;
+
+        /* Trustpilot Review Collector tweaks */
+        .trustpilot-review-collector {
+            width: auto !important;
+            min-width: 220px;
+            max-width: 300px;
+        }
+        .trustpilot-review-collector iframe {
+            width: 100% !important;
+            height: 52px !important;
+        }
+        @media (max-width: 991px) {
+            .trustpilot-review-collector {
+                display: none; /* Hide on mobile/tablet to keep header clean */
+            }
         }
     </style>
-    <!-- Local Business Schema - Fully valid with address, url, and required fields -->
+
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -247,11 +258,8 @@
       }
     }
     </script>
-    <!-- Reviews.io Widget Loader -->
-    <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
 </head>
 <body>
-    <!-- The entire body remains unchanged -->
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -259,8 +267,7 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Reviews.io Carousel Widget Container – placed right at the top for a clean top-header trust bar -->
-    <div id="reviewsio-carousel-widget"></div>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
         <div class="row align-items-center top-bar">
@@ -287,6 +294,7 @@
         </div>
     </div>
     <!-- Topbar End -->
+
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
@@ -315,11 +323,23 @@
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
+
+                <!-- Trustpilot Review Collector Widget – right side of navbar (desktop only) -->
+                <div class="navbar-nav ms-auto d-none d-lg-flex align-items-center pe-3">
+                    <div class="trustpilot-review-collector">
+                        <!-- TrustBox widget - Review Collector -->
+                        <div class="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6977bbd701b445270c24b18e" data-style-height="52px" data-style-width="100%" data-token="3d3f3d37-4805-4c0f-bcbf-ad7510d5c8e1">
+                            <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">Trustpilot</a>
+                        </div>
+                        <!-- End TrustBox widget -->
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
-    <!-- Hero Section Start - Static text + flashing orange badge -->
+
+    <!-- Hero Section Start -->
     <div class="container-fluid bg-light py-5 mb-5">
         <div class="container text-center">
             <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
@@ -330,7 +350,8 @@
         </div>
     </div>
     <!-- Hero Section End -->
-    <!-- Frustrations Section (moved up for better flow) -->
+
+    <!-- Frustrations Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="row g-5 align-items-center">
@@ -349,6 +370,7 @@
         </div>
     </div>
     <!-- Frustrations Section End -->
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -362,7 +384,7 @@
                         <i class="fa fa-arrow-right text-primary"></i>
                     </div>
                 </a>
-                <a href="eligibility-pension-credit.html" class="col-lg-4 col-md-6 service-item-top wow fadeInUp" data-wow-delay="0.3s">
+                <a href="eligibility-pension-credit.html" class="col-lg-4 col-md-6 service-item-top wow FadeInUp" data-wow-delay="0.3s">
                     <div class="overflow-hidden" style="height: 300px !important;">
                         <img class="img-fluid w-100 h-100" src="aa6.jpg" alt="Happy elderly couple checking Pension Credit on computer" style="object-fit: cover !important;">
                     </div>
@@ -384,6 +406,7 @@
         </div>
     </div>
     <!-- Service End -->
+
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -415,6 +438,7 @@
         </div>
     </div>
     <!-- About End -->
+
     <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -472,6 +496,7 @@
         </div>
     </div>
     <!-- Stats End -->
+
     <!-- Fact Start -->
     <div class="container-fluid fact my-5 py-5">
         <div class="container">
@@ -500,6 +525,7 @@
         </div>
     </div>
     <!-- Fact End -->
+
     <!-- Services Carousel Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
@@ -554,6 +580,7 @@
         </div>
     </div>
     <!-- Services Carousel End -->
+
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
@@ -563,6 +590,7 @@
         </div>
     </div>
     <!-- Call to Action End -->
+
     <!-- Booking Start (Request Call Back) -->
     <div class="container-fluid my-5 px-0" id="request-callback">
         <div class="video wow fadeInUp" data-wow-delay="0.1s">
@@ -659,7 +687,7 @@
                                                 <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
                                                 <div class="d-flex flex-wrap gap-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
+                                                        <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care  tasks?" id="care_yes" value="Yes" required>
                                                         <label class="form-check-label" for="care_yes">Yes</label>
                                                     </div>
                                                     <div class="form-check">
@@ -693,6 +721,7 @@
         </div>
     </div>
     <!-- Booking End -->
+
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -761,6 +790,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
     <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -772,6 +802,7 @@
         </div>
     </div>
     <!-- FAQ Teaser End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -831,8 +862,10 @@
         </div>
     </div>
     <!-- Footer End -->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -846,152 +879,5 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- Reviews.io Carousel Initialisation -->
-    <script>
-    new carouselInlineWidget('reviewsio-carousel-widget',{
-      store: 'claimfor.me.uk',
-      sku: '',
-      lang: 'en',
-      carousel_type: 'topHeader',
-      styles_carousel: 'CarouselWidget--topHeader',
-      options:{
-        general:{
-          review_type: 'company',
-          min_reviews: '1',
-          max_reviews: '20',
-          address_format: 'CITY, COUNTRY',
-          enable_auto_scroll: 10000,
-          enable_pause_button: false,
-          enable_sorting: false,
-        },
-        header:{
-          enable_overall_stars: true,
-          rating_decimal_places: 2,
-        },
-        reviews: {
-          enable_customer_name: true,
-          enable_customer_location: true,
-          enable_verified_badge: true,
-          enable_subscriber_badge: true,
-          enable_recommends_badge: true,
-          enable_photos: true,
-          enable_videos: true,
-          enable_review_date: true,
-          disable_same_customer: true,
-          min_review_percent: 4,
-          third_party_source: true,
-          hide_empty_reviews: true,
-          enable_product_name: true,
-          tags: "",
-          branch: "",
-          enable_branch_name: false,
-        },
-        popups: {
-          enable_review_popups: false,
-          enable_helpful_buttons: false,
-          enable_helpful_count: false,
-          enable_share_buttons: false,
-        },
-      },
-      translations: {
-        verified_customer: "Verified Customer",
-      },
-      styles:{
-        '--base-font-size': '16px',
-        '--base-maxwidth':'100%',
-        '--reviewsio-logo-style':'var(--logo-normal)',
-        '--common-star-color':' #0E1311',
-        '--common-star-disabled-color':' rgba(0,0,0,0.25)',
-        '--medium-star-size':' 22px',
-        '--small-star-size':'19px',
-        '--x-small-star-size':'16px',
-        '--x-small-star-display':'inline-flex',
-        '--header-order':'1',
-        '--header-width':'160px',
-        '--header-bg-start-color':'transparent',
-        '--header-bg-end-color':'transparent',
-        '--header-gradient-direction':'135deg',
-        '--header-padding':'0.5em',
-        '--header-border-width':'0px',
-        '--header-border-color':'rgba(0,0,0,0.1)',
-        '--header-border-radius':'0px',
-        '--header-shadow-size':'0px',
-        '--header-shadow-color':'rgba(0, 0, 0, 0.1)',
-        '--header-star-color':'#FF6600',
-        '--header-disabled-star-color':'inherit',
-        '--header-heading-text-color':'#FF6600',
-        '--header-heading-font-size':'inherit',
-        '--header-heading-font-weight':'inherit',
-        '--header-heading-line-height':'inherit',
-        '--header-heading-text-transform':'inherit',
-        '--header-subheading-text-color':'#FF6600',
-        '--header-subheading-font-size':'inherit',
-        '--header-subheading-font-weight':'inherit',
-        '--header-subheading-line-height':'inherit',
-        '--header-subheading-text-transform':'inherit',
-        '--item-maximum-columns':'5',
-        '--item-background-start-color':'transparent',
-        '--item-background-end-color':'transparent',
-        '--item-gradient-direction':'135deg',
-        '--item-padding':'0.5em',
-        '--item-border-width':'0px',
-        '--item-border-color':'rgba(0,0,0,0.1)',
-        '--item-border-radius':'0px',
-        '--item-shadow-size':'0px',
-        '--item-shadow-color':'rgba(0,0,0,0.1)',
-        '--heading-text-color':' #0E1311',
-        '--heading-text-font-weight':' 600',
-        '--heading-text-font-family':' inherit',
-        '--heading-text-line-height':' 1.4',
-        '--heading-text-letter-spacing':'0',
-        '--heading-text-transform':'none',
-        '--body-text-color':' #0E1311',
-        '--body-text-font-weight':'400',
-        '--body-text-font-family':' inherit',
-        '--body-text-line-height':' 1.4',
-        '--body-text-letter-spacing':'0',
-        '--body-text-transform':'none',
-        '--scroll-button-icon-color':'#0E1311',
-        '--scroll-button-icon-size':'24px',
-        '--scroll-button-bg-color':'transparent',
-        '--scroll-button-border-width':'0px',
-        '--scroll-button-border-color':'rgba(0,0,0,0.1)',
-        '--scroll-button-border-radius':'60px',
-        '--scroll-button-shadow-size':'0px',
-        '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
-        '--scroll-button-horizontal-position':'0px',
-        '--scroll-button-vertical-position':'0px',
-        '--badge-icon-color':'#0E1311',
-        '--badge-icon-font-size':'15px',
-        '--badge-text-color':'#0E1311',
-        '--badge-text-font-size':'inherit',
-        '--badge-text-letter-spacing':'inherit',
-        '--badge-text-transform':'inherit',
-        '--author-font-size':'inherit',
-        '--author-font-weight':'inherit',
-        '--author-text-transform':'inherit',
-        '--photo-video-thumbnail-size':'60px',
-        '--photo-video-thumbnail-border-radius':'0px',
-        '--popup-backdrop-color':'rgba(0,0,0,0.75)',
-        '--popup-color':'#ffffff',
-        '--popup-star-color':'inherit',
-        '--popup-disabled-star-color':'inherit',
-        '--popup-heading-text-color':'inherit',
-        '--popup-body-text-color':'inherit',
-        '--popup-badge-icon-color':'inherit',
-        '--popup-badge-icon-font-size':'19px',
-        '--popup-badge-text-color':'inherit',
-        '--popup-badge-text-font-size':'14px',
-        '--popup-border-width':'0px',
-        '--popup-border-color':'rgba(0,0,0,0.1)',
-        '--popup-border-radius':'0px',
-        '--popup-shadow-size':'0px',
-        '--popup-shadow-color':'rgba(0,0,0,0.1)',
-        '--popup-icon-color':'#0E1311',
-        '--tooltip-bg-color':'#0E1311',
-        '--tooltip-text-color':'#ffffff',
-      },
-    });
-    </script>
 </body>
 </html>
