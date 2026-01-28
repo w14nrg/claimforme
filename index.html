@@ -171,16 +171,19 @@
         .accordion-button:not(.collapsed) { background-color: #FF6600 !important; color: white !important; }
         html { scroll-behavior: smooth; }
 
-        /* Manual Trustpilot MicroCombo-style badge – visible on all devices */
+        /* Manual Trustpilot MicroCombo-style badge – always visible */
         .trustpilot-badge-container {
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            padding: 8px 15px;
         }
         @media (max-width: 991px) {
             .trustpilot-badge-container {
                 justify-content: center;
-                margin-top: 10px;
+                padding: 12px 15px;
+                background-color: #f8f8f8;
+                border-bottom: 1px solid #eee;
             }
         }
 
@@ -188,7 +191,7 @@
             background-color: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 6px;
-            padding: 8px 12px;
+            padding: 6px 12px;
             font-family: 'Open Sans', sans-serif;
             font-size: 0.95rem;
             color: #000;
@@ -197,8 +200,17 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            height: 52px;
-            min-width: 280px;
+            height: 48px;
+            min-width: 260px;
+        }
+        @media (max-width: 991px) {
+            .manual-microcombo-badge {
+                height: 44px;
+                font-size: 0.9rem;
+                min-width: 240px;
+                padding: 5px 10px;
+                gap: 6px;
+            }
         }
         .manual-microcombo-badge a {
             text-decoration: none;
@@ -207,23 +219,31 @@
             align-items: center;
             gap: 8px;
         }
+        @media (max-width: 991px) {
+            .manual-microcombo-badge a {
+                gap: 6px;
+            }
+        }
         .manual-microcombo-badge .excellent {
             color: #00b67a; /* Trustpilot green */
             font-weight: bold;
+            font-size: 1rem;
         }
         .manual-microcombo-badge .score {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+        }
+        @media (max-width: 991px) {
+            .manual-microcombo-badge .score {
+                font-size: 1.2rem;
+            }
         }
         .manual-microcombo-badge .stars {
-            color: #ffb100; /* Trustpilot gold */
-        }
-        .manual-microcombo-badge .reviews {
-            font-size: 0.85rem;
-            color: #666;
+            color: #00b67a; /* Green stars as requested */
+            font-size: 1.1rem;
         }
         .manual-microcombo-badge .trustpilot-text {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #666;
         }
     </style>
@@ -301,6 +321,22 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
+
+            <!-- Trustpilot badge – always visible on mobile (outside collapse) -->
+            <div class="trustpilot-badge-container d-lg-none">
+                <div class="manual-microcombo-badge">
+                    <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
+                        <span class="excellent">Excellent</span>
+                        <span class="score">5.0</span>
+                        <span class="stars">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </span>
+                        <span class="trustpilot-text">Trustpilot</span>
+                    </a>
+                </div>
+                <!-- EDIT HERE: Change "Excellent", score "5.0", and star icons as needed -->
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -313,15 +349,14 @@
                             <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
                             <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
                         </ul>
-                    <
                     </div>
                     <a href="how-it-works.html" class="nav-item nav-link">How It Works</a>
                     <a href="pricing.html" class="nav-item nav-link">Pricing</a>
                     <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
 
-                <!-- Manual MicroCombo-style Trustpilot badge – visible on all devices -->
-                <div class="navbar-nav ms-auto align-items-center pe-3">
+                <!-- Trustpilot badge – desktop (inside collapse, right-aligned) -->
+                <div class="navbar-nav ms-auto align-items-center pe-3 d-none d-lg-flex">
                     <div class="trustpilot-badge-container">
                         <div class="manual-microcombo-badge">
                             <a href="https://uk.trustpilot.com/review/claimfor.me.uk" target="_blank" rel="noopener">
@@ -330,11 +365,9 @@
                                 <span class="stars">
                                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                                 </span>
-                                <span class="reviews">(100 reviews)</span>
                                 <span class="trustpilot-text">Trustpilot</span>
                             </a>
                         </div>
-                        <!-- EDIT HERE: Change "Excellent", score "5.0", review count "(100 reviews)", and star fill as needed -->
                     </div>
                 </div>
             </div>
@@ -613,7 +646,7 @@
                             <!-- Hidden settings -->
                             <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
                             <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_captchastrain" value="false">
+                            <input type="hidden" name="_captcha" value="false">
                             <!-- Honeypot anti-spam -->
                             <input type="text" name="_honey" style="display:none">
                             <!-- Personal Details -->
@@ -735,7 +768,7 @@
             <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
                     <div class="testimonial-text text-center p-4 mb-4">
-                        <p class="mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
+                        <p class=" modification mb-0">"They made the Attendance Allowance claim straightforward – approved quickly and received back payments I desperately needed."</p>
                     </div>
                     <div class="mb-2">
                         <small class="fa fa-star text-primary"></small>
@@ -770,7 +803,7 @@
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
                         <small class="fa fa-star text-primary"></small>
-                        <small class="faa fa-star text-primary"></small>
+                        <small class="fa fa-star text-primary"></small>
                     </div>
                     <h5 class="mb-1">Michael Brown</h5>
                     <p class="m-0">Client, England</p>
@@ -814,7 +847,7 @@
                     <h4 class="mb-4">Contact Claim For Me</h4>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>020 7122 8324 – Call for Attendance Allowance & Pension Credit Help</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-sm-square bg-success text-white me-0" href="https://wa.me/442071228324" target="_blank">
+                        <a class="btn btn-sm-square bg-success text-white mr-0" href="https://wa.me/442071228324" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -822,7 +855,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Opening Hours - Benefits Claim Support</h4>
                     <h6>Monday - Sunday:</h6>
-                    <p class="45 mb-0">Flexible – Callutung or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
+                    <p class="mb-0">Flexible – Call or Enquire Anytime for Attendance Allowance & Pension Credit Assistance</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="mb-4">Our Services</h4>
