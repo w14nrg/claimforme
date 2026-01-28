@@ -44,7 +44,7 @@
     .btn-outline-primary { border-color: #FF6600 !important; color: #FF6600 !important; }
     .btn-outline-primary:hover { background-color: #FF6600 !important; color: white !important; }
     .spinner-border { border-color: #FF6600 !important; border-right-color: transparent !important; }
-    .bg-light { background-color: #f8f8f8 !important; } /* Warmer light background */
+    .bg-light { background-colors: #f8f8f8 !important; } /* Warmer light background */
     /* Softer headings - Merriweather serif for warmth and elegance */
     h1, h2, h3, h4, h5, h6, .display-3 {
     font-family: 'Merriweather', serif !important;
@@ -221,12 +221,30 @@
     padding: 10px 0;
     z-index: 1000;
     }
-    /* Ribbon Badge Positioning - Fixed top-right near phone number */
-    #badge-ribbon {
+    /* Modern Badge Positioning - Fixed top-right, compact and neat next to phone number */
+    #badge-160 {
         position: fixed !important;
         top: 20px !important;
         right: 20px !important;
         z-index: 10000 !important;
+        max-width: 160px !important;
+        background: transparent !important;
+        padding: 8px !important;
+        border-radius: 8px !important;
+    }
+    @media (max-width: 991px) {
+        #badge-160 {
+            top: 10px !important;
+            right: 10px !important;
+            max-width: 140px !important;
+        }
+    }
+    @media (max-width: 767px) {
+        #badge-160 {
+            top: 80px !important;
+            right: 10px !important;
+            max-width: 130px !important;
+        }
     }
     </style>
     <!-- Local Business Schema - Fully valid with address, url, and required fields -->
@@ -256,7 +274,7 @@
     </script>
     <!-- Reviews.io Widget Loaders -->
     <script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2026012618"></script>
-    <script src="https://widget.reviews.io/badge-ribbon/dist.js"></script>
+    <script src="https://widget.reviews.io/badge-modern/dist.js"></script>
 </head>
 <body>
     <!-- Spinner Start -->
@@ -270,8 +288,8 @@
     <!-- Reviews.io Carousel Widget Container – placed right at the top for a clean top-header trust bar -->
     <div id="reviewsio-carousel-widget"></div>
 
-    <!-- Reviews.io Ribbon Badge Container (positioned top-right via CSS) -->
-    <div id="badge-ribbon"></div>
+    <!-- Reviews.io Modern Badge (orange, compact, positioned top-right) -->
+    <div id="badge-160" style="max-width:160px;"></div>
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
@@ -523,12 +541,12 @@
     <!-- Services Carousel Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
-            <div class="col-lg-4 d-none d-lg-flex">
+            <div class="col-lg-3 d-none d-lg-flex">
                 <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
                     <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Claim For Me</h1>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-8">
+            <div class="col-md-12 col-lg-9">
                 <div class="ms-lg-5 ps-lg-5">
                     <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
                         <h2 class="text-secondary text-uppercase">Our Services</h2>
@@ -697,7 +715,7 @@
                                                         <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_yes" value="Yes" required>
                                                         <label class="form-check-label" for="mobility_yes">Yes</label>
                                                     </div>
-                                                    <div class="form-call-check">
+                                                    <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_no" value="No" required>
                                                         <label class="form-check-label" for="mobility_no">No</label>
                                                     </div>
@@ -711,7 +729,7 @@
                         </form>
                     </div>
                 </div>
-            </div flavours
+            </div>
         </div>
     </div>
     <!-- Booking End -->
@@ -1003,7 +1021,7 @@
             '--popup-color':'#ffffff',
             '--popup-star-color':'inherit',
             '--popup-disabled-star-color':'inherit',
-            '--popup-heading-text-color':'inherit',
+            '--popupuidor-heading-text-color':'inherit',
             '--popup-body-text-color':'inherit',
             '--popup-badge-icon-color':'inherit',
             '--popup-badge-icon-font-size':'19px',
@@ -1021,11 +1039,12 @@
     });
     </script>
 
-    <!-- Reviews.io Ribbon Badge Initialisation -->
+    <!-- Reviews.io Modern Badge Initialisation -->
     <script>
-        reviewsBadgeRibbon("badge-ribbon", {
-            store: "claimfor.me.uk",
-            size: "small"
+        reviewsBadgeModern('badge-160', {
+            store: 'claimfor.me.uk',
+            primaryClr: '#FF6600',
+            starsClr: '#FF6600'
         });
     </script>
 </body>
