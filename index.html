@@ -62,7 +62,8 @@
  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
  .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
  .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
- .nav-bar { background-color: #ffffff !important; }
+ .nav-bar { background-color: #FAF3E9 !important; }
+ .top-bar { background-color: #FAF3E9 !important; }
  .video { background-color: #355C7D !important; background-image: none !important; padding: 100px 0 !important; color: white !important; }
  .video h1, .video h3 { color: white !important; }
  .fact { background-image: none !important; background-color: #355C7D !important; }
@@ -105,7 +106,7 @@
  .table { border-radius: 1rem !important; overflow: hidden; }
  .img-fluid { border-radius: 1rem !important; }
  .service-carousel .bg-light { border-radius: 1.5rem !important; }
- .bg-light.text-center.p-5 { border-radius: 2rem !important; } /* Callback form container */
+ .bg-light.text-center.p-5 { border-radius: 2rem !important; }
  .d-flex.align-items-center.justify-content-center.border.border-5.border-white { border-radius: 50% !important; }
  .d-flex.flex-shrink-0.align-items-center.justify-content-center.bg-white { border-radius: 50% !important; }
  @media (max-width: 767px) {
@@ -157,10 +158,20 @@
      font-size: 1.6rem !important;
    }
  }
- /* Logo image sizing */
- .header-logo { height: 70px; }
+ /* Logo sizing and styling – larger on both desktop and mobile, with drop-shadow to lift off background */
+ .header-logo {
+   height: 120px; /* Larger on desktop */
+   width: auto;
+   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+ }
  @media (max-width: 991px) {
-   .header-logo { height: 50px; }
+   .header-logo {
+     height: 90px; /* Keeps mobile readable as you said it's fine now */
+   }
+ }
+ /* Extra padding around logo for breathing room */
+ .navbar-brand {
+   padding: 1rem 1.5rem;
  }
  </style>
  <!-- Local Business Schema -->
@@ -197,7 +208,7 @@
  </div>
  <!-- Topbar Start -->
  <div class="container-fluid bg-light d-none d-lg-block top-bar">
- <div class="row align-items-center py-2">
+ <div class="row align-items-center py-4">
  <div class="col-lg-6 col-md-12 text-center text-lg-start">
  <a href="index.html" class="navbar-brand m-0 p-0">
  <img src="claimformelogo.jpg" alt="Claim For Me - Helping you claim with confidence" class="header-logo img-fluid">
