@@ -164,6 +164,12 @@
      font-size: 1.6rem !important;
    }
  }
+ /* Extra padding on hero for mobile to prevent any potential overlap from taller navbar */
+ @media (max-width: 991px) {
+   .container-fluid.bg-light.py-5.mb-5 {
+     padding-top: 6rem !important;
+   }
+ }
  </style>
  <!-- Local Business Schema -->
  <script type="application/ld+json">
@@ -236,7 +242,7 @@
      </span>
      <div>
        <h1 class="m-0">Claim For Me</h1>
-       <p class="mb-0 text-primary fw-bold" style="font-size: 1rem;">Helping you claim with confidence</p>
+       <!-- Tagline removed on mobile to keep navbar compact and prevent any overlap/covering issues -->
      </div>
    </div>
  </a>
