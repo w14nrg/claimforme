@@ -119,13 +119,13 @@
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
         .modal-open .site-header { display: none !important; visibility: hidden !important; }
-        /* Header styles - menu left-aligned after logo on desktop, phone right */
+        /* Header styles */
         .site-header {
-            min-height: 120px;
+            min-height: 130px;
             background-color: #ffffff;
         }
         .site-header .navbar-brand .tagline {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .site-header .phone-section {
             text-align: right;
@@ -135,7 +135,7 @@
             font-weight: 800 !important;
         }
         .site-header .phone-section .subtext {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #666;
         }
         .site-header .mobile-phone {
@@ -143,11 +143,14 @@
             font-weight: 700 !important;
             color: #355C7D !important;
         }
+        /* Menu left-aligned after logo on desktop */
+        .site-header .navbar-nav {
+            margin-left: 3rem !important;
+        }
         /* Hero padding */
         .hero-section {
-            padding-top: 160px !important;
+            padding-top: 180px !important;
         }
-        /* Mobile - tagline visible but smaller, menu full width in collapse */
         @media (max-width: 991px) {
             .site-header {
                 min-height: 100px;
@@ -156,12 +159,10 @@
                 font-size: 2.2rem !important;
             }
             .site-header .navbar-brand .tagline {
-                font-size: 1rem !important;
+                font-size: 1.1rem !important;
             }
-            .site-header .fa-stack {
-                width: 2.5em !important;
-                height: 2.5em !important;
-                line-height: 2.5em !important;
+            .site-header .mobile-phone {
+                font-size: 1.5rem !important;
             }
             .hero-section {
                 padding-top: 140px !important;
@@ -172,10 +173,10 @@
                 font-size: 1.9rem !important;
             }
             .site-header .navbar-brand .tagline {
-                font-size: 0.9rem !important;
+                font-size: 1rem !important;
             }
             .site-header .mobile-phone {
-                font-size: 1.4rem !important;
+                font-size: 1.3rem !important;
             }
         }
     </style>
@@ -233,15 +234,15 @@
                     </div>
                 </a>
 
-                <!-- Mobile phone + hamburger -->
-                <div class="d-lg-none d-flex align-items-center">
-                    <a href="tel:08000548484" class="text-decoration-none mobile-phone me-3">0800 054 8484</a>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <!-- Right side: Mobile phone + Hamburger -->
+                <div class="d-flex align-items-center ms-auto d-lg-none">
+                    <a href="tel:08000548484" class="text-decoration-none mobile-phone me-4">0800 054 8484</a>
+                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
 
-                <!-- Menu (left-aligned after logo on desktop) + Phone right -->
+                <!-- Collapse: Menu left-aligned after logo + Desktop phone right -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
