@@ -8,7 +8,7 @@
     <meta name="description" content="Claim For Me – dedicated to helping people over State Pension age with Attendance Allowance, Pension Credit and Blue Badge applications. No upfront fees, success-based payment.">
     <!-- Trustpilot domain verification -->
     <meta name="trustpilot-one-time-domain-verification-id" content="594a3aed-6f3f-4e07-98b1-2d5ba2d66d5a"/>
-    <!-- Canonical tag to prevent duplicate content issues -->
+    <!-- Canonical tag -->
     <link rel="canonical" href="https://www.claimfor.me.uk/about-us.html" />
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
@@ -27,9 +27,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme & Font Overrides (exact match to index.html) -->
+    <!-- Color Scheme & Font Overrides + Header Fixes (exact match to index) -->
     <style>
-        /* Primary colour: soft navy blue */
         .text-primary { color: #355C7D !important; }
         .bg-primary { background-color: #355C7D !important; }
         .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
@@ -39,9 +38,7 @@
         .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
         .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
         .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
-        /* Warm cream for light backgrounds */
         .bg-light { background-color: #FAF3E9 !important; }
-        /* Softer headings */
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
@@ -66,96 +63,69 @@
         .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
         .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
         .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
-        .video { background-color: #355C7D !important; background-image: none !important; padding: 100px 0 !important; color: white !important; }
-        .video h1, .video h3 { color: white !important; }
-        .fact { background-image: none !important; background-color: #355C7D !important; }
-        .price-badge {
-            display: inline-block;
-            background-color: #355C7D;
-            color: white;
-            font-weight: bold;
-            font-size: 2rem;
-            padding: 12px 30px;
-            border-radius: 50px;
-            margin: 20px 0;
-            animation: badgePulse 3s ease-in-out infinite;
-        }
-        @keyframes badgePulse {
-            0% { box-shadow: 0 0 0 rgba(53, 92, 125, 0); transform: scale(1); }
-            50% { box-shadow: 0 0 30px rgba(53, 92, 125, 0.9); transform: scale(1.08); }
-            100% { box-shadow: 0 0 0 rgba(53, 92, 125, 0); transform: scale(1); }
-        }
-        .footer h4, .footer h5, .footer h6 { color: #355C7D !important; }
-        .footer .text-light { color: #333333 !important; }
-        .footer .btn-link { color: #355C7D !important; text-decoration: underline; padding: 0; }
-        .footer .btn-link:hover { color: #2A4563 !important; }
-        .footer .copyright { color: #666666 !important; }
-        .footer-links a { color: #333333 !important; text-decoration: none; font-weight: 500; }
-        .footer-links a:hover { color: #355C7D !important; text-decoration: underline; }
         .btn { border-radius: 1rem !important; }
-        .form-control { border-radius: 1rem !important; background-color: #FFFFFF !important; box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; }
-        .accordion-button { border-radius: 1rem !important; }
-        .accordion-item { border-radius: 1rem !important; overflow: hidden; }
-        .table { border-radius: 1rem !important; overflow: hidden; }
         .img-fluid { border-radius: 1rem !important; }
-        /* Header styles */
-        .site-header {
-            min-height: 120px;
-            background-color: #ffffff;
+        /* Exact header styles from index.html */
+        .site-header { background-color: #ffffff; }
+        .top-row { min-height: 80px; padding: 12px 0 8px; background-color: #ffffff; }
+        .menu-row {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            padding: 0.25rem 0;
         }
-        .site-header .navbar-brand .tagline {
-            font-size: 1.2rem;
-        }
-        .site-header .phone-section {
-            text-align: right;
-        }
-        .site-header .phone-section .topbar-phone {
-            font-size: 2rem !important;
-            font-weight: 800 !important;
-        }
-        .site-header .phone-section .subtext {
+        .menu-row .nav-link {
+            padding: 0.35rem 1rem;
             font-size: 1rem;
-            color: #666;
         }
-        .site-header .mobile-phone {
-            font-size: 1.6rem !important;
+        /* Stronger shadow on scroll */
+        .site-header.scrolled {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .topbar-phone {
+            font-size: 1.8rem !important;
+            font-weight: 800 !important;
+            color: #355C7D !important;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .subtext {
+            font-size: 0.95rem;
+            color: #666;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .mobile-phone {
+            font-size: 1.4rem !important;
             font-weight: 700 !important;
             color: #355C7D !important;
+            white-space: nowrap;
+            text-decoration: none;
         }
-        /* Hero padding */
-        .hero-section {
-            padding-top: 160px !important;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
         @media (max-width: 991px) {
-            .site-header {
-                min-height: 100px;
-            }
-            .site-header .navbar-brand h1 {
-                font-size: 2.2rem !important;
-            }
-            .site-header .navbar-brand .tagline {
-                font-size: 1rem !important;
-            }
-            .site-header .fa-stack {
-                width: 2.5em !important;
-                height: 2.5em !important;
-                line-height: 2.5em !important;
-            }
-            .hero-section {
-                padding-top: 140px !important;
+            .top-row { min-height: 70px; padding: 8px 0 4px; }
+            .top-row .row { align-items: flex-start; }
+            .top-row .navbar-brand h1 { font-size: 1.8rem !important; }
+            .tagline { font-size: 0.95rem !important; }
+            .mobile-phone { font-size: 1.35rem !important; margin-top: 2px; }
+            .right-mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-start;
+                height: 100%;
             }
         }
         @media (max-width: 576px) {
-            .site-header .navbar-brand h1 {
-                font-size: 1.9rem !important;
-            }
-            .site-header .navbar-brand .tagline {
-                font-size: 0.9rem !important;
-            }
-            .site-header .mobile-phone {
-                font-size: 1.4rem !important;
-            }
+            .top-row .navbar-brand h1 { font-size: 1.55rem !important; }
+            .tagline { font-size: 0.85rem !important; }
+            .mobile-phone { font-size: 1.2rem !important; }
         }
+        .hero-section { padding-top: 140px !important; }
+        @media (max-width: 991px) { .hero-section { padding-top: 110px !important; } }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -171,35 +141,41 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Unified Sticky Header (exact match to index.html, with About Us active) -->
-    <header class="sticky-top bg-white shadow-sm site-header">
-        <div class="container px-4 py-3">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <!-- Logo + Title + Tagline left -->
-                <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <span class="fa-stack fa-3x me-4 d-none d-md-block">
-                        <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                        <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span class="fa-stack fa-2x me-3 d-md-none">
-                        <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                        <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <div>
-                        <h1 class="m-0">Claim For Me</h1>
-                        <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
+    <!-- Header (exact match to index, About Us active) -->
+    <header class="sticky-top shadow-sm site-header">
+        <div class="top-row bg-white">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-8 col-6">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
+                            <span class="fa-stack fa-3x me-3 d-none d-md-block">
+                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <div>
+                                <h1 class="m-0">Claim For Me</h1>
+                                <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <!-- Mobile phone + hamburger -->
-                <div class="d-lg-none d-flex align-items-center">
-                    <a href="tel:08000548484" class="text-decoration-none mobile-phone me-3">0800 054 8484</a>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="col-lg-4 d-none d-lg-block text-end">
+                        <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
+                        <p class="mb-0 subtext">Call us anytime – it's free</p>
+                    </div>
+                    <div class="col-6 d-lg-none right-mobile">
+                        <a href="tel:08000548484" class="mobile-phone d-block">0800 054 8484</a>
+                        <button class="navbar-toggler border-0 p-0 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                 </div>
-                <!-- Menu + Phone right -->
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+            </div>
+        </div>
+        <!-- Desktop menu row -->
+        <div class="menu-row d-none d-lg-block">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <ul class="navbar-nav mb-0">
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
@@ -213,12 +189,31 @@
                         <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
                         <li class="nav-item"><a href="about-us.html" class="nav-link active">About Us</a></li>
                     </ul>
-                    <div class="d-none d-lg-block phone-section ms-auto">
-                        <p class="mb-1 topbar-phone">Freephone 0800 054 8484</p>
-                        <p class="mb-0 subtext">Call us anytime – it's free</p>
-                    </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
+        </div>
+        <!-- Mobile offcanvas menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdownMobile" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                            <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                            <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="about-us.html" class="nav-link active">About Us</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -264,9 +259,9 @@
         </div>
     </div>
 
-    <!-- CTA -->
-    <div class="container-xxl py-5 bg-primary text-white">
-        <div class="container text-center">
+    <!-- CTA Section -->
+    <div class="container-xxl py-5 bg-primary text-white text-center">
+        <div class="container">
             <h2 class="mb-4">Get Your Free Eligibility Check Today</h2>
             <p class="mb-4 fs-4">No obligation – just friendly advice</p>
             <a href="tel:08000548484" class="btn btn-light py-3 px-5 me-3">Call Freephone Now</a>
@@ -274,7 +269,7 @@
         </div>
     </div>
 
-    <!-- Footer (exact match to index.html) -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -327,6 +322,7 @@
             </div>
         </div>
     </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -344,6 +340,18 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Scroll shadow for header -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 
     <!-- Spinner Hide -->
     <script>
