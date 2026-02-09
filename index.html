@@ -30,9 +30,8 @@
     <!-- Reviews.io Carousel Widget CSS -->
     <link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026012618">
     <link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026012618">
-    <!-- Color Scheme & Font Overrides -->
+    <!-- Color Scheme & Font Overrides + Header Fixes -->
     <style>
-        /* Primary colour: soft navy blue */
         .text-primary { color: #355C7D !important; }
         .bg-primary { background-color: #355C7D !important; }
         .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
@@ -42,9 +41,7 @@
         .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
         .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
         .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
-        /* Warm cream for light backgrounds */
         .bg-light { background-color: #FAF3E9 !important; }
-        /* Softer headings */
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
@@ -119,64 +116,76 @@
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
         .modal-open .site-header { display: none !important; visibility: hidden !important; }
-        /* Header styles */
+        /* Header: top row (logo + phone), menu row below */
         .site-header {
-            min-height: 130px;
             background-color: #ffffff;
         }
-        .site-header .navbar-brand .tagline {
+        .top-row {
+            min-height: 100px;
+            align-items: center;
+        }
+        .top-row .tagline {
             font-size: 1.3rem;
+            margin-top: -5px;
         }
-        .site-header .phone-section {
-            text-align: right;
-        }
-        .site-header .phone-section .topbar-phone {
-            font-size: 2rem !important;
+        .top-row .topbar-phone {
+            font-size: 1.8rem !important;
             font-weight: 800 !important;
+            white-space: nowrap;
         }
-        .site-header .phone-section .subtext {
-            font-size: 1.1rem;
+        .top-row .subtext {
+            font-size: 1rem;
             color: #666;
+            white-space: nowrap;
         }
-        .site-header .mobile-phone {
-            font-size: 1.6rem !important;
+        .top-row .mobile-phone {
+            font-size: 1.5rem !important;
             font-weight: 700 !important;
             color: #355C7D !important;
+            white-space: nowrap;
         }
-        /* Menu left-aligned after logo on desktop */
-        .site-header .navbar-nav {
-            margin-left: 3rem !important;
+        .menu-row {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            padding: 0.5rem 0;
         }
-        /* Hero padding */
+        .menu-row .nav-link {
+            padding: 0.5rem 1rem;
+        }
+        /* Mobile */
+        @media (max-width: 991px) {
+            .top-row {
+                min-height: 80px;
+            }
+            .top-row .navbar-brand h1 {
+                font-size: 2rem !important;
+            }
+            .top-row .tagline {
+                font-size: 1.1rem !important;
+            }
+            .top-row .fa-stack {
+                width: 2.5em !important;
+                height: 2.5em !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .top-row .navbar-brand h1 {
+                font-size: 1.8rem !important;
+            }
+            .top-row .tagline {
+                font-size: 1rem !important;
+            }
+            .top-row .mobile-phone {
+                font-size: 1.3rem !important;
+            }
+        }
+        /* Hero padding for sticky header */
         .hero-section {
             padding-top: 180px !important;
         }
         @media (max-width: 991px) {
-            .site-header {
-                min-height: 100px;
-            }
-            .site-header .navbar-brand h1 {
-                font-size: 2.2rem !important;
-            }
-            .site-header .navbar-brand .tagline {
-                font-size: 1.1rem !important;
-            }
-            .site-header .mobile-phone {
-                font-size: 1.5rem !important;
-            }
             .hero-section {
                 padding-top: 140px !important;
-            }
-        }
-        @media (max-width: 576px) {
-            .site-header .navbar-brand h1 {
-                font-size: 1.9rem !important;
-            }
-            .site-header .navbar-brand .tagline {
-                font-size: 1rem !important;
-            }
-            .site-header .mobile-phone {
-                font-size: 1.3rem !important;
             }
         }
     </style>
@@ -214,56 +223,63 @@
         </div>
     </div>
 
-    <!-- Unified Sticky Header -->
-    <header class="sticky-top bg-white shadow-sm site-header">
-        <div class="container px-4 py-3">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <!-- Logo + Title + Tagline left -->
-                <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <span class="fa-stack fa-3x me-4 d-none d-md-block">
-                        <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                        <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span class="fa-stack fa-2x me-3 d-md-none">
-                        <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                        <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <div>
-                        <h1 class="m-0">Claim For Me</h1>
-                        <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
+    <!-- Sticky Header: Top row (logo left, phone right), Menu row below -->
+    <header class="sticky-top shadow-sm site-header">
+        <!-- Top Row -->
+        <div class="top-row bg-white">
+            <div class="container">
+                <div class="row align-items-center py-2">
+                    <div class="col-lg-8 col-6">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
+                            <span class="fa-stack fa-3x me-4 d-none d-md-block">
+                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="fa-stack fa-2x me-3 d-md-none">
+                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <div>
+                                <h1 class="m-0">Claim For Me</h1>
+                                <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-
-                <!-- Right side: Mobile phone + Hamburger -->
-                <div class="d-flex align-items-center ms-auto d-lg-none">
-                    <a href="tel:08000548484" class="text-decoration-none mobile-phone me-4">0800 054 8484</a>
-                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-
-                <!-- Collapse: Menu left-aligned after logo + Desktop phone right -->
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
-                                <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
-                                <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                        <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
-                    </ul>
-                    <div class="d-none d-lg-block phone-section ms-auto">
-                        <p class="mb-1 topbar-phone">Freephone 0800 054 8484</p>
+                    <div class="col-lg-4 d-none d-lg-block text-end">
+                        <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
                         <p class="mb-0 subtext">Call us anytime – it's free</p>
                     </div>
+                    <div class="col-6 d-lg-none text-end">
+                        <a href="tel:08000548484" class="text-decoration-none mobile-phone me-3">0800 054 8484</a>
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                 </div>
-            </nav>
+            </div>
+        </div>
+        <!-- Menu Row -->
+        <div class="menu-row">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                                    <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                                    <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                            <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -873,7 +889,7 @@
             },
         });
     </script>
-    <!-- Intro Video Modal - Show on first load only (per session) -->
+    <!-- Intro Video Modal scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!sessionStorage.getItem('introShown')) {
@@ -883,7 +899,6 @@
             }
         });
     </script>
-    <!-- Stop video on modal close -->
     <script>
         document.getElementById('introVideoModal').addEventListener('hidden.bs.modal', function () {
             var video = this.querySelector('video');
