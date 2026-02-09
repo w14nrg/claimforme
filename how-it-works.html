@@ -25,7 +25,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme & Font Overrides + Custom Styles (matched to index) -->
+    <!-- Color Scheme & Font Overrides + Header Fixes (exact match to index) -->
     <style>
         .text-primary { color: #355C7D !important; }
         .bg-primary { background-color: #355C7D !important; }
@@ -91,6 +91,23 @@
         .checklist ul { list-style: none; padding-left: 0; }
         .checklist li { padding: 0.75rem 0; font-size: 1.1rem; }
         .checklist li i { color: #355C7D; margin-right: 1rem; }
+        /* Exact header styles from index.html */
+        .site-header { background-color: #ffffff; }
+        .top-row { min-height: 80px; padding: 12px 0 8px; background-color: #ffffff; }
+        .menu-row {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            padding: 0.25rem 0;
+        }
+        .menu-row .nav-link {
+            padding: 0.35rem 1rem;
+            font-size: 1rem;
+        }
+        /* Stronger shadow when scrolled to prevent "see behind" */
+        .site-header.scrolled {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
         .topbar-phone {
             font-size: 1.8rem !important;
             font-weight: 800 !important;
@@ -399,6 +416,18 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Scroll shadow for header (prevents "see behind" while keeping exact index appearance) -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 
     <!-- Spinner Hide -->
     <script>
