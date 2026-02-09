@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
     <meta charset="utf-8">
     <title>How It Works | Claim Benefits Over State Pension Age | Claim For Me</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="keywords" content="how it works, claim process, attendance allowance process, pension credit process, blue badge process, benefits claim help">
     <meta name="description" content="Our simple 6-step process: free eligibility questionnaire, agent call to arrange appointment, expert phone consultation, claim submission, decision, and success-based payment.">
+    <!-- Canonical tag -->
+    <link rel="canonical" href="https://www.claimfor.me.uk/how-it-works.html" />
     <!-- Favicon -->
     <link href="favicon.ico" rel="icon">
     <!-- Google Web Fonts -->
@@ -17,54 +20,120 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Consistent Custom Styles (matched to index) -->
+    <!-- Color Scheme & Font Overrides + Custom Styles (matched to index) -->
     <style>
-        .text-primary { color: #FF6600 !important; }
-        .bg-primary { background-color: #FF6600 !important; }
-        .btn-primary { background-color: #FF6600 !important; border-color: #FF6600 !important; }
+        .text-primary { color: #355C7D !important; }
+        .bg-primary { background-color: #355C7D !important; }
+        .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
+        .text-secondary { color: #808080 !important; }
+        .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
+        .bg-dark { background-color: #808080 !important; }
+        .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
+        .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
+        .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
+        .bg-light { background-color: #FAF3E9 !important; }
         h1, h2, h3, h4, h5, h6, .display-3 {
             font-family: 'Merriweather', serif !important;
             font-weight: 700 !important;
-            color: #333333 !important;
+            color: #2C3E50 !important;
             line-height: 1.3 !important;
         }
         .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
-        .navbar-brand h1 { font-family: 'Merriweather', serif !important; font-weight: 700 !important; font-size: 2.6rem !important; color: #333333 !important; margin: 0; }
-        .navbar-brand .logo-c { color: #FF6600 !important; }
-        .navbar-brand .logo-rest {
-            text-decoration-line: underline;
-            text-decoration-style: wavy;
-            text-decoration-color: #FF6600;
-            text-decoration-thickness: 4px;
-            text-underline-offset: 6px;
+        .navbar-brand h1 {
+            font-family: 'Merriweather', serif !important;
+            font-weight: 700 !important;
+            font-size: 2.6rem !important;
+            color: #355C7D !important;
+            margin: 0;
         }
-        body, p { font-family: 'Open Sans', sans-serif !important; color: #444444 !important; font-size: 1.1rem !important; line-height: 1.6 !important; }
-        .step-icon { font-size: 4rem; color: #FF6600; margin-bottom: 1.5rem; }
-        .step-card { background-color: #f8f8f8; border-radius: 15px; padding: 2.5rem; height: 100%; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
-        .step-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-        .step-number { font-size: 2.5rem; font-weight: 700; color: #FF6600; margin-bottom: 1rem; }
-        .checklist { background-color: white; border-radius: 15px; padding: 2rem; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        body, p {
+            font-family: 'Open Sans', sans-serif !important;
+            color: #333333 !important;
+            font-size: 1.1rem !important;
+            line-height: 1.6 !important;
+        }
+        .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
+        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
+        .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
+        .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
+        .btn { border-radius: 1rem !important; }
+        .step-icon { font-size: 4rem; color: #355C7D; margin-bottom: 1.5rem; }
+        .step-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            height: 100%;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #355C7D;
+            margin-bottom: 1rem;
+        }
+        .checklist {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
         .checklist ul { list-style: none; padding-left: 0; }
         .checklist li { padding: 0.75rem 0; font-size: 1.1rem; }
-        .checklist li i { color: #FF6600; margin-right: 1rem; }
-        .bg-light { background-color: #f8f8f8 !important; }
+        .checklist li i { color: #355C7D; margin-right: 1rem; }
         .topbar-phone {
             font-size: 1.8rem !important;
             font-weight: 800 !important;
-            line-height: 1.2 !important;
-            color: #FF6600 !important;
+            color: #355C7D !important;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .subtext {
+            font-size: 0.95rem;
+            color: #666;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .mobile-phone {
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            color: #355C7D !important;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
         @media (max-width: 991px) {
-            .topbar-phone { font-size: 1.6rem !important; }
+            .top-row { min-height: 70px; padding: 8px 0 4px; }
+            .top-row .row { align-items: flex-start; }
+            .top-row .navbar-brand h1 { font-size: 1.8rem !important; }
+            .tagline { font-size: 0.95rem !important; }
+            .mobile-phone { font-size: 1.35rem !important; margin-top: 2px; }
+            .right-mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-start;
+                height: 100%;
+            }
         }
         @media (max-width: 767px) {
             .step-icon { font-size: 3rem; }
             .step-number { font-size: 2rem; }
         }
+        .hero-section { padding-top: 140px !important; }
+        @media (max-width: 991px) { .hero-section { padding-top: 110px !important; } }
     </style>
 </head>
 <body>
@@ -76,64 +145,85 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Topbar Start (matched to index) -->
-    <div class="container-fluid bg-light d-none d-lg-block top-bar">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                <a href="index.html" class="navbar-brand m-0 p-0">
-                    <h1 class="m-0">
-                        <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
-                    </h1>
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center">
-                    <div class="me-5 text-end">
+    <!-- Header (exact match to index, How It Works active) -->
+    <header class="sticky-top shadow-sm site-header">
+        <div class="top-row bg-white">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-8 col-6">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
+                            <span class="fa-stack fa-3x me-3 d-none d-md-block">
+                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <div>
+                                <h1 class="m-0">Claim For Me</h1>
+                                <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block text-end">
                         <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
-                        <p class="mb-0 topbar-email">Call us anytime – it's free</p>
+                        <p class="mb-0 subtext">Call us anytime – it's free</p>
+                    </div>
+                    <div class="col-6 d-lg-none right-mobile">
+                        <a href="tel:08000548484" class="mobile-phone d-block">0800 054 8484</a>
+                        <button class="navbar-toggler border-0 p-0 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start (matched to index, How It Works active) -->
-    <div class="container-fluid nav-bar bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-            <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="m-0">
-                    <span class="logo-c">C</span><span class="logo-rest">laim For Me</span>
-                </h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav me-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Eligibility Check
-                        </a>
+        <!-- Desktop menu row -->
+        <div class="menu-row d-none d-lg-block">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <ul class="navbar-nav mb-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                                <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                                <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Mobile offcanvas menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdownMobile" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
                             <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
                             <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
                         </ul>
-                    </div>
-                    <a href="how-it-works.html" class="nav-item nav-link active">How It Works</a>
-                    <a href="pricing.html" class="nav-item nav-link">Pricing</a>
-                    <a href="about-us.html" class="nav-item nav-link">About Us</a>
-                </div>
+                    </li>
+                    <li class="nav-item"><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+        </div>
+    </header>
 
-    <!-- Page Header -->
-    <div class="container-fluid bg-light py-5 text-center mb-5">
-        <div class="container">
+    <!-- Hero Section -->
+    <div class="container-fluid bg-light py-5 mb-5 hero-section">
+        <div class="container text-center">
             <h1 class="display-3 mb-4">How It Works</h1>
             <p class="fs-4 text-secondary">Our simple, stress-free 6-step process</p>
             <p class="fs-5 mb-4">Everything is done over the phone – no complicated forms for you to fill in.<br>No upfront fees • You only pay if you win</p>
@@ -162,7 +252,7 @@
                         <p>One of our friendly agents will contact you promptly to discuss your questionnaire results and book a convenient phone appointment with a benefits expert. We'll let you know exactly what information you'll need.</p>
                     </div>
                 </div>
-                <!-- Step 3 – Updated icon for "Expert Phone Consultation" -->
+                <!-- Step 3 -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="step-card">
                         <div class="step-number">3</div>
@@ -203,16 +293,16 @@
             <!-- Checklist Section -->
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="checklist text-left">
+                    <div class="checklist text-start">
                         <h3 class="text-center mb-4">What You'll Need for Your Phone Consultation</h3>
                         <p class="text-center mb-4">Don't worry – our expert will guide you through everything, and you can have a family member or carer with you on the call. It's helpful (but not essential) to have the following ready:</p>
                         <ul>
-                            <li><i class="fa fa-check text-primary"></i>Your National Insurance number</li>
-                            <li><i class="fa fa-check text-primary"></i>Your address and contact details</li>
-                            <li><i class="fa fa-check text-primary"></i>Details of your disability or health condition (and how it affects daily living)</li>
-                            <li><i class="fa fa-check text-primary"></i>Details of your GP surgery or medical centre</li>
-                            <li><i class="fa fa-check text-primary"></i>Details of any care home, hospital, or hospice you're currently staying in (if applicable)</li>
-                            <li><i class="fa fa-check text-primary"></i>Details of any other benefits you're currently receiving</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Your National Insurance number</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Your address and contact details</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Details of your disability or health condition (and how it affects daily living)</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Details of your GP surgery or medical centre</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Details of any care home, hospital, or hospice you're currently staying in (if applicable)</li>
+                            <li><i class="fa fa-check text-success me-3"></i>Details of any other benefits you're currently receiving</li>
                         </ul>
                         <p class="text-center mt-4">We handle all the paperwork – you just need to chat with us!</p>
                     </div>
@@ -220,7 +310,7 @@
             </div>
 
             <!-- Final Reassurance & CTA -->
-            <div class="text-center mt-5 py-5 bg-light rounded">
+            <div class="text-center mt-5 py-5 bg-light rounded wow fadeInUp" data-wow-delay="0.1s">
                 <p class="fs-4 fw-medium text-primary mb-4">No win, no fee – you only ever pay if your claim succeeds,<br>and it's usually covered by your backdated award.</p>
                 <a href="index.html" class="btn btn-primary py-3 px-5 me-3">Start Your Free Questionnaire</a>
                 <a href="tel:08000548484" class="btn btn-outline-primary py-3 px-5">Call Freephone Now</a>
@@ -238,7 +328,7 @@
         </div>
     </div>
 
-    <!-- Footer Start (exact match to index) -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -294,13 +384,20 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
     <!-- Spinner Hide -->
