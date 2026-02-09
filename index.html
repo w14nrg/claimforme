@@ -150,27 +150,46 @@
         @media (max-width: 767px) {
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
-        /* Force hide navbar and topbar when modal is open */
-        .modal-open .top-bar, .modal-open .nav-bar { display: none !important; visibility: hidden !important; }
-        /* Topbar phone styling */
+        /* Force hide navbar when modal is open */
+        .modal-open .nav-bar { display: none !important; visibility: hidden !important; }
+        /* Topbar phone styling (reused for header phone) */
         .topbar-phone {
             font-size: 1.8rem !important;
             font-weight: 800 !important;
             line-height: 1.2 !important;
             color: #355C7D !important;
         }
-        @media (max-width: 991px) {
-            .topbar-phone {
-                font-size: 1.6rem !important;
-            }
+        .mobile-phone {
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
         }
-        /* Padding for content below sticky navbar */
+        /* Hero padding to account for sticky navbar (prevents covering when scrolled) */
         .hero-section {
-            padding-top: 140px;
+            padding-top: 160px !important;
         }
         @media (max-width: 991px) {
             .hero-section {
-                padding-top: 100px;
+                padding-top: 120px !important;
+            }
+            .navbar-brand h1 {
+                font-size: 2rem !important;
+            }
+            .navbar-brand p {
+                font-size: 1.1rem !important;
+            }
+            .fa-stack {
+                font-size: 2.5rem !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .navbar-brand h1 {
+                font-size: 1.8rem !important;
+            }
+            .navbar-brand p {
+                font-size: 1rem !important;
+            }
+            .mobile-phone {
+                font-size: 1.3rem !important;
             }
         }
     </style>
@@ -208,77 +227,73 @@
         </div>
     </div>
 
-    <!-- Topbar Start (Desktop only - logo left, phone right) -->
-    <div class="container-fluid bg-light d-none d-lg-block top-bar">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-6 text-center text-lg-start">
-                <a href="index.html" class="navbar-brand m-0 p-0">
-                    <div class="d-flex align-items-center">
-                        <span class="fa-stack fa-3x me-4">
-                            <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                            <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <div>
-                            <h1 class="m-0">Claim For Me</h1>
-                            <p class="mb-0 text-primary fw-bold" style="font-size: 1.3rem;">Helping you claim with confidence</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 d-inline-flex align-items-center">
-                    <div class="text-end">
-                        <a href="tel:08000548484" class="topbar-phone text-decoration-none d-block">Freephone 0800 054 8484</a>
-                        <p class="mb-0 text-muted">Call us anytime – it's free</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start - Sticky, with phone visible on mobile -->
-    <div class="container-fluid nav-bar bg-light sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-            <!-- Mobile layout: logo left, phone + hamburger right -->
-            <div class="d-lg-none w-100 d-flex justify-content-between align-items-center">
+    <!-- Unified Sticky Navbar (replaces separate topbar + old navbar) -->
+    <div class="sticky-top bg-light nav-bar shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-lg-3">
+            <div class="container-fluid">
+                <!-- Logo + Shield -->
                 <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
                     <div class="d-flex align-items-center">
-                        <span class="fa-stack fa-2x me-3">
+                        <span class="fa-stack fa-3x me-4 d-none d-lg-block">
+                            <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                            <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack fa-2x me-3 d-lg-none">
                             <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
                             <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
                         </span>
                         <div>
                             <h1 class="m-0">Claim For Me</h1>
-                            <p class="mb-0 text-primary fw-bold" style="font-size: 1rem;">Helping you claim with confidence</p>
+                            <p class="mb-0 text-primary fw-bold">Helping you claim with confidence</p>
                         </div>
                     </div>
                 </a>
+
+                <!-- Mobile phone + hamburger -->
                 <div class="d-flex align-items-center">
-                    <a href="tel:08000548484" class="topbar-phone text-decoration-none me-4">0800 054 8484</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
+                    <a href="tel:08000548484" class="d-flex align-items-center text-decoration-none mobile-phone d-lg-none me-3">
+                        <i class="fa fa-phone-alt fa-flip-horizontal me-2"></i>
+                        0800 054 8484
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-            </div>
 
-            <!-- Desktop menu -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Eligibility Check
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="eligibilityDropdown">
-                            <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
-                            <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
-                            <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
-                        </ul>
+                <!-- Collapsible menu + desktop phone -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Eligibility Check
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="eligibilityDropdown">
+                                <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                                <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                                <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us.html" class="nav-link">About Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-flex align-items-center">
+                        <div class="text-end">
+                            <a href="tel:08000548484" class="text-decoration-none">
+                                <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
+                            </a>
+                            <p class="mb-0 text-muted">Call us anytime – it's free</p>
+                        </div>
                     </div>
-                    <a href="how-it-works.html" class="nav-item nav-link">How It Works</a>
-                    <a href="pricing.html" class="nav-item nav-link">Pricing</a>
-                    <a href="about-us.html" class="nav-item nav-link">About Us</a>
                 </div>
             </div>
         </nav>
@@ -915,7 +930,7 @@
             }
         });
     </script>
-    <!-- Stop video sound on modal close -->
+    <!-- Stop video on modal close -->
     <script>
         document.getElementById('introVideoModal').addEventListener('hidden.bs.modal', function () {
             var video = this.querySelector('video');
