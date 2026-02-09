@@ -56,6 +56,12 @@
             color: #355C7D !important;
             margin: 0;
         }
+        .tagline {
+            font-size: 1.1rem;
+            margin-top: -5px;
+            color: #355C7D;
+            font-weight: bold;
+        }
         body, p, li, .accordion-body, .table {
             font-family: 'Open Sans', sans-serif !important;
             color: #333333 !important;
@@ -66,6 +72,26 @@
         .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
         .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
         .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
+        .topbar-phone {
+            font-size: 1.8rem !important;
+            font-weight: 800 !important;
+            color: #355C7D !important;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .subtext {
+            font-size: 0.95rem;
+            color: #666;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .mobile-phone {
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            color: #355C7D !important;
+            white-space: nowrap;
+            text-decoration: none;
+        }
         .video { background-color: #355C7D !important; background-image: none !important; padding: 100px 0 !important; color: white !important; }
         .video h1, .video h3 { color: white !important; }
         .fact { background-image: none !important; background-color: #355C7D !important; }
@@ -116,99 +142,32 @@
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
         .modal-open .site-header { display: none !important; visibility: hidden !important; }
-        /* Header layout - compact, no overlap */
-        .site-header {
-            background-color: #ffffff;
-        }
-        .top-row {
-            min-height: 80px;
-            padding: 10px 0;
-        }
-        .top-row .tagline {
-            font-size: 1.1rem;
-            margin-top: -5px;
-        }
-        .top-row .topbar-phone {
-            font-size: 1.8rem !important;
-            font-weight: 800 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-        }
-        .top-row .subtext {
-            font-size: 0.95rem;
-            color: #666;
-            white-space: nowrap;
-        }
-        .top-row .mobile-phone {
-            font-size: 1.4rem !important;
-            font-weight: 700 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-        }
-        .menu-row {
-            background-color: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-            border-bottom: 1px solid #dee2e6;
-            padding: 0.2rem 0;
-        }
-        .menu-row .nav-link {
-            padding: 0.3rem 1rem;
-            font-size: 1rem;
-        }
-        /* Mobile - robust flex to prevent overlap */
+        /* Mobile adjustments */
         @media (max-width: 991px) {
-            .top-row {
-                min-height: 60px;
-                padding: 5px 0;
-            }
-            .top-row .container > .row {
-                align-items: center;
-            }
-            .top-row .navbar-brand {
-                display: flex;
-                align-items: center;
-            }
-            .top-row .fa-stack {
-                width: 1.6em !important;
-                height: 1.6em !important;
-                font-size: 1.4rem !important;
-                margin-right: 8px !important;
-            }
-            .top-row .navbar-brand h1 {
+            .navbar-brand h1 {
                 font-size: 1.7rem !important;
             }
-            .top-row .tagline {
+            .tagline {
                 font-size: 0.9rem !important;
             }
-            .top-row .mobile-phone {
+            .mobile-phone {
                 font-size: 1.3rem !important;
-            }
-            .top-row .text-end {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
             }
         }
         @media (max-width: 576px) {
-            .top-row .fa-stack {
-                width: 1.4em !important;
-                height: 1.4em !important;
-                font-size: 1.2rem !important;
-                margin-right: 6px !important;
-            }
-            .top-row .navbar-brand h1 {
+            .navbar-brand h1 {
                 font-size: 1.5rem !important;
             }
-            .top-row .tagline {
+            .tagline {
                 font-size: 0.85rem !important;
             }
-            .top-row .mobile-phone {
+            .mobile-phone {
                 font-size: 1.1rem !important;
             }
         }
-        /* Hero padding */
+        /* Hero padding - adjusted for single-row header */
         .hero-section {
-            padding-top: 140px !important;
+            padding-top: 130px !important;
         }
         @media (max-width: 991px) {
             .hero-section {
@@ -248,60 +207,48 @@
             </div>
         </div>
     </div>
-    <!-- Header: Top row (logo left, phone right), Menu row below (super compact) -->
-    <header class="sticky-top shadow-sm site-header">
-        <!-- Top Row -->
-        <div class="top-row bg-white">
+    <!-- Header - Standard Bootstrap navbar (single row) -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-6">
-                        <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
-                            <span class="fa-stack fa-3x me-3 d-none d-md-block">
-                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <div>
-                                <h1 class="m-0">Claim For Me</h1>
-                                <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
-                            </div>
-                        </a>
+                <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
+                    <span class="fa-stack fa-3x me-3 d-none d-md-block">
+                        <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
+                        <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <div>
+                        <h1 class="m-0">Claim For Me</h1>
+                        <p class="m-0 tagline">Helping you claim with confidence</p>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block text-end">
-                        <p class="mb-0 topbar-phone">Freephone 0800 054 8484</p>
-                        <p class="mb-0 subtext">Call us anytime – it's free</p>
-                    </div>
-                    <div class="col-6 d-lg-none text-end d-flex align-items-center justify-content-end">
-                        <a href="tel:08000548484" class="text-decoration-none mobile-phone me-3">0800 054 8484</a>
-                        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                </a>
+                <div class="d-flex align-items-center ms-auto">
+                    <a href="tel:08000548484" class="mobile-phone me-3 d-lg-none">0800 054 8484</a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Eligibility Check</a>
+                            <ul class="dropdown-menu" aria-labelledby="eligibilityDropdown">
+                                <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
+                                <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
+                                <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+                    </ul>
+                    <div class="d-none d-lg-block text-end">
+                        <p class="topbar-phone">Freephone 0800 054 8484</p>
+                        <p class="subtext">Call us anytime – it's free</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Menu Row (super compact) -->
-        <div class="menu-row">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light p-0">
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="eligibilityDropdown" role="button" data-bs-toggle="dropdown">Eligibility Check</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="eligibility-attendance-allowance.html">Attendance Allowance</a></li>
-                                    <li><a class="dropdown-item" href="eligibility-pension-credit.html">Pension Credit</a></li>
-                                    <li><a class="dropdown-item" href="eligibility-blue-badge.html">Blue Badge</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                            <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        </nav>
     </header>
     <!-- Hero Section Start -->
     <div class="container-fluid bg-light py-5 mb-5 hero-section">
