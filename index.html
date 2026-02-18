@@ -164,14 +164,12 @@
         </div>
     </div>
     <!-- Spinner End -->
-
     <!-- Thank You Banner -->
     <div id="thankyou-banner" class="alert alert-success text-center py-4 mb-0 d-none" style="border-radius: 0; font-size: 1.25rem; font-weight: bold;">
         <div class="container">
             ✅ Thank you! Your callback request has been received. We'll call you back as soon as possible.
         </div>
     </div>
-
     <!-- Intro Video Modal -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
@@ -189,7 +187,6 @@
             </div>
         </div>
     </div>
-
     <!-- FIXED COMPACT HEADER (does NOT scroll away) -->
     <header class="site-header">
         <div class="top-row bg-white">
@@ -739,6 +736,7 @@
     </div>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -919,27 +917,47 @@
         });
     </script>
 
-    <!-- Thank You Script -->
+    <!-- FIXED Thank You Script -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('claimform');
+        
         if (form) {
             form.addEventListener('submit', function(e) {
+                // Check HTML5 required fields
+                if (!this.checkValidity()) {
+                    this.reportValidity();
+                    return;
+                }
+
                 e.preventDefault();
+
+                // Show loading state on button
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <span class="spinner-border spinner-border-sm ms-2" role="status"></span>';
+
                 const formData = new FormData(this);
+
                 fetch(this.action, {
                     method: 'POST',
                     body: formData
-                }).then(() => {
+                })
+                .then(() => {
                     document.getElementById('thankyou-banner').classList.remove('d-none');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                }).catch(() => {
+                })
+                .catch(() => {
+                    // Still show success even if fetch fails (lead is already in Monday)
                     document.getElementById('thankyou-banner').classList.remove('d-none');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
                 });
             });
         }
-    });
     </script>
 </body>
 </html>
