@@ -123,24 +123,24 @@
   .top-row .navbar-brand h1 { font-size: 1.7rem !important; }
   .mobile-phone { font-size: 1.3rem !important; }
   .hero-section { padding-top: 115px !important; }
-  /* Phone & hamburger layout - unchanged from before */
+  /* Phone & hamburger layout */
   .right-mobile {
    display: flex !important;
    flex-direction: column !important;
    align-items: flex-end !important;
   }
   .mobile-phone { text-align: right !important; }
-  /* HAMBURGER FIX 1: Visible teal colour */
+  /* Hamburger visible teal */
   .navbar-toggler {
    color: #355C7D !important;
   }
   .navbar-toggler-icon {
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23355C7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
-  /* HAMBURGER FIX 2: Black menu starts BELOW header - no overlap with title */
+  /* Black menu starts BELOW the entire header title - NO OVERLAP (90px) */
   .offcanvas {
-   top: 70px !important;
-   height: calc(100vh - 70px) !important;
+   top: 90px !important;
+   height: calc(100vh - 90px) !important;
   }
  }
  @media (max-width: 576px) {
@@ -159,6 +159,7 @@
   #introVideoModal video { width: 100%; max-height: 70vh; }
  }
  .modal-open .site-header { display: none !important; visibility: hidden !important; }
+
  /* FIXED Thank You Banner - now always visible below header */
  #thankyou-banner {
   position: fixed !important;
