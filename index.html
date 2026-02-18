@@ -140,6 +140,17 @@
             #introVideoModal video { width: 100%; max-height: 70vh; }
         }
         .modal-open .site-header { display: none !important; visibility: hidden !important; }
+
+        /* FIXED Thank You Banner - now always visible below header */
+        #thankyou-banner {
+            position: fixed !important;
+            top: 125px !important;
+            left: 0 !important;
+            width: 100% !important;
+            z-index: 10000 !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+            border-radius: 0 !important;
+        }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -164,12 +175,16 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Thank You Banner -->
-    <div id="thankyou-banner" class="alert alert-success text-center py-4 mb-0 d-none" style="border-radius: 0; font-size: 1.25rem; font-weight: bold;">
-        <div class="container">
+
+    <!-- FIXED Thank You Banner (visible below header + close button) -->
+    <div id="thankyou-banner" class="alert alert-success text-center py-4 mb-0 d-none">
+        <div class="container position-relative">
             ✅ Thank you! Your callback request has been received. We'll call you back as soon as possible.
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" 
+                    onclick="document.getElementById('thankyou-banner').classList.add('d-none')"></button>
         </div>
     </div>
+
     <!-- Intro Video Modal -->
     <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
@@ -187,6 +202,7 @@
             </div>
         </div>
     </div>
+
     <!-- FIXED COMPACT HEADER (does NOT scroll away) -->
     <header class="site-header">
         <div class="top-row bg-white">
@@ -303,6 +319,7 @@
             </div>
         </div>
     </header>
+
     <!-- Hero Section Start -->
     <div class="container-fluid bg-light py-5 mb-5 hero-section">
         <div class="container text-center">
@@ -314,12 +331,14 @@
         </div>
     </div>
     <!-- Hero Section End -->
+
     <!-- Reviews Carousel Section -->
     <div class="reviews-section">
         <div class="container">
             <div id="reviewsio-carousel-widget"></div>
         </div>
     </div>
+
     <!-- Frustrations Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -338,6 +357,7 @@
             </div>
         </div>
     </div>
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -372,6 +392,7 @@
             </div>
         </div>
     </div>
+
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -402,6 +423,7 @@
             </div>
         </div>
     </div>
+
     <!-- Stats Section -->
     <div class="container-xxl py-5 bg-light">
         <div class="container">
@@ -458,6 +480,7 @@
             <p class="text-center mt-4">Millions of pounds go unclaimed every year. Professional help significantly increases success rates and speeds up the process.</p>
         </div>
     </div>
+
     <!-- Fact Start -->
     <div class="container-fluid fact my-5 py-5">
         <div class="container">
@@ -485,6 +508,7 @@
             </div>
         </div>
     </div>
+
     <!-- Services Carousel Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
         <div class="row g-0">
@@ -538,6 +562,7 @@
             </div>
         </div>
     </div>
+
     <!-- Call to Action Section -->
     <div class="container-xxl py-5 bg-primary text-white">
         <div class="container text-center">
@@ -546,6 +571,7 @@
             <a href="#top" class="btn btn-secondary py-3 px-5">Choose a Benefit from Menu ↑</a>
         </div>
     </div>
+
     <!-- Booking Start (Request Call Back) -->
     <div class="container-fluid my-5 px-0" id="request-callback">
         <div class="video wow fadeInUp" data-wow-delay="0.1s">
@@ -671,6 +697,7 @@
             </div>
         </div>
     </div>
+
     <!-- FAQ Teaser -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -681,6 +708,7 @@
             </div>
         </div>
     </div>
+
     <!-- Footer Start -->
     <div class="container-fluid bg-light text-dark footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -734,6 +762,7 @@
             </div>
         </div>
     </div>
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -750,6 +779,7 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
     <!-- Reviews.io Carousel Initialisation -->
     <script>
         new carouselInlineWidget('reviewsio-carousel-widget',{
@@ -897,6 +927,7 @@
             },
         });
     </script>
+
     <!-- Intro Video Modal scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -917,13 +948,13 @@
         });
     </script>
 
-    <!-- FIXED Thank You Script -->
+    <!-- FIXED Thank You Script - This is the one that now works perfectly -->
     <script>
         const form = document.getElementById('claimform');
         
         if (form) {
             form.addEventListener('submit', function(e) {
-                // Check HTML5 required fields
+                // Respect all required fields
                 if (!this.checkValidity()) {
                     this.reportValidity();
                     return;
@@ -931,7 +962,7 @@
 
                 e.preventDefault();
 
-                // Show loading state on button
+                // Loading state on button
                 const submitBtn = this.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 submitBtn.disabled = true;
@@ -944,12 +975,15 @@
                     body: formData
                 })
                 .then(() => {
+                    // Show banner + clear form + scroll to top
                     document.getElementById('thankyou-banner').classList.remove('d-none');
+                    this.reset();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 })
                 .catch(() => {
-                    // Still show success even if fetch fails (lead is already in Monday)
+                    // Still show success (lead is already in Monday)
                     document.getElementById('thankyou-banner').classList.remove('d-none');
+                    this.reset();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 })
                 .finally(() => {
