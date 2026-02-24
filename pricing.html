@@ -50,105 +50,117 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme & Font Overrides + Header Fixes (exact match to index) -->
+    <!-- Color Scheme & Font Overrides + Header Fixes (exact from index) -->
     <style>
-        .text-primary { color: #355C7D !important; }
-        .bg-primary { background-color: #355C7D !important; }
-        .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
-        .text-secondary { color: #808080 !important; }
-        .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
-        .bg-dark { background-color: #808080 !important; }
-        .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
-        .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
-        .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #FAF3E9 !important; }
-        h1, h2, h3, h4, h5, h6, .display-3 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            color: #2C3E50 !important;
-            line-height: 1.3 !important;
-        }
-        .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
-        .navbar-brand h1 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            font-size: 2.6rem !important;
-            color: #355C7D !important;
-            margin: 0;
-        }
-        body, p, li, .accordion-body, .table {
-            font-family: 'Open Sans', sans-serif !important;
-            color: #333333 !important;
-            font-size: 1.1rem !important;
-            line-height: 1.6 !important;
-        }
-        .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
-        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
-        .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
-        .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
-        .btn { border-radius: 1rem !important; }
-        .table { border-radius: 1rem !important; overflow: hidden; }
-        .table thead { background-color: #355C7D !important; color: white !important; }
-        .table th, .table td { vertical-align: middle; }
-        /* Exact header styles from index.html */
-        .site-header { background-color: #ffffff; }
-        .top-row { min-height: 80px; padding: 12px 0 8px; background-color: #ffffff; }
-        .menu-row {
-            background-color: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-            border-bottom: 1px solid #dee2e6;
-            padding: 0.25rem 0;
-        }
-        .menu-row .nav-link {
-            padding: 0.35rem 1rem;
-            font-size: 1rem;
-        }
-        /* Stronger shadow on scroll (prevents any "see behind" while keeping exact index look) */
-        .site-header.scrolled {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .topbar-phone {
-            font-size: 1.8rem !important;
-            font-weight: 800 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        .subtext {
-            font-size: 0.95rem;
-            color: #666;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        .mobile-phone {
-            font-size: 1.4rem !important;
-            font-weight: 700 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            text-decoration: none;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
-        @media (max-width: 991px) {
-            .top-row { min-height: 70px; padding: 8px 0 4px; }
-            .top-row .row { align-items: flex-start; }
-            .top-row .navbar-brand h1 { font-size: 1.8rem !important; }
-            .tagline { font-size: 0.95rem !important; }
-            .mobile-phone { font-size: 1.35rem !important; margin-top: 2px; }
-            .right-mobile {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-start;
-                height: 100%;
-            }
-        }
-        @media (max-width: 767px) {
-            .display-3 { font-size: 2.5rem !important; }
-        }
-        .hero-section { padding-top: 140px !important; }
-        @media (max-width: 991px) { .hero-section { padding-top: 110px !important; } }
+ .text-primary { color: #355C7D !important; }
+ .bg-primary { background-color: #355C7D !important; }
+ .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
+ .text-secondary { color: #808080 !important; }
+ .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
+ .bg-dark { background-color: #808080 !important; }
+ .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
+ .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
+ .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
+ .bg-light { background-color: #FAF3E9 !important; }
+ h1, h2, h3, h4, h5, h6, .display-3 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  color: #2C3E50 !important;
+  line-height: 1.3 !important;
+ }
+ .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
+ .navbar-brand h1 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  font-size: 2.2rem !important;
+  color: #355C7D !important;
+  margin: 0;
+ }
+ body, p, li, .accordion-body, .table {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #333333 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+ }
+ .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
+ .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
+ .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
+ .video { background-color: #355C7D !important; background-image: none !important; padding: 100px 0 !important; color: white !important; }
+ .video h1, .video h3 { color: white !important; }
+ .fact { background-image: none !important; background-color: #355C7D !important; }
+ .price-badge {
+  display: inline-block;
+  background-color: #355C7D;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 12px 30px;
+  border-radius: 50px;
+  margin: 20px 0;
+  animation: badgePulse 3s ease-in-out infinite;
+ }
+ @keyframes badgePulse {
+  0% { box-shadow: 0 0 0 rgba(53, 92, 125, 0); transform: scale(1); }
+  50% { box-shadow: 0 0 30px rgba(53, 92, 125, 0.9); transform: scale(1.08); }
+  100% { box-shadow: 0 0 0 rgba(53, 92, 125, 0); transform: scale(1); }
+ }
+ .footer h4, .footer h5, .footer h6 { color: #355C7D !important; }
+ .footer .text-light { color: #333333 !important; }
+ .footer .btn-link { color: #355C7D !important; text-decoration: underline; padding: 0; }
+ .footer .btn-link:hover { color: #2A4563 !important; }
+ .footer .copyright { color: #666666 !important; }
+ .footer-links a { color: #333333 !important; text-decoration: none; font-weight: 500; }
+ .footer-links a:hover { color: #355C7D !important; text-decoration: underline; }
+ .btn { border-radius: 1rem !important; }
+ .form-control { border-radius: 1rem !important; background-color: #FFFFFF !important; box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; }
+ .accordion-button { border-radius: 1rem !important; }
+ .accordion-item { border-radius: 1rem !important; overflow: hidden; }
+ .table { border-radius: 1rem !important; overflow: hidden; }
+ .img-fluid { border-radius: 1rem !important; }
+ /* FIXED COMPACT HEADER - does NOT scroll with the page */
+ .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+ .top-row { min-height: 62px !important; padding: 8px 0 4px !important; }
+ .topbar-phone { font-size: 1.55rem !important; }
+ .menu-row { padding: 0.15rem 0 !important; background-color: #f8f9fa; }
+ .menu-row .nav-link { padding: 0.3rem 1rem !important; font-size: 0.95rem; }
+ .hero-section { padding-top: 130px !important; }
+ @media (max-width: 991px) {
+  .top-row { min-height: 58px !important; padding: 6px 0 4px !important; }
+  .top-row .navbar-brand h1 { font-size: 1.7rem !important; }
+  .mobile-phone { font-size: 1.3rem !important; }
+  .hero-section { padding-top: 115px !important; }
+  .right-mobile {
+   display: flex !important;
+   flex-direction: column !important;
+   align-items: flex-end !important;
+  }
+  .mobile-phone { text-align: right !important; }
+  .navbar-toggler {
+   color: #355C7D !important;
+  }
+  .navbar-toggler-icon {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23355C7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .offcanvas {
+   top: 90px !important;
+   height: calc(100vh - 90px) !important;
+  }
+ }
+ @media (max-width: 576px) {
+  .top-row .navbar-brand h1 { font-size: 1.5rem !important; }
+  .mobile-phone { font-size: 1.15rem !important; }
+ }
+ /* Pricing-specific table styles (unchanged) */
+ .table thead { background-color: #355C7D !important; color: white !important; }
+ .table th, .table td { vertical-align: middle; }
     </style>
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -163,17 +175,59 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Header (exact match to index, Pricing active) -->
-    <header class="sticky-top shadow-sm site-header">
+
+    <!-- FIXED COMPACT HEADER (does NOT scroll away) - EXACT MATCH FROM INDEX -->
+    <header class="site-header">
         <div class="top-row bg-white">
             <div class="container">
                 <div class="row align-items-start">
                     <div class="col-lg-8 col-6">
                         <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
-                            <span class="fa-stack fa-3x me-3 d-none d-md-block">
-                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-label="Claim For Me Icon" class="me-3" style="width: 60px; height: auto; flex-shrink: 0;">
+                                <defs>
+                                    <style>
+                                        .navy{stroke:#233b5b; fill:none;}
+                                        .teal{stroke:#6bb7ad; fill:none;}
+                                    </style>
+                                </defs>
+                                <!-- Shield -->
+                                <path class="navy" stroke-width="22" stroke-linejoin="round" d="
+                                    M210 35
+                                    C285 35 350 60 350 60
+                                    V230
+                                    C350 332 285 400 210 440
+                                    C135 400 70 332 70 230
+                                    V60
+                                    C70 60 135 35 210 35
+                                    Z" />
+                                <!-- Inner shield border -->
+                                <path class="navy" stroke-width="14" stroke-linejoin="round" opacity="0.95" d="
+                                    M210 70
+                                    C270 70 320 90 320 90
+                                    V225
+                                    C320 305 270 360 210 392
+                                    C150 360 100 305 100 225
+                                    V90
+                                    C100 90 150 70 210 70
+                                    Z" />
+                                <!-- Document -->
+                                <path class="navy" stroke-width="16" stroke-linejoin="round" d="
+                                    M160 120
+                                    H250
+                                    L275 145
+                                    V270
+                                    H160
+                                    Z" />
+                                <path class="navy" stroke-width="16" stroke-linejoin="round" d="M250 120 V145 H275" />
+                                <!-- Document lines -->
+                                <path class="navy" stroke-width="14" stroke-linecap="round" d="M180 180 H255" opacity="0.95"/>
+                                <path class="navy" stroke-width="14" stroke-linecap="round" d="M180 220 H235" opacity="0.95"/>
+                                <!-- Check mark -->
+                                <path class="teal" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" d="
+                                    M170 285
+                                    L210 325
+                                    L305 230" />
+                            </svg>
                             <div>
                                 <h1 class="m-0">Claim For Me</h1>
                                 <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
@@ -181,7 +235,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block text-end">
-                        <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="topbar-phone d-block text-decoration-none">Freephone 0800 054 8484</a>
+                        <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="topbar-phone d-block text-decoration-none" style="color: inherit;">Freephone 0800 054 8484</a>
                         <p class="mb-0 subtext">Call us anytime – it's free</p>
                     </div>
                     <div class="col-6 d-lg-none right-mobile">
@@ -193,7 +247,7 @@
                 </div>
             </div>
         </div>
-        <!-- Desktop menu row -->
+        <!-- Desktop menu row - left aligned -->
         <div class="menu-row d-none d-lg-block">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -238,6 +292,7 @@
             </div>
         </div>
     </header>
+
     <!-- Hero Section -->
     <div class="container-fluid bg-light py-5 mb-5 hero-section">
         <div class="container text-center">
@@ -372,6 +427,7 @@
         </div>
     </div>
     <!-- Footer End -->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
@@ -387,17 +443,6 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- Scroll shadow for header (matches index behavior exactly while preventing any transparency issues) -->
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.site-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
     <!-- Spinner Hide -->
     <script>
         window.addEventListener('load', function() {
