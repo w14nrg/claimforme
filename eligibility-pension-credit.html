@@ -50,119 +50,114 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Color Scheme & Font Overrides + Header Fixes (matched to index) -->
+    <!-- Color Scheme & Font Overrides + Header Fixes (exact from index) -->
     <style>
-        .text-primary { color: #355C7D !important; }
-        .bg-primary { background-color: #355C7D !important; }
-        .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
-        .text-secondary { color: #808080 !important; }
-        .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
-        .bg-dark { background-color: #808080 !important; }
-        .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
-        .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
-        .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
-        .bg-light { background-color: #FAF3E9 !important; }
-        h1, h2, h3, h4, h5, h6, .display-3 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            color: #2C3E50 !important;
-            line-height: 1.3 !important;
-        }
-        .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
-        .navbar-brand h1 {
-            font-family: 'Merriweather', serif !important;
-            font-weight: 700 !important;
-            font-size: 2.6rem !important;
-            color: #355C7D !important;
-            margin: 0;
-        }
-        body, p, li, .accordion-body, .table, label, .form-check-label {
-            font-family: 'Open Sans', sans-serif !important;
-            color: #333333 !important;
-            font-size: 1.1rem !important;
-            line-height: 1.6 !important;
-        }
-        .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
-        .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
-        .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
-        .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
-        .btn { border-radius: 1rem !important; }
-        .form-control { border-radius: 1rem !important; background-color: #FFFFFF !important; box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; }
-        .img-fluid { border-radius: 1rem !important; }
-        .progress { height: 10px; border-radius: 1rem; }
-        .progress-bar { background-color: #355C7D !important; }
-        .form-check-input:checked { background-color: #355C7D !important; border-color: #355C7D !important; }
-        .button-group { display: flex; justify-content: space-between; margin-top: 30px; }
-        .button-group .btn { min-width: 120px; }
-        .error-message { color: #dc3545; font-size: 0.9rem; margin-top: 5px; display: none; }
-        .thank-you {
-            display: none;
-            text-align: center;
-            padding: 60px 20px;
-            background: #FAF3E9;
-            border-left: 6px solid #355C7D;
-            margin-top: 40px;
-            border-radius: 1rem;
-        }
-        .quiz-step { display: none; }
-        .quiz-step.active { display: block; }
-        /* Header layout (from index) */
-        .site-header { background-color: #ffffff; }
-        .top-row { min-height: 80px; padding: 12px 0 8px; }
-        .menu-row {
-            background-color: #f8f9fa;
-            border-top: 1px solid #dee2e6;
-            border-bottom: 1px solid #dee2e6;
-            padding: 0.25rem 0;
-        }
-        .menu-row .nav-link {
-            padding: 0.35rem 1rem;
-            font-size: 1rem;
-        }
-        .topbar-phone {
-            font-size: 1.8rem !important;
-            font-weight: 800 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        .subtext {
-            font-size: 0.95rem;
-            color: #666;
-            white-space: nowrap;
-            margin-bottom: 0;
-        }
-        .mobile-phone {
-            font-size: 1.4rem !important;
-            font-weight: 700 !important;
-            color: #355C7D !important;
-            white-space: nowrap;
-            text-decoration: none;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        }
-        @media (max-width: 991px) {
-            .top-row { min-height: 70px; padding: 8px 0 4px; }
-            .top-row .row { align-items: flex-start; }
-            .top-row .navbar-brand h1 { font-size: 1.8rem !important; }
-            .tagline { font-size: 0.95rem !important; }
-            .mobile-phone { font-size: 1.35rem !important; margin-top: 2px; }
-            .right-mobile {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-start;
-                height: 100%;
-            }
-        }
-        @media (max-width: 576px) {
-            .top-row .navbar-brand h1 { font-size: 1.55rem !important; }
-            .tagline { font-size: 0.85rem !important; }
-            .mobile-phone { font-size: 1.2rem !important; }
-        }
-        .hero-section { padding-top: 140px !important; }
-        @media (max-width: 991px) { .hero-section { padding-top: 110px !important; } }
+ .text-primary { color: #355C7D !important; }
+ .bg-primary { background-color: #355C7D !important; }
+ .btn-primary { background-color: #355C7D !important; border-color: #355C7D !important; }
+ .text-secondary { color: #808080 !important; }
+ .btn-secondary { background-color: #808080 !important; border-color: #808080 !important; }
+ .bg-dark { background-color: #808080 !important; }
+ .btn-outline-primary { border-color: #355C7D !important; color: #355C7D !important; }
+ .btn-outline-primary:hover { background-color: #355C7D !important; color: white !important; }
+ .spinner-border { border-color: #355C7D !important; border-right-color: transparent !important; }
+ .bg-light { background-color: #FAF3E9 !important; }
+ h1, h2, h3, h4, h5, h6, .display-3 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  color: #2C3E50 !important;
+  line-height: 1.3 !important;
+ }
+ .display-3 { font-weight: 600 !important; font-size: 3rem !important; }
+ .navbar-brand h1 {
+  font-family: 'Merriweather', serif !important;
+  font-weight: 700 !important;
+  font-size: 2.2rem !important;
+  color: #355C7D !important;
+  margin: 0;
+ }
+ body, p, li, .accordion-body, .table, label, .form-check-label {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #333333 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+ }
+ .navbar-light .navbar-nav .nav-link { color: #444444 !important; font-weight: 500 !important; font-family: 'Open Sans', sans-serif !important; }
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active { color: #355C7D !important; }
+ .dropdown-menu { border: none !important; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 1rem !important; }
+ .dropdown-item:hover { background-color: #EDF2F7 !important; color: #355C7D !important; }
+ .fact { background-image: none !important; background-color: #355C7D !important; }
+ .footer h4, .footer h5, .footer h6 { color: #355C7D !important; }
+ .footer .text-light { color: #333333 !important; }
+ .footer .btn-link { color: #355C7D !important; text-decoration: underline; padding: 0; }
+ .footer .btn-link:hover { color: #2A4563 !important; }
+ .footer .copyright { color: #666666 !important; }
+ .footer-links a { color: #333333 !important; text-decoration: none; font-weight: 500; }
+ .footer-links a:hover { color: #355C7D !important; text-decoration: underline; }
+ .btn { border-radius: 1rem !important; }
+ .form-control { border-radius: 1rem !important; background-color: #FFFFFF !important; box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; }
+ .accordion-button { border-radius: 1rem !important; }
+ .accordion-item { border-radius: 1rem !important; overflow: hidden; }
+ .table { border-radius: 1rem !important; overflow: hidden; }
+ .img-fluid { border-radius: 1rem !important; }
+ /* FIXED COMPACT HEADER - does NOT scroll with the page */
+ .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+ .top-row { min-height: 62px !important; padding: 8px 0 4px !important; }
+ .topbar-phone { font-size: 1.55rem !important; }
+ .menu-row { padding: 0.15rem 0 !important; background-color: #f8f9fa; }
+ .menu-row .nav-link { padding: 0.3rem 1rem !important; font-size: 0.95rem; }
+ .hero-section { padding-top: 130px !important; }
+ @media (max-width: 991px) {
+  .top-row { min-height: 58px !important; padding: 6px 0 4px !important; }
+  .top-row .navbar-brand h1 { font-size: 1.7rem !important; }
+  .mobile-phone { font-size: 1.3rem !important; }
+  .hero-section { padding-top: 115px !important; }
+  .right-mobile {
+   display: flex !important;
+   flex-direction: column !important;
+   align-items: flex-end !important;
+  }
+  .mobile-phone { text-align: right !important; }
+  .navbar-toggler {
+   color: #355C7D !important;
+  }
+  .navbar-toggler-icon {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23355C7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .offcanvas {
+   top: 90px !important;
+   height: calc(100vh - 90px) !important;
+  }
+ }
+ @media (max-width: 576px) {
+  .top-row .navbar-brand h1 { font-size: 1.5rem !important; }
+  .mobile-phone { font-size: 1.15rem !important; }
+ }
+ /* Pension Credit page styles (unchanged) */
+ .progress { height: 10px; border-radius: 1rem; }
+ .progress-bar { background-color: #355C7D !important; }
+ .form-check-input:checked { background-color: #355C7D !important; border-color: #355C7D !important; }
+ .button-group { display: flex; justify-content: space-between; margin-top: 30px; }
+ .button-group .btn { min-width: 120px; }
+ .error-message { color: #dc3545; font-size: 0.9rem; margin-top: 5px; display: none; }
+ .thank-you {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+  background: #FAF3E9;
+  border-left: 6px solid #355C7D;
+  margin-top: 40px;
+  border-radius: 1rem;
+ }
+ .quiz-step { display: none; }
+ .quiz-step.active { display: block; }
     </style>
 </head>
 <body>
@@ -173,17 +168,59 @@
         </div>
     </div>
     <!-- Spinner End -->
-    <!-- Header (exact match to index, Pension Credit active) -->
-    <header class="sticky-top shadow-sm site-header">
+
+    <!-- FIXED COMPACT HEADER (does NOT scroll away) - EXACT MATCH FROM INDEX -->
+    <header class="site-header">
         <div class="top-row bg-white">
             <div class="container">
                 <div class="row align-items-start">
                     <div class="col-lg-8 col-6">
                         <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0">
-                            <span class="fa-stack fa-3x me-3 d-none d-md-block">
-                                <i class="fas fa-shield-alt fa-stack-2x text-primary"></i>
-                                <i class="fas fa-clipboard-check fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-label="Claim For Me Icon" class="me-3" style="width: 60px; height: auto; flex-shrink: 0;">
+                                <defs>
+                                    <style>
+                                        .navy{stroke:#233b5b; fill:none;}
+                                        .teal{stroke:#6bb7ad; fill:none;}
+                                    </style>
+                                </defs>
+                                <!-- Shield -->
+                                <path class="navy" stroke-width="22" stroke-linejoin="round" d="
+                                    M210 35
+                                    C285 35 350 60 350 60
+                                    V230
+                                    C350 332 285 400 210 440
+                                    C135 400 70 332 70 230
+                                    V60
+                                    C70 60 135 35 210 35
+                                    Z" />
+                                <!-- Inner shield border -->
+                                <path class="navy" stroke-width="14" stroke-linejoin="round" opacity="0.95" d="
+                                    M210 70
+                                    C270 70 320 90 320 90
+                                    V225
+                                    C320 305 270 360 210 392
+                                    C150 360 100 305 100 225
+                                    V90
+                                    C100 90 150 70 210 70
+                                    Z" />
+                                <!-- Document -->
+                                <path class="navy" stroke-width="16" stroke-linejoin="round" d="
+                                    M160 120
+                                    H250
+                                    L275 145
+                                    V270
+                                    H160
+                                    Z" />
+                                <path class="navy" stroke-width="16" stroke-linejoin="round" d="M250 120 V145 H275" />
+                                <!-- Document lines -->
+                                <path class="navy" stroke-width="14" stroke-linecap="round" d="M180 180 H255" opacity="0.95"/>
+                                <path class="navy" stroke-width="14" stroke-linecap="round" d="M180 220 H235" opacity="0.95"/>
+                                <!-- Check mark -->
+                                <path class="teal" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" d="
+                                    M170 285
+                                    L210 325
+                                    L305 230" />
+                            </svg>
                             <div>
                                 <h1 class="m-0">Claim For Me</h1>
                                 <p class="m-0 text-primary fw-bold tagline">Helping you claim with confidence</p>
@@ -191,7 +228,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block text-end">
-                        <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="topbar-phone d-block text-decoration-none">Freephone 0800 054 8484</a>
+                        <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="topbar-phone d-block text-decoration-none" style="color: inherit;">Freephone 0800 054 8484</a>
                         <p class="mb-0 subtext">Call us anytime – it's free</p>
                     </div>
                     <div class="col-6 d-lg-none right-mobile">
@@ -203,7 +240,7 @@
                 </div>
             </div>
         </div>
-        <!-- Desktop menu row -->
+        <!-- Desktop menu row - left aligned -->
         <div class="menu-row d-none d-lg-block">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -248,6 +285,7 @@
             </div>
         </div>
     </header>
+
     <!-- Hero Section -->
     <div class="container-fluid bg-light py-5 mb-5 hero-section">
         <div class="container text-center">
@@ -294,7 +332,6 @@
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Pension Credit Questionnaire Submission">
                 <input type="hidden" name="_autoresponse" value="Thank you for completing the Pension Credit eligibility questionnaire. We have received your answers and will call you soon to discuss next steps.">
-
                 <!-- Question 1 -->
                 <div class="quiz-step active" id="step1">
                     <h5>1. Are you over the qualifying age for Pension Credit?</h5>
@@ -312,7 +349,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(1)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 2 -->
                 <div class="quiz-step" id="step2">
                     <h5>2. Do you have a low income below the Pension Credit threshold?</h5>
@@ -330,7 +366,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 3 -->
                 <div class="quiz-step" id="step3">
                     <h5>3. Do you have savings or investments under £10,000?</h5>
@@ -348,7 +383,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(3)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 4 -->
                 <div class="quiz-step" id="step4">
                     <h5>4. Do you live permanently in the UK?</h5>
@@ -366,7 +400,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(4)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 5 -->
                 <div class="quiz-step" id="step5">
                     <h5>5. Do you have the right to reside in the UK (e.g., British citizen)?</h5>
@@ -384,7 +417,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(5)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 6 -->
                 <div class="quiz-step" id="step6">
                     <h5>6. Are you registered blind or severely sight impaired?</h5>
@@ -402,7 +434,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(6)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 7 -->
                 <div class="quiz-step" id="step7">
                     <h5>7. Do you have a partner living with you?</h5>
@@ -420,7 +451,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(7)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 8 -->
                 <div class="quiz-step" id="step8">
                     <h5>8. Does your partner live permanently in a care home?</h5>
@@ -438,7 +468,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(8)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 9 -->
                 <div class="quiz-step" id="step9">
                     <h5>9. Are you separated from your partner?</h5>
@@ -456,7 +485,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(9)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 10 -->
                 <div class="quiz-step" id="step10">
                     <h5>10. Do you have any children or qualifying young people you want to claim for?</h5>
@@ -474,7 +502,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(10)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 11 -->
                 <div class="quiz-step" id="step11">
                     <h5>11. Does a child live with you all the time?</h5>
@@ -492,7 +519,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(11)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 12 -->
                 <div class="quiz-step" id="step12">
                     <h5>12. Do you pay rent, Council Tax, or both for your home?</h5>
@@ -510,7 +536,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(12)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 13 -->
                 <div class="quiz-step" id="step13">
                     <h5>13. Do you live in a care home?</h5>
@@ -528,7 +553,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(13)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 14 -->
                 <div class="quiz-step" id="step14">
                     <h5>14. Do you have savings or investments over £10,000?</h5>
@@ -546,7 +570,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(14)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 15 -->
                 <div class="quiz-step" id="step15">
                     <h5>15. Are you entitled to Disability Living Allowance?</h5>
@@ -564,7 +587,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(15)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 16 -->
                 <div class="quiz-step" id="step16">
                     <h5>16. Is a child entitled to Personal Independence Payment?</h5>
@@ -582,7 +604,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(16)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 17 -->
                 <div class="quiz-step" id="step17">
                     <h5>17. Do you receive Carer's Allowance?</h5>
@@ -600,7 +621,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(17)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 18 -->
                 <div class="quiz-step" id="step18">
                     <h5>18. Do you spend 35 hours a week caring for someone on disability benefits?</h5>
@@ -618,7 +638,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(18)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 19 -->
                 <div class="quiz-step" id="step19">
                     <h5>19. Do you receive a private pension?</h5>
@@ -636,7 +655,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(19)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 20 -->
                 <div class="quiz-step" id="step20">
                     <h5>20. Are you doing paid work now?</h5>
@@ -654,7 +672,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(20)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 21 -->
                 <div class="quiz-step" id="step21">
                     <h5>21. Do you have other money coming in (e.g., lodging allowance)?</h5>
@@ -672,7 +689,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(21)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 22 -->
                 <div class="quiz-step" id="step22">
                     <h5>22. Are you in hospital as an inpatient?</h5>
@@ -690,7 +706,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(22)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 23 -->
                 <div class="quiz-step" id="step23">
                     <h5>23. Have you recently arrived in the UK from abroad?</h5>
@@ -708,7 +723,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(23)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 24 -->
                 <div class="quiz-step" id="step24">
                     <h5>24. Does your immigration status allow access to public funds?</h5>
@@ -726,7 +740,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(24)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Question 25 -->
                 <div class="quiz-step" id="step25">
                     <h5>25. Do you expect to receive money in the next 12 months?</h5>
@@ -744,7 +757,6 @@
                         <button type="button" class="btn btn-primary" onclick="nextStep(25)">Next →</button>
                     </div>
                 </div>
-
                 <!-- Final Step - Contact Info -->
                 <div class="quiz-step" id="step-final">
                     <h4>Your Details (all required)</h4>
@@ -775,7 +787,6 @@
                         <button type="submit" onclick="gtag('event', 'conversion', {'send_to': 'AW-17969840228/RJLWCMGnmP0bEOSA2PhC', 'value': 1.0, 'currency': 'GBP'});" class="btn btn-primary">Submit Answers</button>
                     </div>
                 </div>
-
                 <!-- Thank You Message -->
                 <div class="thank-you" id="thankYou">
                     <h3>Thank You!</h3>
@@ -828,7 +839,7 @@
             </div>
             <div class="container mt-5">
                 <div class="copyright text-center">
-                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for People Over State Pension Age – No Upfront Fees.<br>
+                    © <a class="border-bottom" href="#">Claim For Me</a>, All Rights Reserved. Expert Help Claiming Attendance Allowance, Pension Credit & Blue Badge for People Over State Pension Age – No Upfront Fees.<br><br>
                     Company number 17002345
                     <div class="footer-links">
                         <a href="faq.html">FAQ</a> |
@@ -840,6 +851,7 @@
         </div>
     </div>
     <!-- Footer End -->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
