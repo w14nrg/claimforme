@@ -403,7 +403,7 @@
          <textarea name="Full Address" class="form-control border-0" placeholder="Full Address (optional)" autocomplete="street-address" rows="3"></textarea>
         </div>
         <div class="col-12 col-sm-6">
-         <input type="tel" id="phone" name="Phone Number" class="form-control border-0" placeholder="Phone Number * (REAL UK mobile e.g. 07340 274965)" autocomplete="tel" style="height: 55px;" required>
+         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number * (UK mobile e.g. 07123456789)" autocomplete="tel" style="height: 55px;" required pattern="^(\+?44|0)7\d{9}$" title="Please enter a valid UK mobile number: must start with 07 or +447 followed by 9 digits (no spaces)">
         </div>
         <div class="col-12 col-sm-6">
          <input type="email" name="Email Address" class="form-control border-0" placeholder="Email Address (optional)" autocomplete="email" style="height: 55px;">
@@ -798,42 +798,11 @@
  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
  <!-- Template Javascript -->
  <script src="js/main.js"></script>
- <!-- FIXED Thank You Script + STRONG PHONE VALIDATION -->
+ <!-- FIXED Thank You Script -->
  <script>
  const form = document.getElementById('claimform');
  if (form) {
   form.addEventListener('submit', function(e) {
-   // === STRONG PHONE VALIDATION (blocks short junk like 955 + fakes) ===
-   const phoneInput = document.getElementById('phone');
-   if (phoneInput) {
-    let phone = phoneInput.value.trim().replace(/[\s+()-]/g, '');
-    
-    // Too short (e.g. 955, 123, 000)
-    if (phone.length < 10) {
-     phoneInput.setCustomValidity("❌ Too short – please enter your full 11-digit UK mobile number (starts with 07)");
-     phoneInput.reportValidity();
-     return;
-    }
-    
-    // Basic UK mobile format
-    if (!/^(\+?44|0)7[1-9]\d{8}$/.test(phone)) {
-     phoneInput.setCustomValidity("❌ Please enter a REAL UK mobile number (must start with 07 or +447 and be 11/13 digits total)");
-     phoneInput.reportValidity();
-     return;
-    }
-    
-    // Block obvious fake/repetitive numbers
-    const digitsOnly = phone.replace(/\D/g, '');
-    if (/^(\d)\1{9,}$/.test(digitsOnly) || /(.)\1{7,}/.test(digitsOnly)) {
-     phoneInput.setCustomValidity("❌ This number looks fake (too many repeating digits). Please use your real UK mobile number.");
-     phoneInput.reportValidity();
-     return;
-    }
-    
-    phoneInput.setCustomValidity(''); // clear error
-   }
-   // === End of phone validation ===
-
    if (!this.checkValidity()) {
     this.reportValidity();
     return;
@@ -877,3 +846,4 @@
  </script>
 </body>
 </html>
+
