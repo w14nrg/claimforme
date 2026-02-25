@@ -156,30 +156,21 @@
   .top-row .navbar-brand h1 { font-size: 1.7rem !important; }
   .mobile-phone { font-size: 1.3rem !important; }
   .hero-section { padding-top: 115px !important; }
-  /* Phone & hamburger layout */
   .right-mobile {
    display: flex !important;
    flex-direction: column !important;
    align-items: flex-end !important;
   }
   .mobile-phone { text-align: right !important; }
-  /* Hamburger visible teal */
   .navbar-toggler {
    color: #355C7D !important;
   }
   .navbar-toggler-icon {
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23355C7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
-  /* Black menu starts BELOW the entire header title - NO OVERLAP (90px) */
   .offcanvas {
    top: 90px !important;
    height: calc(100vh - 90px) !important;
-  }
-  /* FIX: tagline no longer overlaps hamburger on mobile */
-  .tagline {
-   font-size: 0.92rem !important;
-   line-height: 1.15 !important;
-   padding-right: 85px !important;
   }
  }
  @media (max-width: 576px) {
@@ -354,20 +345,26 @@
    </div>
   </div>
  </header>
- <!-- Hero Section Start -->
+ <!-- Hero Section Start - UPDATED ONLY THIS PART -->
  <div class="container-fluid bg-light py-5 mb-5 hero-section">
   <div class="container text-center">
-   <h1 class="display-3 mb-3">Making Claiming <span class="text-primary">Easier</span></h1>
-   <p class="fs-4 fst-italic text-secondary mb-4">“Honest support. Better results.” – We help people over State Pension age claim Attendance Allowance, Pension Credit and Blue Badge — clearly, correctly and with care.</p>
-   <p class="fs-3 text-primary fw-bold mb-2">Success-based – no upfront costs</p>
-   <div class="price-badge">Prices from £99</div>
-   <p class="fs-5 mt-4">Choose a benefit below or from the menu above to start your free eligibility questionnaire</p>
+   <h1 class="display-3 mb-3">We Fill & Submit Your Attendance Allowance Form For You</h1>
+   <p class="fs-4 fst-italic text-secondary mb-4">Experts handle everything – no upfront cost</p>
+   <p class="fs-3 text-primary fw-bold mb-2">You only pay our £99 success fee when the money arrives (often thousands backdated)</p>
+   <div class="price-badge">From £99 Success Fee Only</div>
+
+   <div class="mt-5">
+    <a href="tel:08000548484" onclick="return gtag_report_conversion('tel:08000548484');" class="btn btn-primary py-4 px-5 fs-3 fw-bold">📞 Call Free Now – 0800 054 8484</a>
+   </div>
+   <p class="mt-3 text-secondary">Or use the short form below for a callback within 1 hour</p>
+
    <div class="mt-4">
     <a href="about-us.html" class="btn btn-outline-primary py-3 px-5">Watch Intro Video</a>
    </div>
   </div>
  </div>
  <!-- Hero Section End -->
+
  <!-- FORM NOW AT THE TOP (moved here) -->
  <!-- Booking Start (Request Call Back) -->
  <div class="container-fluid my-5 px-0" id="request-callback">
@@ -403,7 +400,7 @@
          <textarea name="Full Address" class="form-control border-0" placeholder="Full Address (optional)" autocomplete="street-address" rows="3"></textarea>
         </div>
         <div class="col-12 col-sm-6">
-         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number * (UK mobile e.g. 07123456789)" autocomplete="tel" style="height: 55px;" required pattern="^(\+?44|0)7\d{9}$" title="Please enter a valid UK mobile number: must start with 07 or +447 followed by 9 digits (no spaces)">
+         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number *" autocomplete="tel" style="height: 55px;" required>
         </div>
         <div class="col-12 col-sm-6">
          <input type="email" name="Email Address" class="form-control border-0" placeholder="Email Address (optional)" autocomplete="email" style="height: 55px;">
@@ -846,4 +843,3 @@
  </script>
 </body>
 </html>
-
