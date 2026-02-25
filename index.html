@@ -224,29 +224,12 @@
   </div>
  </div>
  <!-- Spinner End -->
- <!-- FIXED Thank You Banner  (visible below header + close button) -->
+ <!-- FIXED Thank You Banner (visible below header + close button) -->
  <div id="thankyou-banner" class="alert alert-success text-center py-4 mb-0 d-none">
   <div class="container position-relative">
    ✅ Thank you! Your callback request has been received. We'll call you back as soon as possible.
    <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
     onclick="document.getElementById('thankyou-banner').classList.add('d-none')"></button>
-  </div>
- </div>
- <!-- Intro Video Modal -->
- <div class="modal fade" id="introVideoModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-  <div class="modal-dialog">
-   <div class="modal-content">
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-    <div class="modal-body p-0">
-     <video autoplay muted loop playsinline controls style="width:100%;">
-      <source src="claim-for-me.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-     </video>
-    </div>
-    <div class="text-center p-4 enter-site-btn">
-     <button type="button" class="btn btn-primary btn-lg px-5" data-bs-dismiss="modal">Enter Site</button>
-    </div>
-   </div>
   </div>
  </div>
  <!-- FIXED COMPACT HEADER (does NOT scroll away) -->
@@ -373,9 +356,139 @@
    <p class="fs-3 text-primary fw-bold mb-2">Success-based – no upfront costs</p>
    <div class="price-badge">Prices from £99</div>
    <p class="fs-5 mt-4">Choose a benefit below or from the menu above to start your free eligibility questionnaire</p>
+   <div class="mt-4">
+    <a href="about-us.html" class="btn btn-outline-primary py-3 px-5">Watch Intro Video</a>
+   </div>
   </div>
  </div>
  <!-- Hero Section End -->
+
+ <!-- FORM NOW AT THE TOP (moved here) -->
+ <!-- Booking Start (Request Call Back) -->
+ <div class="container-fluid my-5 px-0" id="request-callback">
+  <div class="video wow fadeInUp" data-wow-delay="0.1s">
+   <h2 class="text-white mb-4">Claim For Me – Benefits Support for People Over State Pension Age</h2>
+   <h3 class="text-white mb-0">Expert Assistance Available</h3>
+  </div>
+  <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
+   <div class="row justify-content-center">
+    <div class="col-lg-8">
+     <div class="bg-light text-center p-5">
+      <div class="d-flex align-items-center justify-content-center mb-4">
+       <i class="fa fa-phone-alt fa-3x text-primary me-3"></i>
+       <h2 class="mb-0">Request a Call Back</h2>
+      </div>
+      <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
+      <form id="claimform" action="https://hooks.zapier.com/hooks/catch/26450170/uc1cbi2/" method="POST">
+       <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
+       <input type="hidden" name="_template" value="table">
+       <input type="hidden" name="_captcha" value="false">
+       <input type="text" name="_honey" style="display:none">
+       <div class="row g-3 mb-5">
+        <div class="col-12">
+         <h4 class="text-start mb-3">Your Details</h4>
+        </div>
+        <div class="col-12 col-sm-6">
+         <input type="text" name="Full Name" class="form-control border-0" placeholder="Full Name *" autocomplete="name" style="height: 55px;" required>
+        </div>
+        <div class="col-12 col-sm-6">
+         <input type="text" name="Postcode" class="form-control border-0" placeholder="Postcode *" autocomplete="postal-code" style="height: 55px;" required>
+        </div>
+        <div class="col-12">
+         <textarea name="Full Address" class="form-control border-0" placeholder="Full Address (optional)" autocomplete="street-address" rows="3"></textarea>
+        </div>
+        <div class="col-12 col-sm-6">
+         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number *" autocomplete="tel" style="height: 55px;" required>
+        </div>
+        <div class="col-12 col-sm-6">
+         <input type="email" name="Email Address" class="form-control border-0" placeholder="Email Address (optional)" autocomplete="email" style="height: 55px;">
+        </div>
+       </div>
+       <div class="accordion mb-5" id="eligibilityAccordion">
+        <div class="accordion-item">
+         <h2 class="accordion-header" id="headingEligibility">
+          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility">
+           Eligibility Questions – please answer all (click to expand)
+          </button>
+         </h2>
+         <div id="collapseEligibility" class="accordion-collapse collapse" aria-labelledby="headingEligibility" data-bs-parent="#eligibilityAccordion">
+          <div class="accordion-body text-start">
+           <div class="mb-4">
+            <p class="fw-bold mb-3">1. Are you over State Pension age? *</p>
+            <div class="d-flex flex-wrap gap-4">
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="1. Are you over State Pension age?" id="age_yes" value="Yes" required>
+              <label class="form-check-label" for="age_yes">Yes</label>
+             </div>
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="1. Are you over State Pension age?" id="age_no" value="No" required>
+              <label class="form-check-label" for="age_no">No</label>
+             </div>
+            </div>
+           </div>
+           <div class="mb-4">
+            <p class="fw-bold mb-3">2. Do you live in England, Scotland, or Wales? *</p>
+            <div class="d-flex flex-wrap gap-4">
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_yes" value="Yes" required>
+              <label class="form-check-label" for="residency_yes">Yes</label>
+             </div>
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_no" value="No" required>
+              <label class="form-check-label" for="residency_no">No</label>
+             </div>
+            </div>
+           </div>
+           <div class="mb-4">
+            <p class="fw-bold mb-3">3. Do you have a long-term physical or mental health condition or disability (lasting or expected to last at least 6 months)? *</p>
+            <div class="d-flex flex-wrap gap-4">
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_yes" value="Yes" required>
+              <label class="form-check-label" for="condition_yes">Yes</label>
+             </div>
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_no" value="No" required>
+              <label class="form-check-label" for="condition_no">No</label>
+             </div>
+            </div>
+           </div>
+           <div class="mb-4">
+            <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
+            <div class="d-flex flex-wrap gap-4">
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
+              <label class="form-check-label" for="care_yes">Yes</label>
+             </div>
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_no" value="No" required>
+              <label class="form-check-label" for="care_no">No</label>
+             </div>
+            </div>
+           </div>
+           <div class="mb-4">
+            <p class="fw-bold mb-3">5. Do you have severe difficulty walking or getting around outdoors due to your condition (e.g., pain, breathlessness, or balance issues)? *</p>
+            <div class="d-flex flex-wrap gap-4">
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_yes" value="Yes" required>
+              <label class="form-check-label" for="mobility_yes">Yes</label>
+             </div>
+             <div class="form-check">
+              <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_no" value="No" required>
+              <label class="form-check-label" for="mobility_no">No</label>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <button class="btn btn-primary w-100 py-3" type="submit">Request Call Back</button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
  <!-- Frustrations Section -->
  <div class="container-xxl py-5 bg-light">
   <div class="container">
@@ -602,131 +715,6 @@
    <a href="#top" class="btn btn-secondary py-3 px-5">Choose a Benefit from Menu ↑</a>
   </div>
  </div>
- <!-- Booking Start (Request Call Back) -->
- <div class="container-fluid my-5 px-0" id="request-callback">
-  <div class="video wow fadeInUp" data-wow-delay="0.1s">
-   <h2 class="text-white mb-4">Claim For Me – Benefits Support for People Over State Pension Age</h2>
-   <h3 class="text-white mb-0">Expert Assistance Available</h3>
-  </div>
-  <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
-   <div class="row justify-content-center">
-    <div class="col-lg-8">
-     <div class="bg-light text-center p-5">
-      <div class="d-flex align-items-center justify-content-center mb-4">
-       <i class="fa fa-phone-alt fa-3x text-primary me-3"></i>
-       <h2 class="mb-0">Request a Call Back</h2>
-      </div>
-      <p class="mb-4">Fill in your details and answer the questions below honestly. We will call you back to discuss potential claims for Attendance Allowance, Pension Credit, or Blue Badge.</p>
-      <form id="claimform" action="https://hooks.zapier.com/hooks/catch/26450170/uc1cbi2/" method="POST">
-       <input type="hidden" name="_subject" value="New Callback Request - ClaimFor.me.uk">
-       <input type="hidden" name="_template" value="table">
-       <input type="hidden" name="_captcha" value="false">
-       <input type="text" name="_honey" style="display:none">
-       <div class="row g-3 mb-5">
-        <div class="col-12">
-         <h4 class="text-start mb-3">Your Details</h4>
-        </div>
-        <div class="col-12 col-sm-6">
-         <input type="text" name="Full Name" class="form-control border-0" placeholder="Full Name *" autocomplete="name" style="height: 55px;" required>
-        </div>
-        <div class="col-12 col-sm-6">
-         <input type="text" name="Postcode" class="form-control border-0" placeholder="Postcode *" autocomplete="postal-code" style="height: 55px;" required>
-        </div>
-        <div class="col-12">
-         <textarea name="Full Address" class="form-control border-0" placeholder="Full Address (optional)" autocomplete="street-address" rows="3"></textarea>
-        </div>
-        <div class="col-12 col-sm-6">
-         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number *" autocomplete="tel" style="height: 55px;" required>
-        </div>
-        <div class="col-12 col-sm-6">
-         <input type="email" name="Email Address" class="form-control border-0" placeholder="Email Address (optional)" autocomplete="email" style="height: 55px;">
-        </div>
-       </div>
-       <div class="accordion mb-5" id="eligibilityAccordion">
-        <div class="accordion-item">
-         <h2 class="accordion-header" id="headingEligibility">
-          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEligibility" aria-expanded="false" aria-controls="collapseEligibility">
-           Eligibility Questions – please answer all (click to expand)
-          </button>
-         </h2>
-         <div id="collapseEligibility" class="accordion-collapse collapse" aria-labelledby="headingEligibility" data-bs-parent="#eligibilityAccordion">
-          <div class="accordion-body text-start">
-           <div class="mb-4">
-            <p class="fw-bold mb-3">1. Are you over State Pension age? *</p>
-            <div class="d-flex flex-wrap gap-4">
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="1. Are you over State Pension age?" id="age_yes" value="Yes" required>
-              <label class="form-check-label" for="age_yes">Yes</label>
-             </div>
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="1. Are you over State Pension age?" id="age_no" value="No" required>
-              <label class="form-check-label" for="age_no">No</label>
-             </div>
-            </div>
-           </div>
-           <div class="mb-4">
-            <p class="fw-bold mb-3">2. Do you live in England, Scotland, or Wales? *</p>
-            <div class="d-flex flex-wrap gap-4">
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_yes" value="Yes" required>
-              <label class="form-check-label" for="residency_yes">Yes</label>
-             </div>
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="2. Do you live in England, Scotland, or Wales?" id="residency_no" value="No" required>
-              <label class="form-check-label" for="residency_no">No</label>
-             </div>
-            </div>
-           </div>
-           <div class="mb-4">
-            <p class="fw-bold mb-3">3. Do you have a long-term physical or mental health condition or disability (lasting or expected to last at least 6 months)? *</p>
-            <div class="d-flex flex-wrap gap-4">
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_yes" value="Yes" required>
-              <label class="form-check-label" for="condition_yes">Yes</label>
-             </div>
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="3. Long-term physical/mental health condition or disability?" id="condition_no" value="No" required>
-              <label class="form-check-label" for="condition_no">No</label>
-             </div>
-            </div>
-           </div>
-           <div class="mb-4">
-            <p class="fw-bold mb-3">4. Do you need help or supervision throughout the day or night with personal care tasks (e.g., washing, dressing, eating, toileting, or taking medication)? *</p>
-            <div class="d-flex flex-wrap gap-4">
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_yes" value="Yes" required>
-              <label class="form-check-label" for="care_yes">Yes</label>
-             </div>
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="4. Need help/supervision with personal care tasks?" id="care_no" value="No" required>
-              <label class="form-check-label" for="care_no">No</label>
-             </div>
-            </div>
-           </div>
-           <div class="mb-4">
-            <p class="fw-bold mb-3">5. Do you have severe difficulty walking or getting around outdoors due to your condition (e.g., pain, breathlessness, or balance issues)? *</p>
-            <div class="d-flex flex-wrap gap-4">
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_yes" value="Yes" required>
-              <label class="form-check-label" for="mobility_yes">Yes</label>
-             </div>
-             <div class="form-check">
-              <input class="form-check-input" type="radio" name="5. Severe difficulty walking/getting around outdoors?" id="mobility_no" value="No" required>
-              <label class="form-check-label" for="mobility_no">No</label>
-             </div>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-       <button class="btn btn-primary w-100 py-3" type="submit">Request Call Back</button>
-      </form>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
  <!-- FAQ Teaser -->
  <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
   <div class="container">
@@ -805,25 +793,6 @@
  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
  <!-- Template Javascript -->
  <script src="js/main.js"></script>
- <!-- Intro Video Modal scripts -->
- <script>
- document.addEventListener('DOMContentLoaded', function () {
-  if (!sessionStorage.getItem('introShown')) {
-   var introModal = new bootstrap.Modal(document.getElementById('introVideoModal'));
-   introModal.show();
-   sessionStorage.setItem('introShown', 'true');
-  }
- });
- </script>
- <script>
- document.getElementById('introVideoModal').addEventListener('hidden.bs.modal', function () {
-  var video = this.querySelector('video');
-  if (video) {
-   video.pause();
-   video.currentTime = 0;
-  }
- });
- </script>
  <!-- FIXED Thank You Script -->
  <script>
  const form = document.getElementById('claimform');
