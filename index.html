@@ -175,6 +175,12 @@
    top: 90px !important;
    height: calc(100vh - 90px) !important;
   }
+  /* FIX: tagline no longer overlaps hamburger on mobile */
+  .tagline {
+   font-size: 0.92rem !important;
+   line-height: 1.15 !important;
+   padding-right: 85px !important;
+  }
  }
  @media (max-width: 576px) {
   .top-row .navbar-brand h1 { font-size: 1.5rem !important; }
@@ -362,7 +368,6 @@
   </div>
  </div>
  <!-- Hero Section End -->
-
  <!-- FORM NOW AT THE TOP (moved here) -->
  <!-- Booking Start (Request Call Back) -->
  <div class="container-fluid my-5 px-0" id="request-callback">
@@ -398,7 +403,7 @@
          <textarea name="Full Address" class="form-control border-0" placeholder="Full Address (optional)" autocomplete="street-address" rows="3"></textarea>
         </div>
         <div class="col-12 col-sm-6">
-         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number *" autocomplete="tel" style="height: 55px;" required>
+         <input type="tel" name="Phone Number" class="form-control border-0" placeholder="Phone Number * (UK mobile e.g. 07123456789)" autocomplete="tel" style="height: 55px;" required pattern="^(\+?44|0)7\d{9}$" title="Please enter a valid UK mobile number: must start with 07 or +447 followed by 9 digits (no spaces)">
         </div>
         <div class="col-12 col-sm-6">
          <input type="email" name="Email Address" class="form-control border-0" placeholder="Email Address (optional)" autocomplete="email" style="height: 55px;">
